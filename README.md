@@ -10,8 +10,8 @@ See [related talk](https://github.com/MooersLab/BerlinEmacsAugust2022).
 
 ## Related projects of possible interest
 
-- [Org-mode manuscript template](https://github.com/MooersLab/manuscriptInOrg/edit/main/README.md)
-- [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX/edit/main/README.md)
+- [Org-mode manuscript template](https://github.com/MooersLab/manuscriptInOrg)
+- [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX)
 - [Writing log template in LaTeX](https://github.com/MooersLab/writingLogTemplate)
 - [Slideshow template in LaTeX](https://github.com/MooersLab/slideshowTemplateLaTeX)
 - [Annotated bibliography Template in LaTeX](https://github.com/MooersLab/annotatedBibliography)
