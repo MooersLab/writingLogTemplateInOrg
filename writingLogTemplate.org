@@ -1,3 +1,4 @@
+#+Title:Writing log for this hot paper
 #+Options: toc:nil author:nil
 #+LaTeX_CLASS:article
 #+LaTeX_CLASS_OPTIONS:[11pt,letterpaper]
@@ -13,6 +14,7 @@
 #+LaTeX_HEADER:\usepackage{minted}
 #+LaTeX_HEADER:\usepackage{ulem}
 #+LaTeX_HEADER:\usepackage{spreadtab}
+# #+LaTeX_HEADER:\usepackage{setspace} \singlespacing
 #+LaTeX_HEADER:%Print page numbers in the upper right corner rather than the bottom center.
 #+LaTeX_HEADER:\pagestyle{myheadings}
 #+LaTeX_HEADER:% Code for plotting table 
@@ -26,8 +28,6 @@
 #+LaTeX_HEADER:  every last row/.style={after row=\bottomrule},
 #+LaTeX_HEADER:  fixed,precision=2,
 #+LaTeX_HEADER:}
-#+LaTeX_HEADER:\makeindex
-
 #+LaTeX_HEADER:% todolist env from https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
 #+LaTeX_HEADER:% done with checkmark, wontfix with x, next with finger.
 #+LaTeX_HEADER:% Use square brackets around the commands: e.g., [\next]
@@ -39,30 +39,43 @@
 #+LaTeX_HEADER:\newcommand{\cmark}{\ding{51}}% checkmark
 #+LaTeX_HEADER:\newcommand{\xmark}{\ding{55}}% x-mark
 #+LaTeX_HEADER:\newcommand{\wmark}{\ding{116}}% wait mark, inverted triangle representing yield sign
-
 #+LaTeX_HEADER:\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
 #+LaTeX_HEADER:  \hspace{-2.5pt}}
 #+LaTeX_HEADER:\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
 #+LaTeX_HEADER:\newcommand{\waiting}{\rlap{\raisebox{0.18ex}{\hspace{0.17ex}\scriptsize \wmark}}$\square$}
 #+LaTeX_HEADER:% \newcommand{\next}{\nmark}%
-
-
+#+LaTeX_HEADER:\bibliographystyle{cell}
+#+Latex_HEADER:\makeindex
 #+Latex_HEADER:\title{Writing Log for hot paper}
 #+Latex_HEADER:\author{Blaine Mooers}
 
+#+LaTeX:\maketitle
 
-#+LaTeX_HEADER:\maketitle
+
+#+LaTeX:\t
+ableofcontents
+
+
 
 * Why am I writing this paper?}
+#+LaTeX:\index{why}
 
 What is the rationale for writing this paper?
 
-To help advance the field. To help win or renew a grant.
+To help advance the field.
+
+To help win or renew a grant funding.
+
+To establish credibility in a new field for my lab.
+
 
 * Who is the audience of the paper?
+#+LaTeX:\index{audience}
+
 
 
 * Related Grant Application Specific Aims
+#+LaTeX:\index{specifc aims}
 
 -
 -
@@ -74,8 +87,9 @@ To help advance the field. To help win or renew a grant.
 
 
 * Related projects
+#+LaTeX:\index{related projects}
 
-Take care not to re-start the second project a second time.
+Take care not to re-start a project a second time.
 
 -
 -
@@ -87,61 +101,77 @@ Take care not to re-start the second project a second time.
 -
 
 * Potential Journals, IF
+#+LaTeX:\index{potential journals}
 
-- Nature
-- Science
-- Cell
+** Very High Impact Journals
+
 - Annals of Oncology, 51.7!
+- Cell
 - Molecular Cell
-- PNAS
+- Nature
 - Nature Methods
-- Structure
-- J of Appl Crystallography
-- J of Molecular Biology
-- Acta Cryst. Section D
+- Nature Molecular and Structural Biology
+- NPJ Precision Oncology
+- Nucleic Acids Research
+- PNAS
+- Science
+  
+** Respectable Science Journals
+
 - Acta Cryst. Section A
-- Structural Dynamics
-- Protein Science
-- Biophysical Journal
-- Computing in Science and Engineering
-- Bioinformatics
-- NAR
-- Journal of Applied Crystallography
-- Computers in Engineering and Science
-- Structural Biology
-- Structure
+- Acta Cryst. Section B
 - Acta Cryst Section D
+- Biochemistry
+- Bioinformatics
+- Biophysical Journal
+- Cell Communication and Signaling
 - Computational and Structural Biotechnology Journal, 7.3
 - Data in Brief
-- SoftwareX
+- The FEBS Journal, 5.5
+- IUCrJ
+- iScience
+- J of Appl Crystallography
+- J of Biological Chemistry
+- J of Molecular Biology
+- J of Structural Dynamics
+- J of Structural Biology
 - MethodsX
+- Opinion in Structural Biology
+- Progress in Biophysics and Molecular Biology, 3.7
+- Protein Science
+- RNA
+- Structure
+
+
+** Computationtal biochemistry
+
 - Computational and Theoretical Chemistry, 1.9
 - Computational Biology and Chemistry, 2.8 
-- Journal of Molecular Graphics and Modelling, 2.5
-- Computers and Geosciences, 3.4
-- Journal of Computational Science, 4.0
-- CAD Computer Aided Design, 3.0    
-- Computers and Education, Open, no APC
-- Graphics \& Visual Computing,
-- Progress in Biophysics and Molecular Biology, 3.7
-- Computational Geometry: Theory and Applications
-- Computer Aided Geometric Design, 1.3
-- Progress in Nuclear Magnetic Resonance Spectroscopy. 9.7
-- The FEBS Journal, 5.5
-- Biochemistry and Molecular Biology Education, 1.2
-- Journal of Computational Chemistry, 3.4
-- Biochemistry and Molecular Biology Education
-- Computer Graphics Forum
-- J. of Molecular Graphics and Modeling
+- Computers in Engineering and Science
 - Crystals
 - International Journal of Molecular Science, 6.3
-- Structure Opinion in Structural Biology
-- Structural Biology
-- RNA
-- Protein Science
+- Journal of Computational Chemistry, 3.4
+- Journal of Molecular Graphics and Modeling
+- Journal of Molecular Graphics and Modelling, 2.5
 
+
+** Computing Journals
+
+- CAD Computer Aided Design, 3.0    
+- Computational Geometry: Theory and Applications  
+- Computer Aided Geometric Design, 1.3
+- Computer Graphics Forum
+- Computers in Engineering and Science
+- Graphics \& Visual Computing,
+- SoftwareX
+
+** Journals about science education
+- Biochemistry and Molecular Biology Education, 1.2
+- Biochemistry and Molecular Biology Education
+- Computers and Education, Open, no APC  
 
 * Potential Titles
+#+LaTeX:\index{titles}
 
 - 
 - 
@@ -151,6 +181,8 @@ Take care not to re-start the second project a second time.
 
 
 * Potential Keywords
+#+LaTeX:\index{keywords}
+
 
 - 
 - 
@@ -160,6 +192,7 @@ Take care not to re-start the second project a second time.
 
 
 * Potential Internal Reviewers
+#+LaTeX:\index{internal reviewers}
 
 - 
 - 
@@ -168,9 +201,10 @@ Take care not to re-start the second project a second time.
 - 
 
 * Potential External Reviewers
+#+LaTeX:\index{external reviewers}
 
-- 
-- 
+- Harsh Critic 
+- Keen Competitor
 - 
 - 
 - 
@@ -181,6 +215,7 @@ Take care not to re-start the second project a second time.
 - 
 
 * Potential Competitors
+#+LaTeX:\index{competitors}
 
 - 
 - 
@@ -191,6 +226,7 @@ Take care not to re-start the second project a second time.
 
 
 * Potential Collaborators
+#+LaTeX:\index{collabotators}
 
 - 
 - 
@@ -200,25 +236,44 @@ Take care not to re-start the second project a second time.
 
 
 * Draft Introduction
+#+LaTeX:\index{Introduction}
 
+The central hypothesis of this amazing paper is that it will be accepted on the first submission \cite{chaloner1995bayesianexperimentaldesignareview}.
 
 
 * Draft Abstract
-
+#+LaTeX:\index{Abstract}
 
 
 
 * Writing Log
 
 ** 9 September 2022
+5 hours
 
+- Answered the why
+- Identified the audience
+- Drafted the Introduction and identified the central hypothesis of the paper
+- Outlined the planned results in terms of figures and tables
+- Outlined the key discussion points
+- Drafted the abstract
+- Started a list of potential titles
+- Started list of keywords
+- Generated list of potential reviewers to suggest  
+
+
+** 10 September 2022
+1.5 hours
+Worked on the Results subsection about the more important result.
 
 
 * Next Action
+#+LaTeX:\index{next action}
 
-
+- To this next
 
 * To Be Done
+#+LaTeX:\index{To be done}
 
 - 
 - 
@@ -230,7 +285,7 @@ Take care not to re-start the second project a second time.
 
 * May Be Done Someday
 
-- 
+- write another related paper
 - 
 - 
 - 
@@ -238,8 +293,12 @@ Take care not to re-start the second project a second time.
 
 
 * Word Count
+#+LaTeX:\index{word count}
 
-#+LaTeX:\begin{figure}[H]
+The word count tends to approach a plateau in the latter stages of writing.
+
+
+#+Latex:\begin{figure}[H]
 #+LaTeX:  \centering
 #+LaTeX:  \begin{tikzpicture}
 #+LaTeX:    \begin{axis}[
@@ -268,19 +327,31 @@ Take care not to re-start the second project a second time.
 
 
 * Glossary of jargon
+#+LaTeX:\index{jargon}
 
-- 
-- 
-- 
-- 
-- 
+
+#+LaTeX:\begin{description}
+#+LaTeX:\item [censored datacensored data] Censoring hides values from points that are too large, too small, or both. The number of data points that were censored is known, unlike the case for truncated data. Data are right-censored if the value is greater than a threshold. The data are left-censored if the value is below a threshold. The censored data can be treated as missing data. In Stan, the censored data have their own array and their mean and sigma are sampled.
+#+LaTeX:\item [diminishing adaptation condition] The distance between two consecutive Markov kernels must uniformly decrease to zero.
+#+LaTeX:\item [leapfrog approximation] The Metropolis-Hastings correction required by the Hamiltonian Monte Carlo.
+#+LaTeX:\item [Markov Chain Monte Carlo] A class of algorithms that simulates a Markov chain whose stationary distribution is the target distribution of interest. The stationary chain generates a sample from the target distribution.
+#+LaTeX:\item [No U-turn sampler] An adaptive algorithm that aims to find the best parameter settings by tracking the sample path and preventing HMC from retracing its steps in this path.
+#+LaTeX:\item [overdispersion] When the observed variance is greater than the mean in count data.
+#+LaTeX:\item [Poisson overdispersion] The Poisson distribution has a mean that is equal to its variance. When the observed variance is greater than the mean; this is known as overdispersion and indicates that the Poisson model is not appropriate. A common reason for overdispersikon ais the omission of relevant explanatory variables, or dependent observations. Under some circumstances, the problem of overdispersion can be solved by using quasi-likelihood estimation or a negative binomial distribution instead.
+#+LaTeX:\end{description}
 
 
 * Reminders and precautions
+#+LaTeX:\index{reminders}
+#+LaTeX:\index{precautions}
 
-- 
-- 
+
+- Develop a checklist for manuscript uploading to save time and pain 
+- Check the accepted image file format early in the figure preparation process
 - 
 - 
 - 
 
+
+#+Latex:\bibliography{AnnoBibMyBDA}
+#+LaTeX:\printindex
