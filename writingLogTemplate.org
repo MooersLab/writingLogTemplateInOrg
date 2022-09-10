@@ -1,0 +1,286 @@
+#+Options: toc:nil author:nil
+#+LaTeX_CLASS:article
+#+LaTeX_CLASS_OPTIONS:[11pt,letterpaper]
+# \documentclass[10pt,letterpaper]{article}
+#+LaTeX_HEADER:\usepackage{amsmath}
+#+LaTeX_HEADER:\usepackage{amsfonts}
+#+LaTeX_HEADER:\usepackage{amssymb}
+#+LaTeX_HEADER:\usepackage{makeidx}
+#+LaTeX_HEADER:\usepackage{graphicx}
+#+LaTeX_HEADER:\usepackage{hyperref}
+#+LaTeX_HEADER:\usepackage[letterpaper, total={7in, 9in}]{geometry}
+#+LaTeX_HEADER:\usepackage{datetime2}
+#+LaTeX_HEADER:\usepackage{minted}
+#+LaTeX_HEADER:\usepackage{ulem}
+#+LaTeX_HEADER:\usepackage{spreadtab}
+#+LaTeX_HEADER:%Print page numbers in the upper right corner rather than the bottom center.
+#+LaTeX_HEADER:\pagestyle{myheadings}
+#+LaTeX_HEADER:% Code for plotting table 
+#+LaTeX_HEADER:\usepackage{pgfplots}
+#+LaTeX_HEADER:\usepackage{pgfplotstable}
+#+LaTeX_HEADER:\usepackage{booktabs}
+#+LaTeX_HEADER:\usepackage{array}
+#+LaTeX_HEADER:\usepackage{colortbl}
+#+LaTeX_HEADER:\pgfplotstableset{% global config, for example in the preamble
+#+LaTeX_HEADER:  every head row/.style={before row=\toprule,after row=\midrule},
+#+LaTeX_HEADER:  every last row/.style={after row=\bottomrule},
+#+LaTeX_HEADER:  fixed,precision=2,
+#+LaTeX_HEADER:}
+#+LaTeX_HEADER:\makeindex
+
+#+LaTeX_HEADER:% todolist env from https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
+#+LaTeX_HEADER:% done with checkmark, wontfix with x, next with finger.
+#+LaTeX_HEADER:% Use square brackets around the commands: e.g., [\next]
+#+LaTeX_HEADER:\usepackage{enumitem,amssymb}
+#+LaTeX_HEADER:\newlist{todolist}{itemize}{2}
+#+LaTeX_HEADER:\setlist[todolist]{label=$\square$}
+#+LaTeX_HEADER:\usepackage{pifont}
+#+LaTeX_HEADER:\newcommand{\nmark}{\ding{42}}% next
+#+LaTeX_HEADER:\newcommand{\cmark}{\ding{51}}% checkmark
+#+LaTeX_HEADER:\newcommand{\xmark}{\ding{55}}% x-mark
+#+LaTeX_HEADER:\newcommand{\wmark}{\ding{116}}% wait mark, inverted triangle representing yield sign
+
+#+LaTeX_HEADER:\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+#+LaTeX_HEADER:  \hspace{-2.5pt}}
+#+LaTeX_HEADER:\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+#+LaTeX_HEADER:\newcommand{\waiting}{\rlap{\raisebox{0.18ex}{\hspace{0.17ex}\scriptsize \wmark}}$\square$}
+#+LaTeX_HEADER:% \newcommand{\next}{\nmark}%
+
+
+#+Latex_HEADER:\title{Writing Log for hot paper}
+#+Latex_HEADER:\author{Blaine Mooers}
+
+
+#+LaTeX_HEADER:\maketitle
+
+* Why am I writing this paper?}
+
+What is the rationale for writing this paper?
+
+To help advance the field. To help win or renew a grant.
+
+* Who is the audience of the paper?
+
+
+* Related Grant Application Specific Aims
+
+-
+-
+-
+-
+-
+-
+-
+
+
+* Related projects
+
+Take care not to re-start the second project a second time.
+
+-
+-
+-
+-
+-
+-
+-
+-
+
+* Potential Journals, IF
+
+- Nature
+- Science
+- Cell
+- Annals of Oncology, 51.7!
+- Molecular Cell
+- PNAS
+- Nature Methods
+- Structure
+- J of Appl Crystallography
+- J of Molecular Biology
+- Acta Cryst. Section D
+- Acta Cryst. Section A
+- Structural Dynamics
+- Protein Science
+- Biophysical Journal
+- Computing in Science and Engineering
+- Bioinformatics
+- NAR
+- Journal of Applied Crystallography
+- Computers in Engineering and Science
+- Structural Biology
+- Structure
+- Acta Cryst Section D
+- Computational and Structural Biotechnology Journal, 7.3
+- Data in Brief
+- SoftwareX
+- MethodsX
+- Computational and Theoretical Chemistry, 1.9
+- Computational Biology and Chemistry, 2.8 
+- Journal of Molecular Graphics and Modelling, 2.5
+- Computers and Geosciences, 3.4
+- Journal of Computational Science, 4.0
+- CAD Computer Aided Design, 3.0    
+- Computers and Education, Open, no APC
+- Graphics \& Visual Computing,
+- Progress in Biophysics and Molecular Biology, 3.7
+- Computational Geometry: Theory and Applications
+- Computer Aided Geometric Design, 1.3
+- Progress in Nuclear Magnetic Resonance Spectroscopy. 9.7
+- The FEBS Journal, 5.5
+- Biochemistry and Molecular Biology Education, 1.2
+- Journal of Computational Chemistry, 3.4
+- Biochemistry and Molecular Biology Education
+- Computer Graphics Forum
+- J. of Molecular Graphics and Modeling
+- Crystals
+- International Journal of Molecular Science, 6.3
+- Structure Opinion in Structural Biology
+- Structural Biology
+- RNA
+- Protein Science
+
+
+* Potential Titles
+
+- 
+- 
+- 
+- 
+- 
+
+
+* Potential Keywords
+
+- 
+- 
+- 
+- 
+- 
+
+
+* Potential Internal Reviewers
+
+- 
+- 
+- 
+- 
+- 
+
+* Potential External Reviewers
+
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+* Potential Competitors
+
+- 
+- 
+- 
+- 
+- 
+
+
+
+* Potential Collaborators
+
+- 
+- 
+- 
+- 
+- 
+
+
+* Draft Introduction
+
+
+
+* Draft Abstract
+
+
+
+
+* Writing Log
+
+** 9 September 2022
+
+
+
+* Next Action
+
+
+
+* To Be Done
+
+- 
+- 
+- 
+- 
+- 
+
+
+
+* May Be Done Someday
+
+- 
+- 
+- 
+- 
+- 
+
+
+* Word Count
+
+#+LaTeX:\begin{figure}[H]
+#+LaTeX:  \centering
+#+LaTeX:  \begin{tikzpicture}
+#+LaTeX:    \begin{axis}[
+#+LaTeX:      xlabel={Date},
+#+LaTeX:      ylabel={Word Count Cumulative},
+#+LaTeX:      % legend pos=south east,
+#+LaTeX:      % legend entries={},
+#+LaTeX:      ]
+#+LaTeX:      \addplot table [x=Day,y=Words] {wordcount.txt};
+#+LaTeX:    \end{axis}
+#+LaTeX:  \end{tikzpicture}
+#+LaTeX:\caption{Cummulative word count.}
+#+LaTEX:\end{figure}
+
+#+LaTeX:\begin{table}[]
+#+LaTeX:  \centering
+#+LaTeX:  \pgfplotstabletypeset[
+#+LaTeX:  columns/Date/.style={column name=Date},
+#+LaTeX:  columns/Day/.style={column name=Day},
+#+LaTeX:  columns/Word/.style={column name=Words},
+#+LaTeX:  ]{wordcount.txt}
+#+LaTeX:  \caption{Date, day and wordcount.}
+#+Latex:  \label{tab:my_label}
+#+LaTeX:\end{table}
+
+
+
+* Glossary of jargon
+
+- 
+- 
+- 
+- 
+- 
+
+
+* Reminders and precautions
+
+- 
+- 
+- 
+- 
+- 
+
