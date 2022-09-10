@@ -52,8 +52,7 @@
 #+LaTeX:\maketitle
 
 
-#+LaTeX:\t
-ableofcontents
+#+LaTeX:\tableofcontents
 
 
 
@@ -247,6 +246,8 @@ The central hypothesis of this amazing paper is that it will be accepted on the 
 
 
 * Writing Log
+#+LaTeX:\index{writing log}
+
 
 ** 9 September 2022
 5 hours
