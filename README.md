@@ -4,7 +4,7 @@ Use this writing log in parallel to the main writing project document to track y
 
 [Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read LaTeX code.
 
-Use the org-mode markdown code as nomral and re-use the LaTeX code as templates for figures and tables with captions.
+Use the org-mode markdown code as normal and re-use the LaTeX code as templates for figures and tables with captions.
 
 
 ## Features
@@ -19,8 +19,8 @@ Use the org-mode markdown code as nomral and re-use the LaTeX code as templates 
 ## Usage
 
 - `git clone` into the folder containing your current writing project.
--  Load the 
-- Essential keybindings in Emacs:
+- Load the writingLogTemplate.org into Emacs. 
+- Essential keybindings active in org-mode:
   + `C-g` to abort current command.
   + `C-c C-x` to quit Emacs
   + `C-x C-s` to save the current document.
