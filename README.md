@@ -2,6 +2,7 @@
 
 Use this writing log in parallel to the main writing project document.
 [Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read LaTeX code.
+Use the org-mode markdown code as  nomral.
 
 
 ## Features
