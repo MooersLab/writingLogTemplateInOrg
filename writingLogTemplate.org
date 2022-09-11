@@ -76,9 +76,9 @@ To establish credibility in a new field for my lab.
 * Related Grant Application Specific Aims
 #+LaTeX:\index{specifc aims}
 
--
--
--
+- Aim 1: 
+- Aim 2: 
+- Aim 3: 
 -
 -
 -
@@ -90,7 +90,7 @@ To establish credibility in a new field for my lab.
 
 Take care not to re-start a project a second time.
 
--
+- Related project 1
 -
 -
 -
