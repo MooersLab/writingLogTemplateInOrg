@@ -56,16 +56,14 @@
 
 
 
-* Why am I writing this paper?}
+* Why am I writing this paper?
 #+LaTeX:\index{why}
 
 What is the rationale for writing this paper?
 
-To help advance the field.
-
-To help win or renew a grant funding.
-
-To establish credibility in a new field for my lab.
+- To help advance the field.
+- To help win or renew a grant funding.
+- To establish credibility in a new field for my lab.
 
 
 * Who is the audience of the paper?
