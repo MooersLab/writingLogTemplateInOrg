@@ -1,6 +1,6 @@
 # A Org-mode template for thinking, planning, and monitoring progress on writing projects 
 
-Org-mode is a rich variant of markdown that can read LaTeX code.
+[Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read LaTeX code.
 Use this writing log in parallel to a the main writing project document.
 
 ## Features
