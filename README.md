@@ -12,9 +12,9 @@ Use the org-mode markdown code as normal and re-use the LaTeX code as templates 
 - 20 considerations for planning a manuscript.
 - A table of contents that is automatically generated.
 - An automatically generated index.
-- Support for generating a refernces cited section.
+- Support for generating a references cited section.
 - A writing log section for recording notes by each day's accomplishments.
-- code to plot to wordcount by writing session to track your progress
+- Code to plot to wordcount by writing session to track your progress
 
 ## Usage
 
