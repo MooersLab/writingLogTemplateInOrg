@@ -1,8 +1,26 @@
 # A Org-mode template for thinking, planning, and monitoring progress on writing projects 
 
 Org-mode is a rich variant of markdown that can read LaTeX code.
-Use in parallel to a the main writing project document.
-Includes code to plot to wordcount by writing session.
+Use this writing log in parallel to a the main writing project document.
+
+## Features
+
+- 20 considerations for planning a manuscript.
+- A table of contents that is automatically generated.
+- An automatically generated index.
+- Support for generating a refernces cited section.
+- A writing log section for recording notes by each day's accomplishments.
+- code to plot to wordcount by writing session to track your progress
+
+## Usage
+
+- `git clone` into the folder containing your current writing project.
+- Essential keybindings in Emacs:
+  + `C-g` to abort current command.
+  + `C-c C-x` to quit Emacs
+  + `C-x C-s` to save the current document.
+  + `C-c C-e l o` to export to pdflatex and bibtex and open the resulting PDF in default PDF viewer.
+  + `C-x u` to undo the last change.
 
 The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access org-mode because it is built into Emacs.
 
@@ -12,7 +30,7 @@ See [related talk](https://github.com/MooersLab/BerlinEmacsAugust2022).
 
 - [Org-mode manuscript template](https://github.com/MooersLab/manuscriptInOrg)
 - [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX)
-- [Writing log template in LaTeX](https://github.com/MooersLab/writingLogTemplate)
+- [Writing log template in LaTeX (compiles on Overleaf and in Emacs)](https://github.com/MooersLab/writingLogTemplate)
 - [Slideshow template in LaTeX](https://github.com/MooersLab/slideshowTemplateLaTeX)
 - [Annotated bibliography Template in LaTeX](https://github.com/MooersLab/annotatedBibliography)
 - [Diary for 2022 in LaTeX](https://github.com/MooersLab/diary2022inLaTeX)
