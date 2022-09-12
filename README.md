@@ -19,9 +19,24 @@ Use the org-mode markdown code as normal and re-use the LaTeX code as templates 
 ## Usage
 
 - `git clone https://github.com/MooersLab/writingLogTemplateInOrg` into the folder containing your current writing project.
-- Start Emacs, perhaps using the [latex-emacs]() profile
+- Start Emacs, perhaps using the [latex-emacs](https://github.com/MooersLab/latex-emacs) profile.
 - Load the writingLogTemplate.org file into Emacs via `C-x C-f`. 
-- Essential keybindings for editing this file in in org-mode:
+
+## Configure yasnippets
+
+You may want to enable yasnippets to make available your latex-mode and org-mode snippets while editing the writinglog.org file in org-mode.
+
+1. In your `~/.emacs.d/snippets/latex-mode`, create a file named `.yas-parents`.
+2. Add the following to this file:
+
+```elisp
+latex-mode
+org-mode
+```
+3. Under the Yasnippets pulldown, select `reload everything` or in the minibuffer, enter `M-x yas-reload-all`.
+ 
+
+## Essential keybindings for editing this file in in org-mode:
   + `C-g` to abort current command.
   + `C-x C-c` to quit Emacs
   + `C-x C-s` to save the current document.
