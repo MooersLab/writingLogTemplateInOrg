@@ -59,7 +59,7 @@ The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access o
 - [snippets for latex-mode in Emacs](https://github.com/MooersLab/snippet-latex-mode)
 - [Quizzes about Emacs to improve recall of keybindings](https://github.com/MooersLab/qemacs)
 - [Slides to talk given August 31, 2022](https://github.com/MooersLab/BerlinEmacsAugust2022)
-- [Emacsconf 2023 talk about GhostText on YouTube](https://www.youtube.com/watch?v=2NPUDYAOgW0&t=3s)
+- [Emacsconf 2023 talk about GhostText on YouTube December 2022](https://www.youtube.com/watch?v=2NPUDYAOgW0&t=3s)
 - [Slides from talk about GhostText, Data Science Workshop, July 2022](https://github.com/MooersLab/DSW22ghosttext)
 - [Video link to talk about GhostText, Data Science Workshop, July 2022](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d)
 
