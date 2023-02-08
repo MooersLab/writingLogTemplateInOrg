@@ -104,6 +104,7 @@ Take care not to re-start a project a second time.
 
 - Annals of Oncology, 51.7!
 - Cell
+- Journal of the American Chemical Society (JACS)
 - Molecular Cell
 - Nature
 - Nature Methods
@@ -112,8 +113,9 @@ Take care not to re-start a project a second time.
 - Nucleic Acids Research
 - PNAS
 - Science
+
   
-** Respectable Science Journals
+** Respectable Science Journals 
 
 - Acta Cryst. Section A
 - Acta Cryst. Section B
@@ -142,14 +144,36 @@ Take care not to re-start a project a second time.
 
 ** Computationtal biochemistry
 
+- [Biological Modeling and Simulation]()
+- Biochemistry
+- [Biomolecules](https://www.mdpi.com/journal/biomolecules) 6.1
+- [Biophyscial Journal]()
+- Chem. Phys. Lett.
 - Computational and Theoretical Chemistry, 1.9
 - Computational Biology and Chemistry, 2.8 
 - Computers in Engineering and Science
 - Crystals
 - International Journal of Molecular Science, 6.3
-- Journal of Computational Chemistry, 3.4
-- Journal of Molecular Graphics and Modeling
 - Journal of Molecular Graphics and Modelling, 2.5
+- J. Biol. Chem.
+- [Journal of Biomolecular Structure and Dynamics](), 5.235 
+- J. Chem. Phys. (JCP)
+- Journal of Computational Chemistry, 3.4
+- [J. Molecular Graphics and Modelling](https://www.sciencedirect.com/journal/journal-of-molecular-graphics-and-modelling), 2.9, 20% acceptance rate
+- [J. Molecular Modeling](https://www.springer.com/journal/894), 2.1
+- J. Phys. Chem. A (JPC A)
+- J. Phys. Chem. C (JPC C)
+- J. Phys. Chem. B (JPC B)
+- Langmuir
+- Macromolecules
+- Phys. Rev. B (PRB)
+- Phys. Rev. Lett. (PRL)
+- Phys. Chem. Chem. Phys.
+- [PLoS Computational Biology](https://journals.plos.org/ploscompbiol/), 4.5
+- PLoS One
+- Proc. Nat. Acad. of Sci. USA (PNAS)
+- RSC Adv.
+- Sci. Rep.
 
 
 ** Computing Journals
