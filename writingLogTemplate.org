@@ -145,7 +145,7 @@ Take care not to re-start a project a second time.
 ** Computationtal biochemistry
 
 - [Biological Modeling and Simulation]()
-- Biochemistry
+- [Biochemistry]()
 - [Biomolecules](https://www.mdpi.com/journal/biomolecules) 6.1
 - [Biophyscial Journal]()
 - Chem. Phys. Lett.
@@ -158,14 +158,15 @@ Take care not to re-start a project a second time.
 - J. Biol. Chem.
 - [Journal of Biomolecular Structure and Dynamics](), 5.235 
 - J. Chem. Phys. (JCP)
-- Journal of Computational Chemistry, 3.4
+- [Journal of Computational Chemistry](https://onlinelibrary.wiley.com/journal/1096987x), 3.4
 - [J. Molecular Graphics and Modelling](https://www.sciencedirect.com/journal/journal-of-molecular-graphics-and-modelling), 2.9, 20% acceptance rate
 - [J. Molecular Modeling](https://www.springer.com/journal/894), 2.1
 - J. Phys. Chem. A (JPC A)
 - J. Phys. Chem. C (JPC C)
 - J. Phys. Chem. B (JPC B)
 - Langmuir
-- Macromolecules
+- [Macromolecules]()
+- [Nature Computational Science](https://www.nature.com/natcomputsci) IF, Unknown
 - Phys. Rev. B (PRB)
 - Phys. Rev. Lett. (PRL)
 - Phys. Chem. Chem. Phys.
