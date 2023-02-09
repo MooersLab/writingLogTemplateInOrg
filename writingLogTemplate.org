@@ -153,7 +153,7 @@ Take care not to re-start a project a second time.
 - Computational Biology and Chemistry, 2.8 
 - Computers in Engineering and Science
 - Crystals
-- International Journal of Molecular Science, 6.3
+- [International Journal of Molecular Science](https://www.mdpi.com/journal/ijms), 6.3
 - Journal of Molecular Graphics and Modelling, 2.5
 - J. Biol. Chem.
 - [Journal of Biomolecular Structure and Dynamics](), 5.235 
