@@ -2,7 +2,7 @@
 
 Use this writing log in parallel to the main writing project document to track your progress and record your plans.
 
-[Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read LaTeX code.
+[Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read some LaTeX code.
 
 Use the org-mode markdown code as normal and re-use the LaTeX code as templates for figures and tables with captions.
 
