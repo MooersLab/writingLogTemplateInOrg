@@ -2,7 +2,8 @@
 
 Use this writing log in parallel to the main writing project document to track your progress and record your plans.
 
-[Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read some LaTeX code.
+[Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read directly some LaTeX code.
+The remaining LaTeX code can be used in a code block for LaTeX.
 
 Use the org-mode markdown code as normal and re-use the LaTeX code as templates for figures and tables with captions.
 
@@ -12,9 +13,10 @@ Use the org-mode markdown code as normal and re-use the LaTeX code as templates 
 - 20 considerations for planning a manuscript.
 - A table of contents that is automatically generated and hyperlinked.
 - An automatically generated index that is hyperlinked.
-- Support for generating a references cited section form a Bibtex library.
+- Support for generating a references cited section from a Bibtex library.
 - A writing log section for recording notes by each day's accomplishments.
 - Plot of wordcount by writing session to track your progress.
+- Use org-clock and clock tables to track and summarize your effort.
 
 ## Usage
 
