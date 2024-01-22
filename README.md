@@ -22,7 +22,9 @@ Use the org-mode markdown code as normal and re-use the LaTeX code as templates 
 - Plot of wordcount by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
 
-Version 0.3 of the writing log is divided into four sections: project intiation; daily entries; future additions and tangents; and Guidelines, checklists, protocols, and helpful.
+### Features of Version 0.3 
+
+The writing log is divided into four sections: project intiation; daily entries; future additions and tangents; and Guidelines, checklists, protocols, and helpful.
 
 ### Project intiation
 
