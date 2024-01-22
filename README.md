@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-# A Org-mode writing log template 
+# Writing log for org-mode
 
 Use this writing log in parallel to the main writing project document to track your progress and record your plans.
 
@@ -22,11 +22,28 @@ Use the org-mode markdown code as normal and re-use the LaTeX code as templates 
 - Plot of wordcount by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
 
-### Features of Version 0.3 
 
-The writing log is divided into four sections: project intiation; daily entries; future additions and tangents; and guidelines, checklists, protocols, and helpful.
+## Introduction
 
-### Project intiation
+The writing log is a document that is external to the manuscript.
+It is used to store the plans and progress made on a one manuscript.
+It is tool for enhancing your focus and sustaining forward momentum on the writing project.
+It is also tool that ease re-engagement in an interrupted writing project.
+It is like a master thinking document or second brain for a writing project.
+
+Instructions for using the writing log are found in the annotations in the template.
+You can delete these after they are no longer needed.
+
+Version 0.3 of the writing log is divided into four sections: 
+
+- project initiation
+- daily entries
+- future additions and tangents
+- Guidelines, checklists, protocols, and helpful tips
+
+The subsections of these four sections are shown below.
+
+## Project initiation
 
 - Rationale
 - Audience
@@ -38,13 +55,12 @@ The writing log is divided into four sections: project intiation; daily entries;
 - Prior discussion points
 - Potential titles
 - Potential keywords
-- Protential abstract
+- Potential abstract
 - Abbreviations
-- Potetial collaborators
-- Potetial competitors
-- Potetial reviewers
+- Potential collaborators
+- Potential competitors
+- Potential reviewers
 - Draft cover letter
-
 
 ### Daily entries
 
@@ -77,9 +93,6 @@ The writing log is divided into four sections: project intiation; daily entries;
 - Guidelines for benchmarks
 - Guidelines for using Writing Progress Notebook
 - Guidelines for using a personal knowledge base
-
-
-
 
 ## Usage
 
