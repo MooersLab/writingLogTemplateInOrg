@@ -129,6 +129,10 @@ The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access o
 - [Org-mode manuscript template](https://github.com/MooersLab/manuscriptInOrg)
 - [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX)
 - [Writing log template in LaTeX (compiles on Overleaf and in Emacs)](https://github.com/MooersLab/writingLogTemplate)
+- [Writing log template in reStructuredText](https://github.com/MooersLab/writing-log-rst) reStructuredText is used by programmers for documentation.
+- [Writing log template in Markdown](https://github.com/MooersLab/writing-log-md) Markdown variant. Read and rendered to PDF by most good text editors.
+- [Writing log template in ODT](https://github.com/MooersLab/writing-log-odt) ODT can be read by Open Office, LibreOffice and MS Word.
+- [Writing log template in DOCX for MS Word](https://github.com/MooersLab/writing-log-docx) MS Word variant. Probably the least suitable format for this task.
 - [Slideshow template in LaTeX](https://github.com/MooersLab/slideshowTemplateLaTeX)
 - [Annotated bibliography Template in LaTeX](https://github.com/MooersLab/annotatedBibliography)
 - [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX/edit/main/README.md)
