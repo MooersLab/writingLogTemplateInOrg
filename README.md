@@ -24,7 +24,7 @@ Use the org-mode markdown code as normal and re-use the LaTeX code as templates 
 
 ### Features of Version 0.3 
 
-The writing log is divided into four sections: project intiation; daily entries; future additions and tangents; and Guidelines, checklists, protocols, and helpful.
+The writing log is divided into four sections: project intiation; daily entries; future additions and tangents; and guidelines, checklists, protocols, and helpful.
 
 ### Project intiation
 
