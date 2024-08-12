@@ -34,14 +34,17 @@ It is like a master thinking document or a second brain for a writing project.
 Instructions for using the writing log are found in the annotations in the template.
 You can delete these after they are no longer needed.
 
-Version 0.3 of the writing log is divided into four sections: 
+Version 0.5 of the writing log is divided into four sections: 
 
 - project initiation
+- project data
+- plans to support the project
+- timely completion
 - daily entries
 - future additions and tangents
 - Guidelines, checklists, protocols, and helpful tips
 
-The subsections of these four sections are shown below.
+The subsections of these sections are shown below.
 
 ### Project initiation
 
@@ -194,6 +197,7 @@ The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access o
 
 |Version      | Changes                                                                                      | Date                 |
 |:-----------|-----------------------------------------------------------------------------------------------|:--------------------|
+| Version 0.1 |   First working version.                                                                     | 2022 September 10    |
 | Version 0.5 |   Added five sections to catch up with the tex version.                                      | 2024 August 11      |
 
 
