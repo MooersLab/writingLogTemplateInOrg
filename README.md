@@ -165,8 +165,34 @@ org-mode
   + `C-c C-e l o` to export to pdflatex and BibTeX and open the resulting PDF in the default PDF viewer.
   + `C-x u` to undo the last change.
   + `M-UP` or `M-DOWN` to shift lines up and down. UP and Down are the arrow keys.
+  + `C-3 S-tab` to collapse the whole document while showing headlines down to the 3rd level. Change the number to collapse to a different level.
+  + `C-x C-o` to show the outline view using consult. This is the same as `M-x consult-outline`. This consult command collapses the document into a more compact format than `C-s S-tab` command. It is easier to navigate as a result. You have to install the consult package.
 
 The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access org-mode because it is built into Emacs.
+
+## Bash function for creating writing log for new project
+
+At the start of a writing project, use this function to write a copy of the writing log template to a file with the project name in it.
+Store this Dash function in the `.bashrc` or `.zshrc` file. Oh shoot too
+
+```bash
+function logorg {
+echo "Copy template writing log in org with project number in title."
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: not enough arguments"
+  echo "Usage1: logorg projectID"
+  return 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  echo "Usage1: logorg projectID"
+  return 2
+fi
+projectID="$1"
+echo "Write writing log to log$1.org file."
+cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5.org log$1.org
+}
+```
+
 
 ## Related projects of possible interest
 
