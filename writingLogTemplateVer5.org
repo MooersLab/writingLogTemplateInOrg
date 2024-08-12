@@ -1011,10 +1011,10 @@ Accomplishments:
 # done".
 
 # I have to admit that I rarely do this task next. I generally reconsider
-# all of the pending to do's at the start of my work session, and I often
+# all of the pending to-do's at the start of my work session, and I often
 # wind up identifying a new task that was not identified as the "Next
 # Action" at the end of the last work session. Anyways, you do gain the
-# Peace of Mind knowing that you have identified the next step, although
+# peace of mind knowing that you have identified the next step, although
 # you may not take it. If you do not use this section, go ahead and delete
 # it.
 
@@ -1027,7 +1027,11 @@ Accomplishments:
 
 # These are the tasks that are thought to be required to get the project
 # finished. The prioritizing of the tasks is the hard part. The book "Time
-# Power" by Charles Hobbs provides helpful helpful guidance.
+# Power" by Charles Hobbs provides helpful guidance on setting priorities.
+# I use an unordered list below but you can use a list of TODO items and 
+# include this org file in the list of source files for the generation of 
+# TODOs in org agenda. I generally would have an overwhelming number of
+# TODOs so I do not use org-agenda in this fashion.
 
 -
 -
