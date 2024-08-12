@@ -6,10 +6,10 @@
 
 Use this writing log in parallel to the main writing project document to track your progress and record your plans.
 
-[Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read directly some LaTeX code.
+[Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read some LaTeX code directly.
 The remaining LaTeX code can be used in a code block for LaTeX.
 
-Use the org-mode markdown code as normal and re-use the LaTeX code as templates for figures and tables with captions.
+Use the org-mode markdown code as normal and reuse the LaTeX code as templates for figures and tables with captions.
 
 
 ## Features
@@ -18,18 +18,18 @@ Use the org-mode markdown code as normal and re-use the LaTeX code as templates 
 - A table of contents that is automatically generated and hyperlinked.
 - An automatically generated index that is hyperlinked.
 - Support for generating a references cited section from a Bibtex library.
-- A writing log section for recording notes by each day's accomplishments.
+- A writing log section for recording notes about each day's accomplishments.
 - Plot of wordcount by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
 
 
-## Introduction
+### Introduction
 
 The writing log is a document that is external to the manuscript.
-It is used to store the plans and progress made on a one manuscript.
-It is tool for enhancing your focus and sustaining forward momentum on the writing project.
-It is also tool that ease re-engagement in an interrupted writing project.
-It is like a master thinking document or second brain for a writing project.
+It stores the plans and progress made on one manuscript.
+It is a tool for enhancing your focus and sustaining forward momentum on the writing project.
+It is also a tool that eases re-engagement in an interrupted writing project.
+It is like a master thinking document or a second brain for a writing project.
 
 Instructions for using the writing log are found in the annotations in the template.
 You can delete these after they are no longer needed.
@@ -43,7 +43,7 @@ Version 0.3 of the writing log is divided into four sections:
 
 The subsections of these four sections are shown below.
 
-## Project initiation
+### Project initiation
 
 - Rationale
 - Audience
@@ -62,9 +62,51 @@ The subsections of these four sections are shown below.
 - Potential reviewers
 - Draft cover letter
 
+### Project Data
+
+- Inventory of data on hand
+- Inventory of project's required external software
+- Inventory of project's software repositories
+- Relevant videos
+- Relevant blogs
+- Relevant literature sources
+- Relevant collections of PDFs
+- Project's progress summary for annual grant report
+- Project's progress summary for annual report to college
+
+
+
+### Plans to support the project
+
+- Budget
+- Relation to specific aims of funded grants.
+- Secure funding for the research and manuscript.
+- Timeline to do the required experiments to test the hypothesis. 
+- Secure access to required national laboratory resources at experimental stations (i.e., general user proposal and beamtime requests).
+- Secure access to computing resources.
+- Gather the appropriate information from the literature.
+- Recruit collaborators
+- Recruit lab members to do the work.
+- Individual career development for lab members, including yourself.
+- Biosafety.
+- Authentication of key biological and chemical resources.
+- Rigorous statistical sampling and data analysis
+- Data management including backups and archives.
+- Data sharing.
+- The NIH PEDP.
+- Advertising plan: posters, talks, seminars, YouTube videos, social media posts.
+
+
+### Project management for timely completion 
+
+- Checklist for manuscript completion.
+- Timeline and Milestones.
+- Periodic assessments of the current state of the manuscript.
+
+
 ### Daily entries
 
-- Daily protocol
+- Daily Protocol
 - Daily Log
 - Update writing progress notebook
 - Update personal knowledge base
@@ -73,7 +115,6 @@ The subsections of these four sections are shown below.
 - To be done
 - Word Count
 
-
 ### Future additions and tangents
 
 - Ideas to consider adding to the manuscript
@@ -81,7 +122,7 @@ The subsections of these four sections are shown below.
   + Results
   + Discussion
 - To be done someday
-- Spin off writing projects
+- Spin-off writing projects
 
 
 ### Guidelines, checklists, protocols, helpful hints
@@ -91,7 +132,7 @@ The subsections of these four sections are shown below.
 - Guidelines for debugging the annotated bibliography
 - Graphical Abstract
 - Guidelines for benchmarks
-- Guidelines for using Writing Progress Notebook
+- Guidelines for using the Writing Progress Notebook
 - Guidelines for using a personal knowledge base
 
 ## Usage
@@ -114,11 +155,11 @@ org-mode
 3. Under the Yasnippets pulldown, select `reload everything` or in the minibuffer, enter `M-x yas-reload-all`.
  
 
-## Essential keybindings for editing this file in in org-mode:
+## Essential keybindings for editing this file in org-mode:
   + `C-g` to abort current command.
   + `C-x C-c` to quit Emacs
   + `C-x C-s` to save the current document.
-  + `C-c C-e l o` to export to pdflatex and bibtex and open the resulting PDF in default PDF viewer.
+  + `C-c C-e l o` to export to pdflatex and BibTeX and open the resulting PDF in the default PDF viewer.
   + `C-x u` to undo the last change.
   + `M-UP` or `M-DOWN` to shift lines up and down. UP and Down are the arrow keys.
 
@@ -147,4 +188,20 @@ The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access o
 - [Video link to talk about GhostText, Data Science Workshop, July 2022](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/4da0872f028c4255ae12935655e911321d)
 - [Slideshow about using LaTeX in Emacs, Berlin Emacs Meetup, 31 August 2022](https://github.com/MooersLab/BerlinEmacsAugust2022)
 - [The writer's crede](https://github.com/MooersLab/thewriterslaw)
+
+
+## Update history
+
+|Version      | Changes                                                                                      | Date                 |
+|:-----------|-----------------------------------------------------------------------------------------------|:--------------------|
+| Version 0.5 |   Added five sections to catch up with the tex version.                                      | 2024 August 11      |
+
+
+
+## Sources of funding
+
+- NIH: R01 CA242845
+- NIH: R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel)
+- NIH: P20 GM103640 and P30 GM145423 (PI: A. West)
 
