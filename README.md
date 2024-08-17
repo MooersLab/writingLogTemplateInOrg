@@ -170,6 +170,15 @@ org-mode
 
 The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access org-mode because it is built into Emacs.
 
+## Using with org-pomodoro
+
+The daily log section is the ideal place for running a pomodoro timer.
+The daily entries have a property drawer.
+Place the cursor or point below the current day's heading and enter `C-c o` to start a pomodoro with the start and end times logged in a logbook in the property drawer.
+
+
+
+
 ## Bash function for creating writing log for new project
 
 At the start of a writing project, use this function to write a copy of the writing log template to a file with the project name in it.
