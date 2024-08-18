@@ -232,9 +232,9 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 
 |Version      | Changes                                                                                      | Date                 |
 |:-----------|-----------------------------------------------------------------------------------------------|:--------------------|
-| Version 0.1 |   First working version.                                                                     | 2022 September 10    |
-| Version 0.5 |   Added five sections to catch up with the tex version.                                      | 2024 August 11      |
-| Version 0.6 |   Successful compiling now independent of init.el file.                                      | 2024 August 18      |
+| Version 0.1 | First working version.                                                                     | 2022 September 10    |
+| Version 0.5 | Added five sections to catch up with the tex version.                                      | 2024 August 11      |
+| Version 0.6 | Compiles now without init.el file. Moved `Daily protocol` to `Guidelines` section. Elevated  `Daily Log` to section level. | 2024 August 18      |
 
 
 ## Sources of funding
