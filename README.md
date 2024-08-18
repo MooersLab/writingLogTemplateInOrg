@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.5&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.6&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -234,7 +234,7 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 |:-----------|-----------------------------------------------------------------------------------------------|:--------------------|
 | Version 0.1 |   First working version.                                                                     | 2022 September 10    |
 | Version 0.5 |   Added five sections to catch up with the tex version.                                      | 2024 August 11      |
-
+| Version 0.6 |   Successful compiling now independent of init.el file.                                      | 2024 August 18      |
 
 
 ## Sources of funding
