@@ -13,6 +13,7 @@
 #+LaTeX_HEADER:\usepackage{datetime2}
 #+LaTeX_HEADER:\usepackage{minted}
 #+LaTeX_HEADER:\usepackage{ulem}
+#+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
 #+LaTeX_HEADER:\usepackage{spreadtab}
 #+LaTeX_HEADER:%Print page numbers in the upper right corner rather than the bottom center.
 #+LaTeX_HEADER:\pagestyle{myheadings}
@@ -30,9 +31,6 @@
 #+LaTeX_HEADER:}
 #+LaTeX_HEADER:% todolist env from https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
 #+LaTeX_HEADER:% done with checkmark, wontfix with x, next with finger.
-#+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
-#+LaTeX_HEADER:\newlist{todolist}{itemize}{2}
-#+LaTeX_HEADER:\setlist[todolist]{label=$\square$}
 #+LaTeX_HEADER:\usepackage{pifont}
 #+LaTeX_HEADER:\newcommand{\nmark}{\ding{42}}% next
 #+LaTeX_HEADER:\newcommand{\cmark}{\ding{51}}% checkmark
@@ -63,24 +61,29 @@
 :END:
 #+Latex:\index{introduction}
 
-This template contains a table of contents, numbered outline, and an
-index that support navigating the document when it has been rendered
-into a PDF. The label and ref macros are part of LaTeX's hyperlinking
-system. Items in the table of contents and in the index are hyperlinked
-to sites in the body of the writing log. When the tex file is being
-viewed on Overleaf, the file outline will appear in the left column. You
-can navigate to different sections of the document by clicking on the
-file outline in this left column.
+This template is in Org mode \cite{Dominik2016TheOrgMode9ReferenceManualOrganizeYourLifeWithGNUEmacs}.
+Org-mode aims to be a used for organizing your life, managing knowledge, doing literate programming, and preparing manuscripts.
+It can be used to teach programming \cite{Birkenkrahe2023TeachingDataScienceWithLiterateProgrammingTools}.
+Many people prefer to work in org-mode all day.
 
-*Version 0.5* is a massive restructuring from four sections to seven sections
-for improved clarity and simplicity. The comments in the sections below
-can be commented out with
-a good text editor or by inserting a percent sign at the start of each
-line. Some of the explanatory text some may have value in the future.
-You can always comment out the lines that contain the explanatory text
-by inserting a percent sign at the start of each line. In Overleaf, you
-would can select the block of text and then enter command-/ to comment
-out the block.
+
+This template is similar to the writing log formatted for LaTeX.
+They share much of the same preamble.
+It is exported from org-mode through LaTeX to PDF.
+This file compiles by entering \textbf{C-c C-e l o} without using an init.el file (e.g., \textbf{emacs -Q logXXXX.org}), but you may have to export it twice to get all of the changes in the source file deployed in the PDF.
+You have to wait half a minute for the compiled document to appear.
+The compiling is faster in LaTeX and on Overleaf.
+This does not matter much because I mostly read and work with the org file when planning my writing session.
+
+This template contains a table of contents, numbered outline, and an index that support navigating the document when it has been rendered into a PDF.
+The label and ref macros are part of LaTeX's hyperlinking system.
+Items in the table of contents and in the index are hyperlinked to sites in the body of the writing log.
+You can navigate to different sections of the document by clicking on the file outline in this left column.
+
+The comments in the sections below can be commented out with a good text editor or by inserting a percent sign at the start of each line.
+Some of the explanatory text some may have value in the future.
+You can always comment out the lines that contain the explanatory text by inserting a percent sign at the start of each line.
+
 
 
 
@@ -1410,7 +1413,7 @@ Premises of the creed:
 :END:
 
 
-#+Latex:\bibliography{AnnoBibMyBDA}
+#+Latex:\bibliography{/Users/blaine/Documents/global.bib}
 #+LaTeX:\printindex
 
 [fn:1] [[https://github.com/MooersLab/writing-progress-2024-25]]
