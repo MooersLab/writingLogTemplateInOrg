@@ -895,42 +895,7 @@ This section catalogs the data to be used in the paper.
 
 
 
-
-
-
-
-* Daily entries
-:PROPERTIES:
-:CUSTOM_ID: sec:dailyEntries
-:END:
-#+Latex:\index{daily entries}
-
-
-** Daily protocol
-:PROPERTIES:
-:CUSTOM_ID: sub:entry-protocol
-:END:
-#+Latex:\index{daily protocol}
-
-
-1. At start of work session, review the timeline
-   [[#subsec:benchmarks][2.5]], recent daily entries
-   [[#sub:daily-log][2.2]], next action item [[#subsec:next][2.6]], and
-   to-do list [[#subsec:to-do][2.7]].
-2. Write the goal(s) for the current writing session as a means of
-   engaging mentally in the work. This prose could be retained or
-   deleted at the end of the work session.
-3. At the end of the work session, move finished items to an achievement
-   list for the day.
-4. Move the unfinished items to the to-do list [[#subsec:to-do][2.7]].
-5. Identify the next task or action [[#subsec:next][2.6]].
-6. Update the wordcount.txt file, if you wrote anything
-   [[#subsec:zk]].
-7. Update the project Sheet in the Writing Progress Workbook
-   [[#subsec:WPsheet][2.3]].
-8. Update your personal knowledge base [[#subsec:zk][2.4]].
-
-** Daily Log
+* Daily Log
 :PROPERTIES:
 :CUSTOM_ID: sub:daily-log
 :END:
@@ -938,7 +903,7 @@ This section catalogs the data to be used in the paper.
 
 
 
-*** 2024 August 10
+** 2024 August 10
 :PROPERTIES:
 :CUSTOM_ID: january-21
 :END:
@@ -950,48 +915,6 @@ Accomplishments:
 - 
 - 
 
-** Update Writing Progress Notebook
-:PROPERTIES:
-:CUSTOM_ID: subsec:WPsheet
-:END:
-#+LaTeX:\index{writing progress notebook}
-
-# The writing progress notebook enables the tracking of progress on a
-# project basis [fn:1]. The Notebook automatically updates sums of words
-# written and minutes spent across all projects on a given day. It only
-# takes a few seconds to enter the number of words written and the time
-# spent for a specific project on that project's Google Sheet. If you have
-# Voice In plus activated, say the words "open sheet 37" to have the
-# worksheet for project 37 opened in the web browser. If not, click on
-# this direct link to the Google Sheet in the compiled PDF of this writing
-# log [fn:2].
-
-# Update the sheet for this project with the total number of minutes spent
-# on this project and the word count. The word count is accessed in
-# Overleaf under the menu pull-down. The word count operation has to be
-# applied to a recently compiled tex document.
-
-
-** Update Zettelkästen in org-roam
-:PROPERTIES:
-:CUSTOM_ID: subsec:zk
-:END:
-#+LaTeX:\index{zettelkasten}
-
-# Update your knowledge base if you found anything worth adding to it. See
-# section 4 for guidance ([[#subsec:guides:knowledgebase][4.7]]).
-
-
-** Timeline or Benchmarks
-:PROPERTIES:
-:CUSTOM_ID: subsec:benchmarks
-:END:
-#+LaTeX:\index{timeline}
-#+LaTeX:\index{benchmarks}
-
-# This section is an outline of benchmarks or deadlines. I include the
-# deadline dates in square brackets. It is best to try to map out a
-# timeline so that the project can continue to move forward.
 
 
 ** Next action
@@ -1076,6 +999,48 @@ Accomplishments:
 #+Latex:  \label{tab:my_label}
 #+LaTeX:\end{table}
 
+** Update Writing Progress Notebook
+:PROPERTIES:
+:CUSTOM_ID: subsec:WPsheet
+:END:
+#+LaTeX:\index{writing progress notebook}
+
+# The writing progress notebook enables the tracking of progress on a
+# project basis [fn:1]. The Notebook automatically updates sums of words
+# written and minutes spent across all projects on a given day. It only
+# takes a few seconds to enter the number of words written and the time
+# spent for a specific project on that project's Google Sheet. If you have
+# Voice In plus activated, say the words "open sheet 37" to have the
+# worksheet for project 37 opened in the web browser. If not, click on
+# this direct link to the Google Sheet in the compiled PDF of this writing
+# log [fn:2].
+
+# Update the sheet for this project with the total number of minutes spent
+# on this project and the word count. The word count is accessed in
+# Overleaf under the menu pull-down. The word count operation has to be
+# applied to a recently compiled tex document.
+
+
+** Update Zettelkästen in org-roam
+:PROPERTIES:
+:CUSTOM_ID: subsec:zk
+:END:
+#+LaTeX:\index{zettelkasten}
+
+# Update your knowledge base if you found anything worth adding to it. See
+# section 4 for guidance ([[#subsec:guides:knowledgebase][4.7]]).
+
+
+** Timeline or Benchmarks
+:PROPERTIES:
+:CUSTOM_ID: subsec:benchmarks
+:END:
+#+LaTeX:\index{timeline}
+#+LaTeX:\index{benchmarks}
+
+# This section is an outline of benchmarks or deadlines. I include the
+# deadline dates in square brackets. It is best to try to map out a
+# timeline so that the project can continue to move forward.
 
 
 * Future additions and tangents
@@ -1185,6 +1150,30 @@ Accomplishments:
 #+LaTeX:\index{protocols}
 #+LaTeX:\index{helpful hints}
 
+
+** Daily protocol
+:PROPERTIES:
+:CUSTOM_ID: sub:entry-protocol
+:END:
+#+Latex:\index{daily protocol}
+
+
+1. At start of work session, review the timeline
+   [[#subsec:benchmarks][2.5]], recent daily entries
+   [[#sub:daily-log][2.2]], next action item [[#subsec:next][2.6]], and
+   to-do list [[#subsec:to-do][2.7]].
+2. Write the goal(s) for the current writing session as a means of
+   engaging mentally in the work. This prose could be retained or
+   deleted at the end of the work session.
+3. At the end of the work session, move finished items to an achievement
+   list for the day.
+4. Move the unfinished items to the to-do list [[#subsec:to-do][2.7]].
+5. Identify the next task or action [[#subsec:next][2.6]].
+6. Update the wordcount.txt file, if you wrote anything
+   [[#subsec:zk]].
+7. Update the project Sheet in the Writing Progress Workbook
+   [[#subsec:WPsheet][2.3]].
+8. Update your personal knowledge base [[#subsec:zk][2.4]].
 
 ** Tips for using Overleaf
 :PROPERTIES:
