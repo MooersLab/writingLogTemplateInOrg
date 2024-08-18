@@ -1,11 +1,11 @@
 #+Title:Writing log for this hot paper
 #+Options: toc:nil author:nil \n:nil
+#+STARTUP: noindent
 #+LaTeX_CLASS:article
 #+LaTeX_CLASS_OPTIONS:[11pt,letterpaper]
-# \documentclass[10pt,letterpaper]{article}
 #+LaTeX_HEADER:\usepackage{amsmath}
 #+LaTeX_HEADER:\usepackage{amsfonts}
-#+LaTeX_HEADER:\usepackage{amssymb}
+#+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
 #+LaTeX_HEADER:\usepackage{makeidx}
 #+LaTeX_HEADER:\usepackage{graphicx}
 #+LaTeX_HEADER:\usepackage{hyperref}
@@ -14,9 +14,9 @@
 #+LaTeX_HEADER:\usepackage{minted}
 #+LaTeX_HEADER:\usepackage{ulem}
 #+LaTeX_HEADER:\usepackage{spreadtab}
-# #+LaTeX_HEADER:\usepackage{setspace} \singlespacing
 #+LaTeX_HEADER:%Print page numbers in the upper right corner rather than the bottom center.
 #+LaTeX_HEADER:\pagestyle{myheadings}
+#+LATEX_HEADER:\usepackage{parskip} % add a blank line between paragraphs upon export to PDF.
 #+LaTeX_HEADER:% Code for plotting table 
 #+LaTeX_HEADER:\usepackage{pgfplots}
 #+LaTeX_HEADER:\usepackage{pgfplotstable}
@@ -30,8 +30,7 @@
 #+LaTeX_HEADER:}
 #+LaTeX_HEADER:% todolist env from https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
 #+LaTeX_HEADER:% done with checkmark, wontfix with x, next with finger.
-#+LaTeX_HEADER:% Use square brackets around the commands: e.g., [\next]
-#+LaTeX_HEADER:\usepackage{enumitem,amssymb}
+#+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
 #+LaTeX_HEADER:\newlist{todolist}{itemize}{2}
 #+LaTeX_HEADER:\setlist[todolist]{label=$\square$}
 #+LaTeX_HEADER:\usepackage{pifont}
@@ -46,7 +45,6 @@
 #+LaTeX_HEADER:% \newcommand{\next}{\nmark}%
 #+LaTeX_HEADER:\bibliographystyle{cell}
 #+Latex_HEADER:\makeindex
-#+Latex_HEADER:\title{Writing Log for hot paper}
 #+Latex_HEADER:\author{Blaine Mooers}
 
 #+LaTeX:\maketitle
