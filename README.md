@@ -109,7 +109,26 @@ The subsections of these sections are shown below.
 
 ### Daily entries
 
-- Daily Protocol
+Create the following yasnippet snippet with the tab trigger of `daily` to autogenerate a subsection heading, property box, and index key using today's date.
+Save it to a file named daily-entry-for-writing-log inside `./snippets/org-mode`.
+
+```elisp
+# -*- coding: utf-8 -*-
+# group: writing-log
+# name: daily-entry-for-writing-log
+# key: daily
+# --
+** `(format-time-string "%Y-%m-%d")`
+:PROPERTIES:
+:CUSTOM_ID: `(format-time-string "%Y-%m-%d")`
+:END:
+#+Latex:\index{`(format-time-string "%Y-%m-%d")`}
+$0
+```
+
+Now type `daily` followed by `tab` to start a new subsection for the current day's entry.
+
+
 - Daily Log
 - Update writing progress notebook
 - Update personal knowledge base
@@ -129,7 +148,8 @@ The subsections of these sections are shown below.
 
 
 ### Guidelines, checklists, protocols, helpful hints
- 
+
+- Daily Protocol
 - Tips for using Overleaf
 - Protocol for running Grammarly in Overleaf
 - Guidelines for debugging the annotated bibliography
