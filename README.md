@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-# Writing log for org-mode
+# Writing log template in org-mode
 
 Use this writing log in parallel to the main writing project document to track your progress and record your plans.
 
