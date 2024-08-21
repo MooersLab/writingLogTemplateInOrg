@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.6&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.7&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -21,6 +21,7 @@ Use the org-mode markdown code as normal and reuse the LaTeX code as templates f
 - A writing log section for recording notes about each day's accomplishments.
 - Plot of wordcount by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
+- A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and entering tab.
 
 
 ### Introduction
@@ -235,6 +236,7 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 | Version 0.1 | First working version.                                                                     | 2022 September 10    |
 | Version 0.5 | Added five sections to catch up with the tex version.                                      | 2024 August 11      |
 | Version 0.6 | Compiles now without init.el file. Moved `Daily protocol` to `Guidelines` section. Elevated  `Daily Log` to section level. | 2024 August 18      |
+| Version 0.7 | Moved the comments or advice prose into a GUIDANCE drawer in each section outside of the Guidelines section. | 2024 August 21      |
 
 
 ## Sources of funding
