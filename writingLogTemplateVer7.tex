@@ -1,4 +1,4 @@
-% Created 2024-08-21 Wed 13:57
+% Created 2024-08-27 Tue 11:05
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt,letterpaper]{article}
 \usepackage[utf8]{inputenc}
@@ -17,6 +17,7 @@
 \setlength{\parindent}{0pt} % make block paragraphs
 \usepackage{makeidx}
 \usepackage{graphicx}
+\usepackage{xurl} % permit line breaks in urls
 \usepackage{hyperref}
 \usepackage[letterpaper, total={7in, 9in}]{geometry}
 \usepackage{datetime2}
@@ -65,6 +66,8 @@ fixed,precision=2,
 \begin{document}
 
 \maketitle
+
+
 \maketitle
 
 
@@ -73,212 +76,77 @@ fixed,precision=2,
 
 
 
-
-\section{Introduction}
-\label{sec:org78acf67}
-\index{introduction}
-
-This template is in Org mode \cite{Dominik2016TheOrgMode9ReferenceManualOrganizeYourLifeWithGNUEmacs}.
-Org-mode aims to be a used for organizing your life, managing knowledge, doing literate programming, and preparing manuscripts.
-It can be used to teach programming \cite{Birkenkrahe2023TeachingDataScienceWithLiterateProgrammingTools}.
-Many people prefer to work in org-mode all day.
-
-
-This template is similar to the writing log formatted for \LaTeX{}.
-They share much of the same preamble.
-It is exported from org-mode through \LaTeX{} to PDF.
-This file compiles by entering \textbf{C-c C-e l o} without using an init.el file (e.g., \textbf{emacs -Q logXXXX.org}), but you may have to export it twice to get all of the changes in the source file deployed in the PDF.
-You have to wait half a minute for the compiled document to appear.
-The compiling is faster in \LaTeX{} and on Overleaf.
-This does not matter much because I mostly read and work with the org file when planning my writing session.
-
-This template contains a table of contents, numbered outline, and an index that support navigating the document when it has been rendered into a PDF.
-The label and ref macros are part of LaTeX's hyperlinking system.
-Items in the table of contents and in the index are hyperlinked to sites in the body of the writing log.
-You can navigate to different sections of the document by clicking on the file outline in this left column.
-
-The comments in the GUIDNACE drawers are usually hidden to reduce the clutter in the document.
-The comments  provide a quick access to suggested ways of using a secition.
-Put the cursor on the title of the drawer and enter tab to open the drawer.
-Repeat to close the drawer.
-
-
-
-
 \section{Project initiation}
-\label{sec:org6e1be76}
+\label{sec:org705758a}
 \index{project initiation}
 
 
 \subsection{Rationale for this article}
-\label{sec:orgb79433f}
+\label{sec:org61e5f8d}
 \index{rationale}
 
 \subsection{Audience for the paper}
-\label{sec:orgae86a03}
+\label{sec:org76ee2fb}
 \index{audience for the paper}
 
 
 
 \subsection{Potential target journals for submission}
-\label{sec:org4a8cea6}
+\label{sec:org498c3a1}
 \index{target journals}
-
-\begin{enumerate}
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{enumerate}
 
 
 
 
 \subsection{Related projects}
-\label{sec:org4fe45be}
+\label{sec:org4925286}
 \index{related projects}
 
-
-\begin{itemize}
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{itemize}
-
 \subsection{Draft Introduction}
-\label{sec:org2780afc}
+\label{sec:org441690d}
 \index{draft!introduction}
 
 
 
 \subsection{Potential results}
-\label{sec:orgbcc3bc8}
+\label{sec:org4d9ce3c}
 \index{draft!results}
 
-
-\begin{enumerate}
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{enumerate}
-
 \subsection{Potential discussion points}
-\label{sec:orgd7bdce5}
+\label{sec:org4ac6bc1}
 \index{draft!discussion}
 
 
 
 \subsection{Prior discussion points}
-\label{sec:org7a968ad}
+\label{sec:org750c544}
 \index{draft!prior discussion points}
 
-\begin{enumerate}
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{enumerate}
-
 \subsection{Potential titles}
-\label{sec:orgb561812}
+\label{sec:orgecfef6e}
 \index{darft!potenital titles}
-
-\begin{enumerate}
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{enumerate}
 
 
 
 
 \subsection{Potential Keywords}
-\label{sec:org2ec1441}
+\label{sec:orge9d69b1}
 \index{darft!potenital keywords}
-
-\begin{enumerate}
-\item open science
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{enumerate}
 
 
 
 \subsection{Potential Abstract}
-\label{sec:orgf0d7b66}
+\label{sec:org313b688}
 \index{draft!potential abstract}
 
 
 \subsection{Abbreviations}
-\label{sec:orgb4e13db}
+\label{sec:org4790ab3}
 \index{draft!abbreviations}
-
-\begin{quote}
-Acronyms/Abbreviations/Initialisms should be defined the first time they
-appear in each of three sections: the abstract; the main text; the first
-figure or table. When defined for the first time, the
-acronym/abbreviation/initialism should be added in parentheses after the
-written-out form.
-\end{quote}
-
-Abbreviations are also listed at the end of the manuscript.
-
-\begin{description}
-\item[{abbrev}] its expansion
-
-\item[{abbrev}] its expansion
-
-\item[{abbrev}] its expansion
-
-\item[{abbrev}] its expansion
-\end{description}
 
 
 \subsection{Potential collaborators: name; institution;e-mail}
-\label{sec:org9ea0fe7}
+\label{sec:org153342f}
 \index{draft!collaborators}
 
 
@@ -293,7 +161,7 @@ Abbreviations are also listed at the end of the manuscript.
 \end{itemize}
 
 \subsection{Potential competitors: name; institution;e-mail}
-\label{sec:orgfffb2d0}
+\label{sec:org4616e75}
 \index{draft!competitors}
 
 
@@ -304,7 +172,7 @@ Abbreviations are also listed at the end of the manuscript.
 \end{itemize}
 
 \subsection{Potential reviewers: name; institution; e-mail}
-\label{sec:orga5a0a69}
+\label{sec:org1a3c6b6}
 \index{draft!potential reviewers}
 
 
@@ -321,64 +189,25 @@ Abbreviations are also listed at the end of the manuscript.
 \end{enumerate}
 
 \subsection{Draft cover letter}
-\label{sec:org7fef497}
+\label{sec:org9c2e134}
 \index{draft!cover letter}
 
 
 
 \subsection{Acknowledgements}
-\label{sec:org1c1b668}
+\label{sec:org408db1e}
 \index{draft!acknowledgements}
 
-\begin{itemize}
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{itemize}
-
 \subsection{Funding sources}
-\label{sec:org07dbfe5}
+\label{sec:org557a1fc}
 \index{data!funding sources}
-
-\begin{itemize}
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{itemize}
 
 
 \section{Data}
-\label{sec:org3d45080}
+\label{sec:orgac118c3}
 \index{data}
-
-This section catalogs the data to be used in the paper.
-
-
-
 \subsection{Inventory of data on hand}
-\label{sec:org9bf994a}
+\label{sec:org8c8d121}
 \index{data inventory!data on hand}
 
 
@@ -396,7 +225,7 @@ SSRL images August 2024 & MooersHD12\\[0pt]
 
 
 \subsection{Inventory of project's required external software}
-\label{sec:org96c787b}
+\label{sec:org53bfb01}
 \index{data inventory!external software}
 
 
@@ -414,7 +243,7 @@ Phenix & iMac3\\[0pt]
 
 
 \subsection{Inventory of project's software repositories}
-\label{sec:org1111ee8}
+\label{sec:org2cc439e}
 \index{data inventory!sofware repos}
 
 
@@ -432,7 +261,7 @@ Repo2 & Codeberg\\[0pt]
 
 
 \subsection{Relevant videos}
-\label{sec:orge89ce54}
+\label{sec:orgd079f47}
 \index{data inventory!videos}
 
 \begin{table}[htbp]
@@ -448,7 +277,7 @@ Description & URL\\[0pt]
 
 
 \subsection{Relevant blogs}
-\label{sec:org0afef85}
+\label{sec:org1ea7417}
 \index{data inventory!relevent blogs}
 \begin{itemize}
 \item 
@@ -466,7 +295,7 @@ Description & URL\\[0pt]
 
 
 \subsection{Relevant literature sources}
-\label{sec:org814ef6b}
+\label{sec:orgfaf2ecf}
 \index{data inventory!literature sources}
 
 \begin{itemize}
@@ -484,7 +313,7 @@ Description & URL\\[0pt]
 \end{itemize}
 
 \subsection{Relevant collections of PDFs in Research Rabbit and the like}
-\label{sec:org67e8fee}
+\label{sec:org92c5c67}
 \index{data!collections of PDFs}
 
 
@@ -504,7 +333,7 @@ Description & URL\\[0pt]
 
 
 \subsection{Project's progress summary for annual grant report}
-\label{sec:orgbc42568}
+\label{sec:org457e744}
 \index{annual grant report}
 
 \begin{itemize}
@@ -526,7 +355,7 @@ Description & URL\\[0pt]
 
 
 \subsection{Project's progress summary for annual report to college}
-\label{sec:org96acc7d}
+\label{sec:orge9d8dfd}
 \index{data!annual college report}
 
 \begin{itemize}
@@ -548,157 +377,115 @@ Description & URL\\[0pt]
 
 
 \section{Plans to support the writing project}
-\label{sec:orga1c3b23}
+\label{sec:orgea63d3e}
 \index{plans!support for the writing project}
-
-% Some of these plans are global in nature and may be applicable across all projects.
-% Some plans may be specific to the project at hand and must be elaborated on.
-% If these plans are relatively short, they could be included in the writing log, but if they are lengthy, it might be necessary to just provide a link to them.
-
-
-
-\begin{itemize}
-\item Budget
-\item Relation to specific aims of funded grants.
-\item Secure funding for the research and manuscript.
-\item Timeline to do the required experiments to test the hypothesis.
-\item Secure access to required national laboratory resources at experimental stations (i.e., general user proposal and beamtime requests).
-\item Secure access to computing resources.
-\item Gather the appropriate information from the literature.
-\item Recruit collaborators
-\item Recruit lab members to do the work.
-\item Individual career development for lab members, including yourself.
-\item Biosafety.
-\item Authentication of key biological and chemical resources.
-\item Rigorous statistical sampling and data analysis
-\item Data management including backups and archives.
-\item Data sharing.
-\item The NIH PEDP.
-\item Advertising plan: posters, talks, seminars, YouTube videos, social media posts.
-\end{itemize}
-
-
-
-
 \subsection{Timeline for experiments}
-\label{sec:org0a4cdb9}
+\label{sec:orgcadfce6}
 \index{plans!timeline for experiments}
 
 
 \subsection{User proposals: national labs}
-\label{sec:org1e1d690}
+\label{sec:org1c3c27b}
 \index{plans!user proposals for national labs}
 
 
 \subsection{User proposals: HPC}
-\label{sec:org7d8e10e}
+\label{sec:org5f34f12}
 \index{plans!user proposals for high performance computing}
 
 
 
 \subsection{Literature retrieval}
-\label{sec:orga414bb2}
+\label{sec:org33ac870}
 \index{plans!literature retrieval}
 
 
 
 
 \subsection{Funding}
-\label{sec:orga8a773e}
+\label{sec:orgfacb6dc}
 \index{plans!funding}
 
 
 
 \subsection{Recruitment of collaborators}
-\label{sec:org3ddd2bd}
+\label{sec:orgf8fb113}
 \index{plans!collaborators}
 
 
 
 \subsection{Recruitment of workers}
-\label{sec:org44a15b7}
+\label{sec:org2c359c8}
 \index{plans!recruitment of workers}
 
 
 
 \subsection{Career development plans}
-\label{sec:org1f379f4}
+\label{sec:org6ce5116}
 \index{plans!carreer development}
 
 
 
 \subsection{Biosafety}
-\label{sec:org67e92dc}
+\label{sec:org45405fc}
 \index{plans!biosafety}
 
 
 
 
 \subsection{Authentication of key biological resources}
-\label{sec:orgbc140b0}
+\label{sec:org1fc8a03}
 \index{plans!authentication!biological resources}
 
 
 \subsection{Authentication of chemical resources}
-\label{sec:orgf3fbd4b}
+\label{sec:orgbaf9894}
 \index{plans!authenticiation!chemical resources}
 
 
 \subsection{Statistical sampling and power analysis}
-\label{sec:orgced3717}
+\label{sec:org40c4c5e}
 \index{plans!sampling plan}
 \index{plans!power analysis}
 
 
 
 \subsection{Computer simulations}
-\label{sec:org4fd230b}
+\label{sec:org8c81f3c}
 \index{plans!simulation}
 
 
 \subsection{Data analysis plans}
-\label{sec:org889e133}
+\label{sec:org565de05}
 \index{plans!analysis}
 
 
 
 
 \subsection{Data management plans}
-\label{sec:org88fab98}
+\label{sec:orgb344dfa}
 \index{plans!data management}
 
 
 
 
 \subsection{Data sharing plans}
-\label{sec:org7cc0f1e}
+\label{sec:orgb3e33b3}
 \index{plans!data sharing}
 
 
 
 
 \subsection{The NIH PEDP}
-\label{sec:org75e19da}
+\label{sec:org20c2c36}
 \index{plans!NIH PEDP}
 
 
 \section{Project management for timely completion}
-\label{sec:org0bbb2f3}
+\label{sec:orgc945418}
 \index{plans!timely completion}
-
-\begin{itemize}
-\item Checklist for manuscript completion.
-\item Timeline and Milestones.
-\item Periodic assessments of the current state of the manuscript.
-\item 
-
-\item 
-
-\item 
-\end{itemize}
-
 \subsection{Checklist for manuscript completion}
-\label{sec:org1d5e47d}
+\label{sec:org6f0ef94}
 \index{manuscript completion!checklist}
 
 
@@ -747,40 +534,26 @@ Description & URL\\[0pt]
 
 
 \subsection{Timeline with milestones}
-\label{sec:orge523420}
+\label{sec:org5df709e}
 \index{manuscript completion!milestones}
-
-\begin{table}[htbp]
-\caption[Milestones]{Timeline with milestones.}
-\centering
-\begin{tabular}{lll}
-Milestone & Target date & Achievement date\\[0pt]
-\hline
-milestone 1 & date & date\\[0pt]
-milestone 2 & date & date\\[0pt]
-milestone 3 & date & date\\[0pt]
-milestone 4 & date & date\\[0pt]
-milestone 5 & date & date\\[0pt]
-\end{tabular}
-\end{table}
 
 
 
 \subsection{Assessments of current state}
-\label{sec:org6b4c6d7}
+\label{sec:org013c949}
 \index{manuscript completion!current state}
 
 
 
 \subsubsection{Date:}
-\label{sec:org62c6a4a}
+\label{sec:org2f83dfa}
 \index{manuscript completion!by date}
 
 
 
 \begin{enumerate}
 \item How far is the manuscript from being completed (in percent completion)?
-\label{sec:org7d46a35}
+\label{sec:orgf92b3c3}
 \index{manuscript completion!percent completion}
 
 
@@ -788,7 +561,7 @@ milestone 5 & date & date\\[0pt]
 
 
 \item List what keeps the manuscript from being submitted today.
-\label{sec:orgeff7933}
+\label{sec:org9a06e76}
 \index{manuscript completion!holding back}
 
 
@@ -796,7 +569,7 @@ milestone 5 & date & date\\[0pt]
 
 
 \item List what is missing from the manuscript that could improve its impact.
-\label{sec:orgafb00c2}
+\label{sec:orgfe40660}
 \index{manuscript completion!what is missing}
 
 
@@ -805,7 +578,7 @@ milestone 5 & date & date\\[0pt]
 
 
 \item What could be removed from the manuscript to streamline it?
-\label{sec:org45b521c}
+\label{sec:org8d843c8}
 \index{manuscript completion!streamlining}
 \end{enumerate}
 
@@ -813,13 +586,13 @@ milestone 5 & date & date\\[0pt]
 
 
 \section{Daily Log}
-\label{sec:org0dabfef}
+\label{sec:orgd71bb8f}
 \index{daily log}
 
 
 
 \subsection{2024 August 10}
-\label{sec:org2d0a63d}
+\label{sec:org9956e50}
 \index{2024 August 10}
 
 Accomplishments:
@@ -835,30 +608,16 @@ Accomplishments:
 
 
 \subsection{Next action}
-\label{sec:org7a95ec2}
+\label{sec:org4278119}
 \index{next action}
 
 
 \subsection{To be done}
-\label{sec:org058c058}
+\label{sec:org662851d}
 \index{To be done}
 
-\begin{itemize}
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{itemize}
-
 \subsection{Word Count}
-\label{sec:org7bd0801}
+\label{sec:org59f9274}
 \index{word count}
 
 
@@ -889,38 +648,21 @@ columns/Word/.style={column name=Words},
 \end{table}
 
 \subsection{Update Writing Progress Notebook}
-\label{sec:orgde2f8b9}
+\label{sec:orge119d5a}
 \index{writing progress notebook}
 
 
 \subsection{Update Zettelkästen in org-roam}
-\label{sec:org5408df5}
+\label{sec:org858e016}
 \index{zettelkasten}
 
 
 
 \section{Future additions and tangents}
-\label{sec:orgcd88e1a}
+\label{sec:org9665946}
 \index{future additions and tangents}
-
-\begin{itemize}
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-
-\item 
-\end{itemize}
-
-
-
 \subsection{Ideas to consider adding to the manuscript}
-\label{sec:org5eda2de}
+\label{sec:orga36365b}
 \index{future additions and tangents}
 
 
@@ -934,7 +676,7 @@ columns/Word/.style={column name=Words},
 \end{itemize}
 
 \subsubsection{Introduction}
-\label{sec:org88908eb}
+\label{sec:org7ce5f97}
 \index{introduction}
 
 
@@ -949,7 +691,7 @@ columns/Word/.style={column name=Words},
 \end{itemize}
 
 \subsubsection{Results}
-\label{sec:org45d9248}
+\label{sec:org14ff79d}
 \index{results}
 
 
@@ -964,7 +706,7 @@ columns/Word/.style={column name=Words},
 \end{itemize}
 
 \subsubsection{Discussion}
-\label{sec:org5df3313}
+\label{sec:org65d8ba6}
 \index{discussion}
 
 
@@ -977,20 +719,11 @@ columns/Word/.style={column name=Words},
 \end{itemize}
 
 \subsection{To be done someday}
-\label{sec:org2468c91}
+\label{sec:orgbde3dff}
 \index{to be done someday}
 
-
-\begin{itemize}
-\item 
-
-\item 
-
-\item 
-\end{itemize}
-
 \subsection{Spin off writing projects}
-\label{sec:org9916048}
+\label{sec:org54f9f71}
 \index{spin off writing progect}
 
 
@@ -1003,7 +736,7 @@ columns/Word/.style={column name=Words},
 
 
 \section{Guidelines, checklists, protocols, helpful hints}
-\label{sec:orgaaf308a}
+\label{sec:org99565c2}
 \index{guidelines}
 \index{checkists}
 \index{protocols}
@@ -1011,7 +744,7 @@ columns/Word/.style={column name=Words},
 
 
 \subsection{Daily protocol}
-\label{sec:org666a742}
+\label{sec:orgf8f4f32}
 \index{daily protocol}
 
 
@@ -1031,7 +764,7 @@ list for the day.
 \end{enumerate}
 
 \subsection{Tips for using Overleaf}
-\label{sec:org9eb8c85}
+\label{sec:orgacd22e6}
 \index{tips for using Overleaf}
 
 \begin{enumerate}
@@ -1048,7 +781,7 @@ Chrome Grammarly extension.
 
 
 \subsection{Protocol for running Grammarly in Overleaf}
-\label{sec:org1ff3169}
+\label{sec:org10f05e7}
 \index{running Grammarly in Overleaf}
 
 
@@ -1064,7 +797,7 @@ may have to scroll down a ways to see the document environment.
 
 
 \subsection{Guidelines for debugging the annotated bibliography}
-\label{sec:org0152b62}
+\label{sec:org9c06645}
 \index{annotated bibliography!guideline for debugging}
 
 
@@ -1092,7 +825,7 @@ Scholar.
 \end{enumerate}
 
 \subsection{Graphical Abstract}
-\label{sec:org90c10fd}
+\label{sec:org7749b1a}
 \index{graphical abstract}
 
 The following is copied from the Crystal Journal's
@@ -1120,12 +853,12 @@ graphical abstract is found
 
 
 \subsection{Guidelines for benchmarks}
-\label{sec:org0273714}
+\label{sec:orgb1897f7}
 \index{guidelines for benchmarks}
 
 
 \subsection{Guidelines for using Writing Progress Notebook}
-\label{sec:org2c19ce5}
+\label{sec:orgcb9d675}
 \index{writing progress notebook!guidelines}
 
 The writing progress notebook enables the tracking of progress on a
@@ -1140,7 +873,7 @@ log \footnote{\href{<insert link for specific sheet>}{<insert link for specific 
 
 
 \subsection{Guidelines for using a personal knowledge base}
-\label{sec:org8cfb260}
+\label{sec:orgf9f76d8}
 \index{personal knowledge base!guidelines}
 
 If you maintain a knowledge base like a Zettelkästen in org-roam or
@@ -1192,7 +925,7 @@ to do this over multiple days if you have fallen behind.
 
 
 \subsection{Writer's Creed}
-\label{sec:org779bb88}
+\label{sec:org7d1f302}
 \index{writer's creed}
 
 A writer does the following:
@@ -1251,7 +984,7 @@ Premises of the creed:
 
 
 \section{Backmatter}
-\label{sec:org252f713}
+\label{sec:orgaf0f25b}
 \bibliography{/Users/blaine/Documents/global.bib}
 \printindex
 \end{document}
