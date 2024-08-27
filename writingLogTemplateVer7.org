@@ -3,11 +3,13 @@
 #+STARTUP: noindent
 #+LaTeX_CLASS:article
 #+LaTeX_CLASS_OPTIONS:[11pt,letterpaper]
+:GUIDANCE:
 #+LaTeX_HEADER:\usepackage{amsmath}
 #+LaTeX_HEADER:\usepackage{amsfonts}
 #+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
 #+LaTeX_HEADER:\usepackage{makeidx}
-#+LaTeX_HEADER:\usepackage{graphicx}
+#+Latex_HEADER:\usepackage{graphicx}
+#+LaTeX_HEADER:\usepackage{xurl} % permit line breaks in urls
 #+LaTeX_HEADER:\usepackage{hyperref}
 #+LaTeX_HEADER:\usepackage[letterpaper, total={7in, 9in}]{geometry}
 #+LaTeX_HEADER:\usepackage{datetime2}
@@ -44,6 +46,8 @@
 #+LaTeX_HEADER:\bibliographystyle{cell}
 #+Latex_HEADER:\makeindex
 #+Latex_HEADER:\author{Blaine Mooers}
+:END:
+
 
 #+LaTeX:\maketitle
 
@@ -53,14 +57,13 @@
 
 
 
-
-* Introduction
+*** Overview of this writing log                         :noexport:
 :PROPERTIES:
 :CUSTOM_ID: introduction
 :CLASS: unnumbered
 :END:
 #+Latex:\index{introduction}
-
+:GUIDANCE
 This template is in Org mode \cite{Dominik2016TheOrgMode9ReferenceManualOrganizeYourLifeWithGNUEmacs}.
 Org-mode aims to be a used for organizing your life, managing knowledge, doing literate programming, and preparing manuscripts.
 It can be used to teach programming \cite{Birkenkrahe2023TeachingDataScienceWithLiterateProgrammingTools}.
@@ -81,12 +84,11 @@ Items in the table of contents and in the index are hyperlinked to sites in the 
 You can navigate to different sections of the document by clicking on the file outline in this left column.
 
 The comments in the GUIDNACE drawers are usually hidden to reduce the clutter in the document.
-The comments  provide a quick access to suggested ways of using a secition.
+The comments  provide a quick access to suggested ways of using a section.
 Put the cursor on the title of the drawer and enter tab to open the drawer.
 Repeat to close the drawer.
-
-
-
+The GUIDANCE drawers are under a headline with a :noexport: tag.
+:END:
 
 * Project initiation
 :PROPERTIES:
@@ -101,10 +103,10 @@ Repeat to close the drawer.
 :END:
 #+Latex:\index{rationale}
 
-
+*** Guidance on rationale for the paper                         :noexport:
 :GUIDANCE:
-# What is the rationale for writing this paper? To help advance the field?
-# To help win or renew a grant funding? To establish credibility in a new
+What is the rationale for writing this paper? To help advance the field?
+To help win or renew a grant funding? To establish credibility in a new
 :END:
 # field for my lab?
 
@@ -114,8 +116,9 @@ Repeat to close the drawer.
 :END:
 #+Latex:\index{audience for the paper}
 
+*** Guidance on audience for the paper                           :noexport:
 :GUIDANCE:
-# Describe in a paragraph of prose the target audience of this paper.
+Describe in a paragraph of prose the target audience of this paper.
 :END:
 
 
@@ -126,10 +129,11 @@ Repeat to close the drawer.
 :END:
 #+Latex:\index{target journals}
 
+*** Guidance on potential titles for the paper                     :noexport:
 :GUIDANCE:
-# The journal titles are enumerated in descending order of desirability.
-# You have a plan B journal identified at the time of submission so that
-# you can respond swiftly if the plan A journal rejects the paper.
+The journal titles are enumerated in descending order of desirability.
+You have a plan B journal identified at the time of submission so that
+you can respond swiftly if the plan A journal rejects the paper.
 :END:
 
 1.
@@ -146,15 +150,15 @@ Repeat to close the drawer.
 :END:
 #+Latex:\index{related projects}
 
-
+*** Guidance on related projects for the paper                     :noexport:
 :GUIDANCE:
-# By listing projects that are closely and even somewhat distantly related
-# to the project at hand, it is possible to identify some synergies that
-# might otherwise be overlooked. For example, when working in a new area,
-# it is often useful to capitalize on the investment made in reading in
-# the new field by capturing those insights in the form of a review
-# article or book chapter. If you use Overleaf, you can include a
-# hyperlink to the project's webpage.
+By listing projects that are closely and even somewhat distantly related
+to the project at hand, it is possible to identify some synergies that
+might otherwise be overlooked. For example, when working in a new area,
+it is often useful to capitalize on the investment made in reading in
+the new field by capturing those insights in the form of a review
+article or book chapter. If you use Overleaf, you can include a
+hyperlink to the project's webpage.
 :END:
 
 -
@@ -167,21 +171,20 @@ Repeat to close the drawer.
 :CUSTOM_ID: subsec:Introduction
 :END:
 #+Latex:\index{draft!introduction}
-
-
+*** Guidance on draft introduction for the paper                     :noexport:
 :GUIDANCE:
-# In this section and in the next two sections, we assemble the key
-# components of the paper. You may wonder why we did not do this in the
-# manuscript document. We find it easier to keep this prose close to the
-# other lists in the sections that follow these subsections. In other
-# words, we are using the writing log as an incubator for the initial
-# drafts of these components of the paper.
+In this section and in the next two sections, we assemble the key
+components of the paper. You may wonder why we did not do this in the
+manuscript document. We find it easier to keep this prose close to the
+other lists in the sections that follow these subsections. In other
+words, we are using the writing log as an incubator for the initial
+drafts of these components of the paper.
 
-# We craft a two-paragraph introduction following the method of Lindsay
-# (Lindsay 2020 Scientific Writing Thinking In Words 2nd Ed). We do this
-# drafting in the writing log until we are satisfied that we have a vision
-# of the project that is clear enough to proceed. At this point, we
-# transfer the draft introduction to the main manuscript.
+We craft a two-paragraph introduction following the method of Lindsay
+(Lindsay 2020 Scientific Writing Thinking In Words 2nd Ed). We do this
+drafting in the writing log until we are satisfied that we have a vision
+of the project that is clear enough to proceed. At this point, we
+transfer the draft introduction to the main manuscript.
 :END:
 
 
@@ -191,26 +194,25 @@ Repeat to close the drawer.
 :CUSTOM_ID: subsec:Results.
 :END:
 #+Latex:\index{draft!results}
-
-
+*** Guidance on draft introduction for the paper                     :noexport:
 :GUIDANCE:
-# This section contains a list of the potential key results that are vital
-# to addressing the central hypothesis. Usually, there are 4 to 6 key
-# results. Yes, we can think about the nature of the results even before
-# we have performed the experiments.
+This section contains a list of the potential key results that are vital
+to addressing the central hypothesis. Usually, there are 4 to 6 key
+results. Yes, we can think about the nature of the results even before
+we have performed the experiments.
 
-# We are not necessarily thinking about the expected results, but we can
-# guess about the nature of the results with regard to whether they will
-# be in the form of a table, a graph or an image. We then do an initial
-# sorting of the results on the basis of how much weight they bear upon
-# testing the central hypothesis. This sorting will be the order in which
-# the results are presented, in contrast to the general tendency to
-# deliver the results in the order in which we obtain the results. At this
-# point, we might even draft an initial paragraph for the results section
-# that outlines the order of the results. This initial paragraph helps to
-# set the reader's expectations about the results that follow. After this
-# initial paragraph is assembled and the planned results are listed, we
-# will transfer this text to the main manuscript.
+We are not necessarily thinking about the expected results, but we can
+guess about the nature of the results with regard to whether they will
+be in the form of a table, a graph or an image. We then do an initial
+sorting of the results on the basis of how much weight they bear upon
+testing the central hypothesis. This sorting will be the order in which
+the results are presented, in contrast to the general tendency to
+deliver the results in the order in which we obtain the results. At this
+point, we might even draft an initial paragraph for the results section
+that outlines the order of the results. This initial paragraph helps to
+set the reader's expectations about the results that follow. After this
+initial paragraph is assembled and the planned results are listed, we
+will transfer this text to the main manuscript.
 :END:
 
 1.
@@ -225,15 +227,15 @@ Repeat to close the drawer.
 :CUSTOM_ID: subsec:futureDiscussion
 :END:
 #+Latex:\index{draft!discussion}
-
+*** Guidance on draft discussion points for the paper                     :noexport:
 :GUIDANCE:
-# After some years of experience in a particular field, one has a sense of
-# the critical discussion points about how the proposed results will
-# relate to the results from the work of others. The content of this
-# discussion is supposed to be about the relationship of our results to
-# those reported by others. Sometimes, we expand these discussion points
-# into initial paragraphs. After we think this section is well-developed,
-# we will transfer it to the main manuscript.
+After some years of experience in a particular field, one has a sense of
+the critical discussion points about how the proposed results will
+relate to the results from the work of others. The content of this
+discussion is supposed to be about the relationship of our results to
+those reported by others. Sometimes, we expand these discussion points
+into initial paragraphs. After we think this section is well-developed,
+we will transfer it to the main manuscript.
 :END:
 
 
@@ -243,18 +245,18 @@ Repeat to close the drawer.
 :CUSTOM_ID: subsec:priorDiscussion
 :END:
 #+Latex:\index{draft!prior discussion points}
-
+*** Guidance on prior discussion points for the paper                     :noexport:
 :GUIDNACE:
-# The discussion section should contain new points of discussion. If you
-# are writing a series of papers about a topic, it is all too easy to
-# recycle old discussion points. Before making the transfer mentioned
-# above, we will check the proposed discussion points against those we
-# have published to avoid repeating ourselves and remind ourselves to
-# review our new results against our prior discussion points. You can
-# check this list against the discussion section of your current
-# manuscript to ensure that you are raising new points or updating prior
-# points while appropriately citing yourself. The new results may require
-# that we update our published discussion points.
+The discussion section should contain new points of discussion. If you
+are writing a series of papers about a topic, it is all too easy to
+recycle old discussion points. Before making the transfer mentioned
+above, we will check the proposed discussion points against those we
+have published to avoid repeating ourselves and remind ourselves to
+review our new results against our prior discussion points. You can
+check this list against the discussion section of your current
+manuscript to ensure that you are raising new points or updating prior
+points while appropriately citing yourself. The new results may require
+that we update our published discussion points.
 :END:
 
 1.
@@ -270,12 +272,12 @@ Repeat to close the drawer.
 :CUSTOM_ID: sub:titles
 :END:
 #+Latex:\index{darft!potenital titles}
-
+*** Guidance on potential titles for the paper                     :noexport:
 :GUIDANCE:
-# Titles of 3-7 words long are easier for people to remember. We generally
-# iterate through enough titles to find one that is catchy. Sometimes,
-# this requires generating a list of more than 100 titles. This work takes
-# time and should not be delayed until the day of manuscript submission.
+Titles of 3-7 words long are easier for people to remember. We generally
+iterate through enough titles to find one that is catchy. Sometimes,
+this requires generating a list of more than 100 titles. This work takes
+time and should not be delayed until the day of manuscript submission.
 :END:
 
 1.
@@ -295,13 +297,13 @@ Repeat to close the drawer.
 :CLASS: unnumbered
 :END:
 #+Latex:\index{darft!potenital keywords}
-
+*** Guidance on potential keywords for the paper                     :noexport:
 :GUDIANCE:
-# Below is a list of potential keywords. Abstracting services use the
-# title and abstract to extract terms for searching. As a result, select
-# keywords that are not in these two parts of the paper. Usually, there is
-# a limit on the number of keywords, so we choose the keywords carefully.
-# We make a long list of keywords and select the best ones.
+Below is a list of potential keywords. Abstracting services use the
+title and abstract to extract terms for searching. As a result, select
+keywords that are not in these two parts of the paper. Usually, there is
+a limit on the number of keywords, so we choose the keywords carefully.
+We make a long list of keywords and select the best ones.
 :END:
 
 
@@ -321,13 +323,13 @@ Repeat to close the drawer.
 :CLASS: unnumbered
 :END:
 #+Latex:\index{draft!potential abstract}
-
+*** Guidance on potential abstract for the paper                     :noexport:
 :GUIDANCE:
-# After filling in the above subsections, we are in a solid position to
-# draft the abstract for the paper. This is just a draft and will be
-# updated as the results emerge. However, going through this exercise is
-# another way of visualizing the paper's contents and helps to strengthen
-# that vision. Such clarity is essential to maintain momentum.
+After filling in the above subsections, we are in a solid position to
+draft the abstract for the paper. This is just a draft and will be
+updated as the results emerge. However, going through this exercise is
+another way of visualizing the paper's contents and helps to strengthen
+that vision. Such clarity is essential to maintain momentum.
 :END:
 
 
@@ -336,11 +338,11 @@ Repeat to close the drawer.
 :CUSTOM_ID: sub:abbrev
 :END:
 #+Latex:\index{draft!abbreviations}
-
+*** Guidance on abbreviation for the paper                     :noexport:
 :GUIDANCE:
-# A common mistake is to delay the assembly of the list of acronyms and
-# abbreviations. An incomplete list tells the reviewer that the authors
-# assembled the manuscript in a hurry.
+A common mistake is to delay the assembly of the list of acronyms and
+abbreviations. An incomplete list tells the reviewer that the authors
+assembled the manuscript in a hurry.
 :END:
 
 
@@ -403,14 +405,14 @@ Abbreviations are also listed at the end of the manuscript.
 :CUSTOM_ID: sub:coverletter
 :END:
 #+Latex:\index{draft!cover letter}
-
+*** Guidance on draft cover letter                                 :noexport:
 :GUIDANCE:
-# It is never too early to start writing the cover letter for a project.
-# This letter is another form of summary that is part of the actualization
-# of the project. If we have enough energy and time left over from
-# completing the initialization of the writing project, we may proceed to
-# drafting the cover letter. The advantage of doing so is to capture one's
-# excitement about the project.
+It is never too early to start writing the cover letter for a project.
+This letter is another form of summary that is part of the actualization
+of the project. If we have enough energy and time left over from
+completing the initialization of the writing project, we may proceed to
+drafting the cover letter. The advantage of doing so is to capture one's
+excitement about the project.
 :END:
 
 
@@ -420,10 +422,10 @@ Abbreviations are also listed at the end of the manuscript.
 :CUSTOM_ID: subsec:literaturesources
 :END:
 #+Latex:\index{draft!acknowledgements}
-
+*** Guidance on acknowledgments                                    :noexport:
 :GUIDANCE:
-# It is never too early to start this section.
-# Work on it should not be delayed until the last minute because you risk overlooking somebody's contribution.
+It is never too early to start this section.
+Work on it should not be delayed until the last minute because you risk overlooking somebody's contribution.
 :END:
 
 
@@ -439,10 +441,10 @@ Abbreviations are also listed at the end of the manuscript.
 :CUSTOM_ID: subsec:fundingsources
 :END:
 #+Latex:\index{data!funding sources}
-
+*** Guidance on funding sources                                    :noexport:
 :GUIDANCE:
-# It is never too early to start this section.
-# Work on it should not be delayed until the last minute because you risk overlooking a funding source.
+It is never too early to start this section.
+Work on it should not be delayed until the last minute because you risk overlooking a funding source.
 :END:
 
 -
@@ -461,9 +463,10 @@ Abbreviations are also listed at the end of the manuscript.
 :CUSTOM_ID: sec:data
 :END:
 #+LaTeX:\index{data}
-
+*** Guidance on funding sources                                    :noexport:
+:GUDIANCE:
 This section catalogs the data to be used in the paper.
-
+:END:
 
 
 ** Inventory of data on hand
@@ -607,16 +610,16 @@ This section catalogs the data to be used in the paper.
 :CUSTOM_ID: supportforwritingproject
 :END:
 #+Latex:\index{plans!support for the writing project}
-
+*** Guidance on plans to support the writing project                     :noexport:
 :GUIDANCE:
-# While it is useful to write about half of a manuscript in four hours in the first sitting without having done any experiments to provide a mental framework for the project and limit the scope, the work will need to be done.
-# If the work is computational or experimental, many plans exist to get it done.
-# Several plans must be developed to execute the work required to complete and submit the manuscript.
-# These plans might not be written down many times, but it is probably quite useful to actually articulate them somewhere.
-# These plans may not necessarily have to reside inside the writing log: A link to the plan in a plain text or an HTML file may be sufficient.
-#+Latex:% Some of these plans are global in nature and may be applicable across all projects.
-#+Latex:% Some plans may be specific to the project at hand and must be elaborated on.
-#+Latex:% If these plans are relatively short, they could be included in the writing log, but if they are lengthy, it might be necessary to just provide a link to them.
+ While it is useful to write about half of a manuscript in four hours in the first sitting without having done any experiments to provide a mental framework for the project and limit the scope, the work will need to be done.
+ If the work is computational or experimental, many plans exist to get it done.
+ Several plans must be developed to execute the work required to complete and submit the manuscript.
+ These plans might not be written down many times, but it is probably quite useful to actually articulate them somewhere.
+ These plans may not necessarily have to reside inside the writing log: A link to the plan in a plain text or an HTML file may be sufficient.
+ Some of these plans are global in nature and may be applicable across all projects.
+Some plans may be specific to the project at hand and must be elaborated on.
+If these plans are relatively short, they could be included in the writing log, but if they are lengthy, it might be necessary to just provide a link to them.
 :END:
 
 
@@ -783,12 +786,12 @@ This section catalogs the data to be used in the paper.
 :CUSTOM_ID: sec:timelycompletion
 :END:
 #+Latex:\index{plans!timely completion}
-
+*** Guidance on plans to support the writing project                     :noexport:
 :GUIDANCE:
-# This section is to plan the completion of the manuscript and for making periodic assessments of its status.
-# Having the checklist and the timeline adjacent each other will aid the scheduling of remaining tasks.
-# The assessment of the current state could be included within the diary section, but we think it is more useful to include it in this area near the timeline and the checklist for completion.
-#  By having the assessments adjacent to each other, you should be able to see more clearly how progress is being made on the manuscript.
+This section is to plan the completion of the manuscript and for making periodic assessments of its status.
+Having the checklist and the timeline adjacent each other will aid the scheduling of remaining tasks.
+The assessment of the current state could be included within the diary section, but we think it is more useful to include it in this area near the timeline and the checklist for completion.
+By having the assessments adjacent to each other, you should be able to see more clearly how progress is being made on the manuscript.
 :END:
 
 
@@ -854,16 +857,16 @@ This section catalogs the data to be used in the paper.
 :CUSTOM_ID: subsec:timelinemilestones
 :END:
 #+Latex:\index{manuscript completion!milestones}
-
+*** Guidance on Timeline with milestones                                :noexport:
 :GUIDANCE:
-# This is the planning section where the calendar is matched up with milestones: goals without deadlines are just dreams.
-# This is a tricky section to include inside of a writing log document because it often requires a heavy-duty external Library to be able to generate an image.
-# This could be done by simply copying the checklist and pasting it into this section as a table with three columns: milestone, target date, and achievement date.
-# This would lead to a very long table that might be too cluttered.
-# There might be a subset of the items in the checklist that are larger in scope that could be listed.
-# For example, completion of various parts of the writing log, key experiments, and solicitation of outside expertise.
-# The setting up of the time timeline will be very Project Specific and will require customization.
-# The main thing is to keep it simple enough to be useful but no simpler than necessary.
+This is the planning section where the calendar is matched up with milestones: goals without deadlines are just dreams.
+This is a tricky section to include inside of a writing log document because it often requires a heavy-duty external Library to be able to generate an image.
+This could be done by simply copying the checklist and pasting it into this section as a table with three columns: milestone, target date, and achievement date.
+This would lead to a very long table that might be too cluttered.
+There might be a subset of the items in the checklist that are larger in scope that could be listed.
+For example, completion of various parts of the writing log, key experiments, and solicitation of outside expertise.
+The setting up of the time timeline will be very Project Specific and will require customization.
+The main thing is to keep it simple enough to be useful but no simpler than necessary.
 :END:
 
 
@@ -962,23 +965,23 @@ Accomplishments:
 :CUSTOM_ID: subsec:next
 :END:
 #+LaTeX:\index{next action}
-
+*** Guidance on next action                                :noexport:
 :GUIDANCE:
-# List the next task or action to be taken to move the project forward.
-# The section is supposed to contain one to do item. It is the next task
-# that needs to be done. The idea to determine in at the end of the
-# current work session what the next action should be so that you do not
-# have to spend time selecting the next action item when you return to the
-# project. This idea came from David Allen, the author of "Getting things
-# done".
+List the next task or action to be taken to move the project forward.
+The section is supposed to contain one to do item. It is the next task
+that needs to be done. The idea to determine in at the end of the
+current work session what the next action should be so that you do not
+have to spend time selecting the next action item when you return to the
+project. This idea came from David Allen, the author of "Getting things
+done".
 
-# I have to admit that I rarely do this task next. I generally reconsider
-# all of the pending to-do's at the start of my work session, and I often
-# wind up identifying a new task that was not identified as the "Next
-# Action" at the end of the last work session. Anyways, you do gain the
-# peace of mind knowing that you have identified the next step, although
-# you may not take it. If you do not use this section, go ahead and delete
-# it.
+I have to admit that I rarely do this task next. I generally reconsider
+all of the pending to-do's at the start of my work session, and I often
+wind up identifying a new task that was not identified as the "Next
+Action" at the end of the last work session. Anyways, you do gain the
+peace of mind knowing that you have identified the next step, although
+you may not take it. If you do not use this section, go ahead and delete
+it.
 :END:
 
 
@@ -987,15 +990,15 @@ Accomplishments:
 :CUSTOM_ID: subsec:to-do
 :END:
 #+LaTeX:\index{To be done}
-
+*** Guidance on to be done                               :noexport:
 :GUIDANCE:
-# These are the tasks that are thought to be required to get the project
-# finished. The prioritizing of the tasks is the hard part. The book "Time
-# Power" by Charles Hobbs provides helpful guidance on setting priorities.
-# I use an unordered list below but you can use a list of TODO items and
-# include this org file in the list of source files for the generation of
-# TODOs in org agenda. I generally would have an overwhelming number of
-# TODOs so I do not use org-agenda in this fashion.
+These are the tasks that are thought to be required to get the project
+finished. The prioritizing of the tasks is the hard part. The book "Time
+Power" by Charles Hobbs provides helpful guidance on setting priorities.
+I use an unordered list below but you can use a list of TODO items and
+include this org file in the list of source files for the generation of
+TODOs in org agenda. I generally would have an overwhelming number of
+TODOs so I do not use org-agenda in this fashion.
 :END:
 
 -
@@ -1048,7 +1051,7 @@ Accomplishments:
 :CUSTOM_ID: subsec:WPsheet
 :END:
 #+LaTeX:\index{writing progress notebook}
-
+*** Guidance on Writing Progress Notebook                               :noexport:
 :GUIDANCE:
 # The writing progress notebook enables the tracking of progress on a
 # project basis [fn:1]. The Notebook automatically updates sums of words
@@ -1069,12 +1072,12 @@ Accomplishments:
 
 ** Update Zettelkästen in org-roam
 :PROPERTIES:
-:CUSTOM_ID: subsec:zk
+:CUSTOM_ID: subsec:zettelkasten
 :END:
 #+LaTeX:\index{zettelkasten}
-
+*** Guidance on Zettelkästen                              :noexport:
 :GUIDANCE:
-# Update your knowledge base if you found anything worth adding to it.
+Update your knowledge base if you found anything worth adding to it.
 :END:
 
 
@@ -1084,7 +1087,7 @@ Accomplishments:
 :CUSTOM_ID: subsec:future
 :END:
 #+LaTeX:\index{future additions and tangents}
-
+*** Guidance on future additions and tangents                              :noexport:
 :GUIDANCE:
 # The word count is stored in wordcount.txt. The word count tends to
 # approach a plateau in the latter stages of writing.
@@ -1154,14 +1157,14 @@ Accomplishments:
 :END:
 #+LaTeX:\index{to be done someday}
 
-
+*** Guidance on to be done someday                              :noexport:
 :GUIDANCE:
-# This section stores tasks that are related to the current project and
-# that may be worth doing someday. Often these tasks are tangential to
-# addressing the central hypothesis of the paper. This is a place for
-# capturing those wonderful ideas. Sometimes these ideas blossom into new
-# projects. This section can capture ideas that might be mentioned in
-# terms of future work in the discussion section of the manuscript.
+This section stores tasks that are related to the current project and
+that may be worth doing someday. Often these tasks are tangential to
+addressing the central hypothesis of the paper. This is a place for
+capturing those wonderful ideas. Sometimes these ideas blossom into new
+projects. This section can capture ideas that might be mentioned in
+terms of future work in the discussion section of the manuscript.
 :END:
 
 -
