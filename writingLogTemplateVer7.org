@@ -65,7 +65,7 @@
 :CLASS: unnumbered
 :END:
 #+Latex:\index{introduction}
-:GUIDANCE
+:GUIDANCE:
 This template is in Org mode \cite{Dominik2016TheOrgMode9ReferenceManualOrganizeYourLifeWithGNUEmacs}.
 Org-mode aims to be a used for organizing your life, managing knowledge, doing literate programming, and preparing manuscripts.
 It can be used to teach programming \cite{Birkenkrahe2023TeachingDataScienceWithLiterateProgrammingTools}.
