@@ -9,8 +9,6 @@ Use this writing log in parallel to the main writing project document to track y
 [Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read some LaTeX code directly.
 The remaining LaTeX code can be used in a code block for LaTeX.
 
-Use the org-mode markdown code as normal and reuse the LaTeX code as templates for figures and tables with captions.
-
 
 ## Features
 
