@@ -2,9 +2,10 @@
 #+Options: toc:nil author:nil \n:nil
 #+STARTUP: noindent
 #+STARTUP: overview
+
+:PREAMBLE:
 #+LaTeX_CLASS:article
 #+LaTeX_CLASS_OPTIONS:[11pt,letterpaper]
-:GUIDANCE:
 #+LaTeX_HEADER:\usepackage{amsmath}
 #+LaTeX_HEADER:\usepackage{amsfonts}
 #+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
