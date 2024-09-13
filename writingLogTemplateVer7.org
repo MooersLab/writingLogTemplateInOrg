@@ -1,6 +1,7 @@
 #+Title:Writing log for this hot paper
 #+Options: toc:nil author:nil \n:nil
 #+STARTUP: noindent
+#+STARTUP: overview
 #+LaTeX_CLASS:article
 #+LaTeX_CLASS_OPTIONS:[11pt,letterpaper]
 :GUIDANCE:
