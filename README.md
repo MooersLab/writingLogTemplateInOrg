@@ -198,7 +198,7 @@ Place the cursor or point below the current day's heading and enter `C-c o` to s
 
 
 
-## Bash function for creating writing log for new project
+## Bash function for creating writing log for a new project
 
 At the start of a writing project, use this function to write a copy of the writing log template to a file with the project name in it.
 Store this Dash function in the `.bashrc` or `.zshrc` file. Oh shoot too
