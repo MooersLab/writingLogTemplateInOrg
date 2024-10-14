@@ -1249,6 +1249,15 @@ viewport are applied to your tex file in the left viewport. Note that
 the preamble of the document will cause the text to be spread out. You
 may have to scroll down a ways to see the document environment.
 
+** Guidelines for BibTeX to BibLaTeX library conversion
+
+Note that you must supply the full file paths.
+
+1. Start R-Studio
+2. library(devtools)
+3. install_github("GeoBosh/rbibutils")
+4. library(rbibutils)
+5. bibConvert("~/Documents/global.bib", "~/Documents/globalBiblatex.bib", "bibtex", "biblatex")
 
 
 ** Guidelines for debugging the annotated bibliography
