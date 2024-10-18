@@ -19,8 +19,17 @@
 #+LaTeX_HEADER:\usepackage{ulem}
 #+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
 #+LaTeX_HEADER:\usepackage{spreadtab}
+
 #+LaTeX_HEADER:%Print page numbers in the upper right corner rather than the bottom center.
 #+LaTeX_HEADER:\pagestyle{myheadings}
+#+LaTeX_HEADER:\usepackage{lastpage}
+#+LaTeX_HEADER:\usepackage{fancyhdr}
+#+LaTeX_HEADER:\pagestyle{fancy}
+#+LaTeX_HEADER:\fancyhf{} % Clear all header and footer fields
+#+LaTeX_HEADER:\fancyhead[L]{\today}
+#+LaTeX_HEADER:\fancyhead[C]{Log for man????} % Center header
+#+LaTeX_HEADER:\fancyhead[R]{\thepage\ / \pageref{LastPage}}
+
 #+LATEX_HEADER:\usepackage{parskip} % add a blank line between paragraphs upon export to PDF.
 #+LaTeX_HEADER:% Code for plotting table
 #+LaTeX_HEADER:\usepackage{pgfplots}
@@ -1249,15 +1258,24 @@ viewport are applied to your tex file in the left viewport. Note that
 the preamble of the document will cause the text to be spread out. You
 may have to scroll down a ways to see the document environment.
 
-** Guidelines for BibTeX to BibLaTeX library conversion
+** Protocol for BibTeX to BibLaTeX library conversion
 
 Note that you must supply the full file paths.
+Also, note the order of the arguments to bibConvert.
+The third argument is the file type of the first.
+The fourth argument is the file type of the second argument.
 
-1. Start R-Studio
-2. library(devtools)
-3. install_github("GeoBosh/rbibutils")
-4. library(rbibutils)
-5. bibConvert("~/Documents/global.bib", "~/Documents/globalBiblatex.bib", "bibtex", "biblatex")
+#+LaTeX:\begin{enumerate}
+#+LaTeX:\item Start R-Studio
+#+LaTeX:\item Run the following code after editing the file paths:
+#+LaTeX:\end{enumerate}
+#+LaTeX:
+#+LaTeX:\begin{minted}{R}
+#+LaTeX:library(devtools)
+#+LaTeX:install_github("GeoBosh/rbibutils")
+#+LaTeX:library(rbibutils)
+#+LaTeX:bibConvert("/Users/blaine/Documents/global.bib", "/Users/blaine/Documents/globalBiblatex.bib", "bibtex", "biblatex")
+#+LaTeX:\end{minted}
 
 
 ** Guidelines for debugging the annotated bibliography
