@@ -4,7 +4,7 @@
 
 # Writing project log template in org-mode
 
-## What is this? A space for metacognition and storing metadata
+## What is this? A space for metacognition and storing metadata about one writing project
 
 Use this template to store in one document outside of your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes) the data and the thinking behind your writing project.
 This document is meant to be specific to one project; create a separate document for additional projects.
