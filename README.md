@@ -2,9 +2,38 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-# Writing log template in org-mode
+# Writing project log template in org-mode
 
-Use this writing log in parallel to the main writing project document to track your progress and record your plans.
+## What is this? A space for metacognition and storing metadata
+
+Use a template to support storing in one document outside of your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes) the data and the thinking behind your writing project.
+This document is meant to be specific to one project; create a separate document for additional projects.
+This template addresses the problem of cluttering the writing project document with notes about decisions made and plans for the work.
+This template provides a safe place for notes that tend to get deleted and lost upon manuscript submission.
+
+Use this writing log in parallel to the main writing project document to support these workflows:
+
+- project ideation and initiation (usually a 3-4 hour work session on day one)
+- Data inventory (update as needed)
+- Daily log to record decisions made, actions completed or attempted, and correspondence.
+- Periodic project assessment against timeline with milestones (once a week, month, or quarter -- whatever is appropriate)
+- Project completion and archiving (one to several days at manuscript submission or acceptance or a bit of both)
+
+## Why use this writing project log?
+
+- Eases restarting a project that has been interrupted.
+- Supports working on several projects concurrently.
+- Updates the fear of losing momentum.
+- Abates the fear of forgetting where you left off.
+- Supports the planning of related projects as you make progress on the current project. You will have a running start on the next writing project.
+
+## What this is not
+
+- This is not an extended annotated bibliography to store your thoughts about the literature you read. You can find elsewhere on the site repositories that support the assembly of classical annotated bibliographies. You will also find repositories for templates for modern bibliographies that support multi-paragraph entries illustrated with figures, tables, code listings, equations, and URLs to relevant websites, including videos.
+- This is not an accountability tool where you record your minutes spent on words written per day across one or more writing projects. You can find several different approaches to writing accountability on this website and the corresponding tools to support those approaches. You can choose one approach that you think you can use daily. Do not try to use more than one approach at a time. You will exhaust yourself and give up. If you schedule your writing activities and show up at the appointed time, the need for tracking your progress will be diminished when following the writing schedule becomes a deeply ingrained habit.
+
+
+## What is org-mode
 
 [Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read some LaTeX code directly.
 The remaining LaTeX code can be used in a code block for LaTeX.
@@ -148,6 +177,9 @@ Now type `daily` followed by `tab` to start a new subsection for the current day
 
 ### Guidelines, checklists, protocols, helpful hints
 
+This part of the writing project log
+
+
 - Daily Protocol
 - Tips for using Overleaf
 - Protocol for running Grammarly in Overleaf
@@ -156,6 +188,7 @@ Now type `daily` followed by `tab` to start a new subsection for the current day
 - Guidelines for benchmarks
 - Guidelines for using the Writing Progress Notebook
 - Guidelines for using a personal knowledge base
+- Protocol for wrapping up the project and archiving data.
 
 ## Usage
 
