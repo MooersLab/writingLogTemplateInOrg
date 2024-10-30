@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.7.2&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.7.3&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
