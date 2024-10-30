@@ -177,7 +177,16 @@ Now type `daily` followed by `tab` to start a new subsection for the current day
 
 ### Guidelines, checklists, protocols, helpful hints
 
-This part of the writing project log
+This part of the writing project log may require customization.
+You may want to include project-specific protocols.
+You May have already written down your own protocols that you want to include, or the space for such protocols May stimulate you to develop protocols for multi-step processes you must go through in your work.
+Having those multi-step processes recorded in a protocol and readily accessible in this document increases the probability that the protocol will be followed and that you will save time by avoiding mistakes.
+
+We have made a variant of this writing log where this section is modular.
+The modularity eases the inclusion and exclusion of various protocols and guidelines so that you can customize this section of the writing log to be most relevant to the writing project at hand.
+Seek repositories on this website with the words modular and writing log.
+
+Below is a list of protocols you can delete, supplement,  or expand upon.
 
 
 - Daily Protocol
