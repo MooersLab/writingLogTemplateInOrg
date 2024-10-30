@@ -290,6 +290,7 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 | Version 0.7 | Moved the comments or advice prose into a GUIDANCE drawer in each section outside of the Guidelines section. | 2024 August 21      |
 | Version 0.7.1 | Added subheading with noexport tag above each GUIDANCE drawer to prevent the export of their contents to the PDF.  Added the urlx package to linewrap long URLs. | 2024 August 27      |
 | Version 0.7.2 | Added STARTUP command to open file with the drawers closed. | 2024 September 13 |
+| Version 0.7.3 | Explained introduction to distinguish this tool from writing accountability tools. | 2024 October 30 |
 
 ## Sources of funding
 
