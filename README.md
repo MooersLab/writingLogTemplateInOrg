@@ -6,7 +6,7 @@
 
 ## What is this? A space for metacognition and storing metadata
 
-Use a template to support storing in one document outside of your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes) the data and the thinking behind your writing project.
+Use this template to store in one document outside of your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes) the data and the thinking behind your writing project.
 This document is meant to be specific to one project; create a separate document for additional projects.
 This template addresses the problem of cluttering the writing project document with notes about decisions made and plans for the work.
 This template provides a safe place for notes that tend to get deleted and lost upon manuscript submission.
