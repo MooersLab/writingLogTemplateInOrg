@@ -293,13 +293,13 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 
 |Version      | Changes                                                                                      | Date                 |
 |:-----------|-----------------------------------------------------------------------------------------------|:--------------------|
-| Version 0.1 | First working version.                                                                     | 2022 September 10    |
-| Version 0.5 | Added five sections to catch up with the tex version.                                      | 2024 August 11      |
-| Version 0.6 | Compiles now without init.el file. Moved `Daily protocol` to `Guidelines` section. Elevated  `Daily Log` to section level. | 2024 August 18      |
-| Version 0.7 | Moved the comments or advice prose into a GUIDANCE drawer in each section outside of the Guidelines section. | 2024 August 21      |
-| Version 0.7.1 | Added subheading with noexport tag above each GUIDANCE drawer to prevent the export of their contents to the PDF.  Added the urlx package to linewrap long URLs. | 2024 August 27      |
-| Version 0.7.2 | Added STARTUP command to open file with the drawers closed. | 2024 September 13 |
-| Version 0.7.3 | Explained introduction to distinguish this tool from writing accountability tools. | 2024 October 30 |
+|  0.1 | First working version.                                                                     | 2022 September 10    |
+|  0.5 | Added five sections to catch up with the tex version.                                      | 2024 August 11      |
+|  0.6 | Compiles now without init.el file. Moved `Daily protocol` to `Guidelines` section. Elevated  `Daily Log` to section level. | 2024 August 18      |
+|  0.7 | Moved the comments or advice prose into a GUIDANCE drawer in each section outside of the Guidelines section. | 2024 August 21      |
+|  0.7.1 | Added subheading with noexport tag above each GUIDANCE drawer to prevent the export of their contents to the PDF.  Added the urlx package to linewrap long URLs. | 2024 August 27      |
+|  0.7.2 | Added STARTUP command to open file with the drawers closed. | 2024 September 13 |
+|  0.7.3 | Explained introduction to distinguish this tool from writing accountability tools. | 2024 October 30 |
 
 ## Sources of funding
 
