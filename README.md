@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.7.3&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.8.3&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -44,9 +44,9 @@ The remaining LaTeX code can be used in a code block for LaTeX.
 - 20 considerations for planning a manuscript.
 - A table of contents that is automatically generated and hyperlinked.
 - An automatically generated index that is hyperlinked.
-- Support for generating a references cited section from a Bibtex library.
+- Support for generating a references cited section from a BibTeX library.
 - A writing log section for recording notes about each day's accomplishments.
-- Plot of wordcount by writing session to track your progress.
+- Plot of the word count by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
 - A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and entering tab.
 
@@ -62,7 +62,7 @@ It is like a master thinking document or a second brain for a writing project.
 Instructions for using the writing log are found in the annotations in the template.
 You can delete these after they are no longer needed.
 
-Version 0.5 of the writing log is divided into four sections: 
+Version 0.8 of the writing log is divided into these sections: 
 
 - project initiation
 - project data
@@ -73,6 +73,7 @@ Version 0.5 of the writing log is divided into four sections:
 - Guidelines, checklists, protocols, and helpful tips
 
 The subsections of these sections are shown below.
+
 
 ### Project initiation
 
@@ -93,6 +94,7 @@ The subsections of these sections are shown below.
 - Potential reviewers
 - Draft cover letter
 
+
 ### Project Data
 
 - Inventory of data on hand
@@ -104,7 +106,6 @@ The subsections of these sections are shown below.
 - Relevant collections of PDFs
 - Project's progress summary for annual grant report
 - Project's progress summary for annual report to college
-
 
 
 ### Plans to support the project
@@ -137,7 +138,7 @@ The subsections of these sections are shown below.
 
 ### Daily entries
 
-Create the following yasnippet snippet with the tab trigger of `daily` to autogenerate a subsection heading, property box, and index key using today's date.
+Create the following yasnippet snippet with the tab trigger of `daily` to auto-generate a subsection heading, property box, and index key using today's date.
 Save it to a file named daily-entry-for-writing-log inside `./snippets/org-mode`.
 
 ```elisp
@@ -154,7 +155,7 @@ Save it to a file named daily-entry-for-writing-log inside `./snippets/org-mode`
 $0
 ```
 
-Now type `daily` followed by `tab` to start a new subsection for the current day's entry.
+Now type `entry` followed by `tab` to start a new subsection for the current day's entry.
 
 
 - Daily Log
@@ -202,7 +203,7 @@ Below is a list of protocols you can delete, supplement,  or expand upon.
 ## Usage
 
 - `git clone https://github.com/MooersLab/writingLogTemplateInOrg` into the folder containing your current writing project.
-- Start Emacs, perhaps using the [latex-emacs](https://github.com/MooersLab/latex-emacs) profile.
+- Start Emacs, perhaps using this [Emacs configuration](https://github.com/MooersLab/dsw-2024-org-mode-init).
 - Load the writingLogTemplate.org file into Emacs via `C-x C-f`. 
 
 ## Configure yasnippets
@@ -238,8 +239,6 @@ The daily entries have a property drawer.
 Place the cursor or point below the current day's heading and enter `C-c o` to start a pomodoro with the start and end times logged in a logbook in the property drawer.
 
 
-
-
 ## Bash function for creating writing log for a new project
 
 At the start of a writing project, use this function to write a copy of the writing log template to a file with the project name in it.
@@ -260,12 +259,18 @@ fi
 projectID="$1"
 echo "Write writing log to log$1.org file."
 cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5.org log$1.org
+
 }
 ```
 
+## Directly related talks
+- [DSW 60-minute talk about scientific writing workflow in Org Mode: November 22, 2024](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/cd5641aea892468c894ae31cd151d4671d)
+- [Slides from the above talk](https://github.com/MooersLab/DSW24-org-mode-slides)
+- [Emacs configuration associated with the above talk](https://github.com/MooersLab/dsw-2024-org-mode-init)
+
+- [EmacsConf24 20-minute talk: December 7, 2024](https://emacsconf.org/2024/talks/project/)
 
 ## Related projects of possible interest
-
 - [Org-mode manuscript template](https://github.com/MooersLab/manuscriptInOrg)
 - [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX)
 - [Writing log template in LaTeX (compiles on Overleaf and in Emacs)](https://github.com/MooersLab/writingLogTemplate)
@@ -273,6 +278,7 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 - [Writing log template in Markdown](https://github.com/MooersLab/writing-log-md) Markdown variant. Read and rendered to PDF by most good text editors.
 - [Writing log template in ODT](https://github.com/MooersLab/writing-log-odt) ODT can be read by Open Office, LibreOffice and MS Word.
 - [Writing log template in DOCX for MS Word](https://github.com/MooersLab/writing-log-docx) MS Word variant. Probably the least suitable format for this task.
+
 - [Slideshow template in LaTeX](https://github.com/MooersLab/slideshowTemplateLaTeX)
 - [Annotated bibliography Template in LaTeX](https://github.com/MooersLab/annotatedBibliography)
 - [LaTeX manuscript template](https://github.com/MooersLab/manuscriptInLaTeX/edit/main/README.md)
@@ -293,13 +299,14 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 
 |Version      | Changes                                                                                      | Date                 |
 |:-----------|-----------------------------------------------------------------------------------------------|:--------------------|
-|  0.1 | First working version.                                                                     | 2022 September 10    |
-|  0.5 | Added five sections to catch up with the tex version.                                      | 2024 August 11      |
+|  0.1 | First working version.                                                                              | 2022 September 10    |
+|  0.5 | Added five sections to catch up with the tex version.                                               | 2024 August 11      |
 |  0.6 | Compiles now without init.el file. Moved `Daily protocol` to `Guidelines` section. Elevated  `Daily Log` to section level. | 2024 August 18      |
 |  0.7 | Moved the comments or advice prose into a GUIDANCE drawer in each section outside of the Guidelines section. | 2024 August 21      |
 |  0.7.1 | Added subheading with noexport tag above each GUIDANCE drawer to prevent the export of their contents to the PDF.  Added the urlx package to linewrap long URLs. | 2024 August 27      |
 |  0.7.2 | Added STARTUP command to open file with the drawers closed. | 2024 September 13 |
 |  0.7.3 | Explained introduction to distinguish this tool from writing accountability tools. | 2024 October 30 |
+|  0.8.0 | Added :restart: tag to position the cursor at the end of the last daily entry in the Daily Log section upon opening the document in Emac. Made minor updates to the README.md file including link to talk about this document. | 2024 November 28 |
 
 ## Sources of funding
 
@@ -308,3 +315,7 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 - NIH: P30 CA225520 (PI: R. Mannel)
 - NIH: P20 GM103640 and P30 GM145423 (PI: A. West)
 
+
+<!-- Local Variables: -->
+<!-- jinx-local-words: "BibTeX" -->
+<!-- End: -->
