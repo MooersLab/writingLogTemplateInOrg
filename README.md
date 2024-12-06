@@ -48,7 +48,7 @@ The remaining LaTeX code can be used in a code block for LaTeX.
 - A writing log section for recording notes about each day's accomplishments.
 - Plot of the word count by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
-- A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and entering tab.
+- A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and entering the tab.
 
 
 ### Introduction
@@ -99,13 +99,13 @@ The subsections of these sections are shown below.
 
 - Inventory of data on hand
 - Inventory of project's required external software
-- Inventory of project's software repositories
+- Inventory of the project's software repositories
 - Relevant videos
 - Relevant blogs
 - Relevant literature sources
 - Relevant collections of PDFs
-- Project's progress summary for annual grant report
-- Project's progress summary for annual report to college
+- Project's progress summary for the annual grant report
+- Project's progress summary for the annual report to college
 
 
 ### Plans to support the project
@@ -123,7 +123,7 @@ The subsections of these sections are shown below.
 - Biosafety.
 - Authentication of key biological and chemical resources.
 - Rigorous statistical sampling and data analysis
-- Data management including backups and archives.
+- Data management, including backups and archives.
 - Data sharing.
 - The NIH PEDP.
 - Advertising plan: posters, talks, seminars, YouTube videos, social media posts.
@@ -205,11 +205,11 @@ Below is a list of protocols you can delete, supplement,  or expand upon.
 We store files containing established protocols in the home directory.
 These files can be included in all writing-project log files.
 This enables updating one file and propagating these updates to all log files.
-You can use the orgmode `#+INCLUDE:` or the LaTeX `\include{}` in an org file.
+In an org file, you can use the org-mode `#+INCLUDE:` or the LaTeX `\include{}`.
 These included files will only be injected into the log file upon export to PDF.
 
 To inject the contents of the external file into an org-mode file so that you see the protocol in the org file, use the following function.
-It includes the filepath of the injected file and a timestamp of when the external file was injected.
+It includes the file path of the injected file and a timestamp of when the external file was injected.
 
 ```elisp
 (defun org-insert-external-file (file-path)  
@@ -237,6 +237,20 @@ Here is an example of the output.
 - [ ] The first flag in the command will preserve the letter case in the cite key.
 ```
 
+Here is a modified form of the above function that prepends the file path to the protocols directory:
+
+```elisp
+(defun org-insert-protocol-file (file-path)  
+  "Insert the contents of a protocol file from ~/protocols-org into the current org-mode file.  
+Prompts for a file path via minibuffer and includes a timestamp in a comment."  
+  (interactive "f~/protocols-org/")  
+  (let ((timestamp (format-time-string "%Y-%m-%d %H:%M:%S")))  
+    (insert (format "#+BEGIN_COMMENT\n# File %s inserted on %s\n#+END_COMMENT\n\n" file-path timestamp))  
+    (insert-file-contents file-path)  
+    (goto-char (point-max))))  
+  
+(global-set-key (kbd "C-c P") 'org-insert-protocol-file)
+```
 
 
 ## Usage
