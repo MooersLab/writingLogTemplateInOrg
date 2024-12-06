@@ -200,6 +200,45 @@ Below is a list of protocols you can delete, supplement,  or expand upon.
 - Guidelines for using a personal knowledge base
 - Protocol for wrapping up the project and archiving data.
 
+#### Standard Protocols
+
+We store files containing established protocols in the home directory.
+These files can be included in all writing-project log files.
+This enables updating one file and propagating these updates to all log files.
+You can use the orgmode `#+INCLUDE:` or the LaTeX `\include{}` in an org file.
+These included files will only be injected into the log file upon export to PDF.
+
+To inject the contents of the external file into an org-mode file, use the following function.
+It includes the filepath of the injected file and a timestamp of when the external file was injected.
+
+```elisp
+(defun org-insert-external-file (file-path)  
+  "Insert the contents of an external file into the current org-mode file.  
+Prompts for a file path via minibuffer and includes a timestamp in a comment."  
+  (interactive "fFile to be inserted: ")  
+  (let ((timestamp (format-time-string "%Y-%m-%d %H:%M:%S")))  
+    (insert (format "#+BEGIN_COMMENT\n# File %s inserted on %s\n#+END_COMMENT\n\n" file-path timestamp))  
+    (insert-file-contents file-path)  
+    (goto-char (point-max))))  
+  
+(global-set-key (kbd "C-c S") 'org-insert-external-file)
+```
+Here is an example of the output.
+
+```org-mode
+** Protocol to generate a bib file with only cited references
+#+BEGIN_COMMENT
+# File ~/protocols-org/bibfileCitedOnly-writing-checklist.org inserted on 2024-12-06 04:16:21
+#+END_COMMENT
+- [ ] Run the following code to generate a bib file of the papers cited in a manuscript:
+- [ ] bibtool --preserve.key.case=on -x main.aux > cited.bib
+- [ ] main.tex is the manuscript file.
+- [ ] Note that the *main.aux* file is hidden on Overleaf under the "Logs and outputs" pulldown menu.
+- [ ] The first flag in the command will preserve the letter case in the cite key.
+```
+
+
+
 ## Usage
 
 - `git clone https://github.com/MooersLab/writingLogTemplateInOrg` into the folder containing your current writing project.
