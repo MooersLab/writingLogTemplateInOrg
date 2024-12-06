@@ -208,7 +208,7 @@ This enables updating one file and propagating these updates to all log files.
 You can use the orgmode `#+INCLUDE:` or the LaTeX `\include{}` in an org file.
 These included files will only be injected into the log file upon export to PDF.
 
-To inject the contents of the external file into an org-mode file, use the following function.
+To inject the contents of the external file into an org-mode file so that you see the protocol in the org file, use the following function.
 It includes the filepath of the injected file and a timestamp of when the external file was injected.
 
 ```elisp
