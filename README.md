@@ -243,15 +243,17 @@ Here is a modified form of the above function that prepends the file path to the
 (defun org-insert-protocol-file (file-path)  
   "Insert the contents of a protocol file from ~/protocols-org into the current org-mode file.  
 Prompts for a file path via minibuffer and includes a timestamp in a comment."  
-  (interactive "f~/protocols-org/")  
-  (let ((timestamp (format-time-string "%Y-%m-%d %H:%M:%S")))  
-    (insert (format "#+BEGIN_COMMENT\n# File %s inserted on %s\n#+END_COMMENT\n\n" file-path timestamp))  
-    (insert-file-contents file-path)  
+  (interactive (list (read-file-name "Directory `~/protocols-org/`: " "~/" "protocols-org/")))  
+  (let ((full-path (expand-file-name file-path))  
+        (timestamp (format-time-string "%Y-%m-%d %H:%M:%S")))  
+    (insert (format "#+BEGIN_COMMENT\n# File %s inserted on %s\n#+END_COMMENT\n\n" full-path timestamp))  
+    (insert-file-contents full-path)  
     (goto-char (point-max))))  
   
 (global-set-key (kbd "C-c P") 'org-insert-protocol-file)
 ```
 
+Disclosure: the last two functions were generated with Lama 3.1 70B via the Sider plugin for Google Chrome
 
 ## Usage
 
