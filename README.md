@@ -253,7 +253,8 @@ Prompts for a file path via minibuffer and includes a timestamp in a comment."
 (global-set-key (kbd "C-c P") 'org-insert-protocol-file)
 ```
 
-Disclosure: the last two functions were generated with Lama 3.1 70B via the Sider plugin for Google Chrome
+Disclosure: the last two functions were generated with Lama 3.1 70B via the Sider plugin for Google Chrome.
+The functions were tested and worked as advertised.
 
 ## Usage
 
