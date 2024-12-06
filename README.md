@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.8.3&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=writingLogTemplateOrg&message=0.8.1&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -346,7 +346,7 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 |  0.7.2 | Added STARTUP command to open file with the drawers closed. | 2024 September 13 |
 |  0.7.3 | Explained introduction to distinguish this tool from writing accountability tools. | 2024 October 30 |
 |  0.8.0 | Added :restart: tag to position the cursor at the end of the last daily entry in the Daily Log section upon opening the document in Emac. Made minor updates to the README.md file including link to talk about this document. | 2024 November 28 |
-
+| 0.8.1 | Added function to insert contents of external files. This is very cool!                            | 2024 December 6 |
 ## Sources of funding
 
 - NIH: R01 CA242845
