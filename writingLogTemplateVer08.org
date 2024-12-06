@@ -484,9 +484,15 @@ Work on it should not be delayed until the last minute because you risk overlook
 :CUSTOM_ID: sec:data
 :END:
 #+LaTeX:\index{data}
-*** Guidance on funding sources                                    :noexport:
+*** Guidance on Data                                   :noexport:
 :GUDIANCE:
 This section catalogs the data to be used in the paper.
+:END:
+
+** Data management plan                                 :noexport:
+:GUDIANCE:
+You might start this section with the data management plan included in the supporting grant application.
+Then you might include updates to this plan as the project evolves.
 :END:
 
 
