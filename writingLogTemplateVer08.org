@@ -639,12 +639,12 @@ Then you might include updates to this plan as the project evolves.
 #+Latex:\index{plans!support for the writing project}
 *** Guidance on plans to support the writing project                     :noexport:
 :GUIDANCE:
- While it is useful to write about half of a manuscript in four hours in the first sitting without having done any experiments to provide a mental framework for the project and limit the scope, the work will need to be done.
- If the work is computational or experimental, many plans exist to get it done.
- Several plans must be developed to execute the work required to complete and submit the manuscript.
- These plans might not be written down many times, but it is probably quite useful to actually articulate them somewhere.
- These plans may not necessarily have to reside inside the writing log: A link to the plan in a plain text or an HTML file may be sufficient.
- Some of these plans are global in nature and may be applicable across all projects.
+While it is useful to write about half of a manuscript in four hours in the first sitting without having done any experiments to provide a mental framework for the project and limit the scope, the work will need to be done.
+If the work is computational or experimental, many plans exist to get it done.
+Several plans must be developed to execute the work required to complete and submit the manuscript.
+These plans might not be written down many times, but it is probably quite useful to actually articulate them somewhere.
+These plans may not necessarily have to reside inside the writing log: A link to the plan in a plain text or an HTML file may be sufficient.
+Some of these plans are global in nature and may be applicable across all projects.
 Some plans may be specific to the project at hand and must be elaborated on.
 If these plans are relatively short, they could be included in the writing log, but if they are lengthy, it might be necessary to just provide a link to them.
 :END:
