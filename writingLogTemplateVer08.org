@@ -987,32 +987,45 @@ Accomplishments:
 
 
 
-** Next action                                            :restart-here:
+** Bridge to next session                                            :restart-here:
 :PROPERTIES:
 :CUSTOM_ID: subsec:next
 :END:
 #+LaTeX:\index{next action}
-*** Guidance on next action                                :noexport:
+*** Guidance on bridge to next session                                :noexport:
 :GUIDANCE:
-List the next task or action to be taken to move the project forward.
-The section is supposed to contain one to do item. It is the next task
-that needs to be done. The idea to determine in at the end of the
-current work session what the next action should be so that you do not
-have to spend time selecting the next action item when you return to the
-project. This idea came from David Allen, the author of "Getting things
-done".
+The idea is not write until the generative well is completely dry.
+Leave some material behind so that you can reengage more easily.
+This idea is from Ernest Hemmingway.
 
-I have to admit that I rarely do this task next. I generally reconsider
-all of the pending to-do's at the start of my work session, and I often
-wind up identifying a new task that was not identified as the "Next
-Action" at the end of the last work session. Anyways, you do gain the
-peace of mind knowing that you have identified the next step, although
-you may not take it. If you do not use this section, go ahead and delete
-it.
+If you paint a clear enough picture, it will be easier to re-engage.
+
+You could copy this subtree and paste into the daily entry to have the
+answers to these questions in front of you.
 :END:
 
+**** Actions to be taken in the next writing session
+- 
+-
 
-** To be done
+**** Summarize current state
+What are the biggest challenges, open questions, or future roadblocks?
+
+- 
+-
+
+**** Record fleeting details
+Record the vital details that may fade away before the next writing session.
+
+- 
+-
+
+**** What is your current intention of what you plan to accomplish in the next writing session?
+
+
+
+
+** To be done or could be done
 :PROPERTIES:
 :CUSTOM_ID: subsec:to-do
 :END:
@@ -1022,18 +1035,24 @@ it.
 These are the tasks that are thought to be required to get the project
 finished. The prioritizing of the tasks is the hard part. The book "Time
 Power" by Charles Hobbs provides helpful guidance on setting priorities.
-I use an unordered list below but you can use a list of TODO items and
-include this org file in the list of source files for the generation of
-TODOs in org agenda. I generally would have an overwhelming number of
-TODOs so I do not use org-agenda in this fashion.
+I use an unordered list below.
+
+I leave this list unprioritized. 
+I pull out a subset of TODOs to work on in a given session.
+I do the priotizing of this subset at the start of the writing session.
+
+Avoding adding deadlines to your TODOs else your org-agenda will become clogged with unfnished TODOs.
+
+This log file can be included in the list of org files scanned for deadlines and scheduled events by org-agenda.
+
+The package mooerslab/org-10k-projects eases capturing TODOs in this file via the org-capture template for projects.
 :END:
 
--
--
--
--
--
--
+*** TODO placeholder
+
+
+
+
 
 ** Word Count
 :PROPERTIES:
