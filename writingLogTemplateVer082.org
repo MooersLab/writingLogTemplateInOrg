@@ -1,0 +1,1554 @@
+#+Title:Writing log for this hot paper
+# Note that the actual title of the paper is in the preamble drawer.
+#+Options: toc:nil title:nil author:nil \n:nil
+#+STARTUP: noindent
+#+STARTUP: overview
+
+:PREAMBLE:
+#+LaTeX_CLASS:article
+#+LaTeX_CLASS_OPTIONS:[11pt,letterpaper]
+#+LaTeX_HEADER:\usepackage{amsmath}
+#+LaTeX_HEADER:\usepackage{amsfonts}
+#+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
+#+LaTeX_HEADER:\usepackage{makeidx}
+#+Latex_HEADER:\usepackage{graphicx}
+#+LaTeX_HEADER:\usepackage{xurl} % permit line breaks in urls
+#+LaTeX_HEADER:\usepackage{hyperref}
+#+LaTeX_HEADER:\usepackage[letterpaper, total={7in, 9in}]{geometry}
+#+LaTeX_HEADER:\usepackage{datetime2}
+#+LaTeX_HEADER:\usepackage{minted}
+#+LaTeX_HEADER:\usepackage{ulem}
+#+LaTeX_HEADER:\setlength{\parindent}{0pt} % make block paragraphs
+#+LaTeX_HEADER:\usepackage{spreadtab}
+
+#+LaTeX_HEADER:%Print page numbers in the upper right corner rather than the bottom center.
+#+LaTeX_HEADER:\pagestyle{myheadings}
+#+LaTeX_HEADER:\usepackage{lastpage}
+#+LaTeX_HEADER:\usepackage{fancyhdr}
+#+LaTeX_HEADER:\pagestyle{fancy}
+#+LaTeX_HEADER:\fancyhf{} % Clear all header and footer fields
+#+LaTeX_HEADER:\fancyhead[L]{\today}
+#+LaTeX_HEADER:\fancyhead[C]{Log for man????} % Center header
+#+LaTeX_HEADER:\fancyhead[R]{\thepage\ / \pageref{LastPage}}
+
+#+LATEX_HEADER:\usepackage{parskip} % add a blank line between paragraphs upon export to PDF.
+#+LaTeX_HEADER:% Code for plotting table
+#+LaTeX_HEADER:\usepackage{pgfplots}
+#+LaTeX_HEADER:\usepackage{pgfplotstable}
+#+LaTeX_HEADER:\usepackage{booktabs}
+#+LaTeX_HEADER:\usepackage{array}
+#+LaTeX_HEADER:\usepackage{colortbl}
+#+LaTeX_HEADER:\pgfplotstableset{% global config, for example in the preamble
+#+LaTeX_HEADER:  every head row/.style={before row=\toprule,after row=\midrule},
+#+LaTeX_HEADER:  every last row/.style={after row=\bottomrule},
+#+LaTeX_HEADER:  fixed,precision=2,}
+#+LaTeX_HEADER:
+#+LaTeX_HEADER:% todolist env from https://tex.stackexchange.com/questions/247681/how-to-create-checkbox-todo-list
+#+LaTeX_HEADER:% done with checkmark, wontfix with x, next with finger.
+#+LaTeX_HEADER:\usepackage{pifont}
+#+LaTeX_HEADER:\newcommand{\nmark}{\ding{42}}% next
+#+LaTeX_HEADER:\newcommand{\cmark}{\ding{51}}% checkmark
+#+LaTeX_HEADER:\newcommand{\xmark}{\ding{55}}% x-mark
+#+LaTeX_HEADER:\newcommand{\wmark}{\ding{116}}% wait mark, inverted triangle representing yield sign
+#+LaTeX_HEADER:\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+#+LaTeX_HEADER:  \hspace{-2.5pt}}
+#+LaTeX_HEADER:\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+#+LaTeX_HEADER:\newcommand{\waiting}{\rlap{\raisebox{0.18ex}{\hspace{0.17ex}\scriptsize \wmark}}$\square$}
+#+LaTeX_HEADER:% \newcommand{\next}{\nmark}%
+#+LaTeX_HEADER:\bibliographystyle{cell}
+#+Latex_HEADER:\makeindex
+
+#+LATEX:\title{Polytglot crystallographic computing in Org-mode}
+#+LaTeX:\author[1]{Graduate Student}
+#+LaTeX:\author[2]{Senior Collaborator}
+#+LaTeX:\author[3]{Staff Scientist}
+#+LaTeX:\author[1,2,3]{Blaine Mooers\thanks{blaine-mooers at ouhsc.edu, phone: 405-271-8XXX, FAX: 405-271-3X3X}}
+#+LaTeX:\affil[1]{Department of Biochemistry and Molecular Biology, University of Oklahoma Health Sciences Center, Oklahoma City, Oklahoma, United States 73104}
+#+LaTeX:\affil[2]{Stephenson Cancer Center, University of Oklahoma Health Sciences Center, Oklahoma City, Oklahoma, United States 73104}
+#+LaTeX:\affil[3]{Laboratory of Biomolecular Structure and Function, University of Oklahoma Health Sciences Center, Oklahoma City, Oklahoma, United States 73104}
+:END:
+
+
+
+#+LaTeX:\maketitle
+
+
+#+LaTeX:\tableofcontents
+
+
+
+
+*** Overview of this writing log                         :noexport:
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:CLASS: unnumbered
+:END:
+#+Latex:\index{introduction}
+:GUIDANCE:
+This template is in Org mode \cite{Dominik2016TheOrgMode9ReferenceManualOrganizeYourLifeWithGNUEmacs}.
+Org-mode aims to be a used for organizing your life, managing knowledge, doing literate programming, and preparing manuscripts.
+It can be used to teach programming \cite{Birkenkrahe2023TeachingDataScienceWithLiterateProgrammingTools}.
+Many people prefer to work in org-mode all day.
+
+
+This template is similar to the writing log formatted for LaTeX.
+They share much of the same preamble.
+It is exported from org-mode through LaTeX to PDF.
+This file compiles by entering \textbf{C-c C-e l o} without using an init.el file (e.g., \textbf{emacs -Q logXXXX.org}), but you may have to export it twice to get all of the changes in the source file deployed in the PDF.
+You have to wait half a minute for the compiled document to appear.
+The compiling is faster in LaTeX and on Overleaf.
+This does not matter much because I mostly read and work with the org file when planning my writing session.
+
+This template contains a table of contents, numbered outline, and an index that support navigating the document when it has been rendered into a PDF.
+The label and ref macros are part of LaTeX's hyperlinking system.
+Items in the table of contents and in the index are hyperlinked to sites in the body of the writing log.
+You can navigate to different sections of the document by clicking on the file outline in this left column.
+
+The comments in the GUIDNACE drawers are usually hidden to reduce the clutter in the document.
+The comments  provide a quick access to suggested ways of using a section.
+Put the cursor on the title of the drawer and enter tab to open the drawer.
+Repeat to close the drawer.
+The GUIDANCE drawers are under a headline with a :noexport: tag.
+:END:
+
+* Project initiation
+:PROPERTIES:
+:CUSTOM_ID: project-initiation
+:END:
+#+Latex:\index{project initiation}
+
+
+** Rationale for this article
+:PROPERTIES:
+:CUSTOM_ID: sub:why
+:END:
+#+Latex:\index{rationale}
+
+*** Guidance on rationale for the paper                         :noexport:
+:GUIDANCE:
+What is the rationale for writing this paper? To help advance the field?
+To help win or renew a grant funding? To establish credibility in a new
+:END:
+# field for my lab?
+
+** Audience for the paper
+:PROPERTIES:
+:CUSTOM_ID: sub:audience
+:END:
+#+Latex:\index{audience for the paper}
+
+*** Guidance on audience for the paper                           :noexport:
+:GUIDANCE:
+Describe in a paragraph of prose the target audience of this paper.
+:END:
+
+
+
+** Potential target journals for submission
+:PROPERTIES:
+:CUSTOM_ID: sub:target-journals
+:END:
+#+Latex:\index{target journals}
+
+*** Guidance on potential titles for the paper                     :noexport:
+:GUIDANCE:
+The journal titles are enumerated in descending order of desirability.
+You have a plan B journal identified at the time of submission so that
+you can respond swiftly if the plan A journal rejects the paper.
+:END:
+
+1.
+2.
+3.
+4.
+
+
+
+
+** Related projects
+:PROPERTIES:
+:CUSTOM_ID: sub:related-projects
+:END:
+#+Latex:\index{related projects}
+
+*** Guidance on related projects for the paper                     :noexport:
+:GUIDANCE:
+By listing projects that are closely and even somewhat distantly related
+to the project at hand, it is possible to identify some synergies that
+might otherwise be overlooked. For example, when working in a new area,
+it is often useful to capitalize on the investment made in reading in
+the new field by capturing those insights in the form of a review
+article or book chapter. If you use Overleaf, you can include a
+hyperlink to the project's webpage.
+:END:
+
+-
+-
+-
+-
+
+** Draft Introduction
+:PROPERTIES:
+:CUSTOM_ID: subsec:Introduction
+:END:
+#+Latex:\index{draft!introduction}
+*** Guidance on draft introduction for the paper                     :noexport:
+:GUIDANCE:
+In this section and in the next two sections, we assemble the key
+components of the paper. You may wonder why we did not do this in the
+manuscript document. We find it easier to keep this prose close to the
+other lists in the sections that follow these subsections. In other
+words, we are using the writing log as an incubator for the initial
+drafts of these components of the paper.
+
+We craft a two-paragraph introduction following the method of Lindsay
+(Lindsay 2020 Scientific Writing Thinking In Words 2nd Ed). We do this
+drafting in the writing log until we are satisfied that we have a vision
+of the project that is clear enough to proceed. At this point, we
+transfer the draft introduction to the main manuscript.
+:END:
+
+
+
+** Potential results
+:PROPERTIES:
+:CUSTOM_ID: subsec:Results.
+:END:
+#+Latex:\index{draft!results}
+*** Guidance on draft introduction for the paper                     :noexport:
+:GUIDANCE:
+This section contains a list of the potential key results that are vital
+to addressing the central hypothesis. Usually, there are 4 to 6 key
+results. Yes, we can think about the nature of the results even before
+we have performed the experiments.
+
+We are not necessarily thinking about the expected results, but we can
+guess about the nature of the results with regard to whether they will
+be in the form of a table, a graph or an image. We then do an initial
+sorting of the results on the basis of how much weight they bear upon
+testing the central hypothesis. This sorting will be the order in which
+the results are presented, in contrast to the general tendency to
+deliver the results in the order in which we obtain the results. At this
+point, we might even draft an initial paragraph for the results section
+that outlines the order of the results. This initial paragraph helps to
+set the reader's expectations about the results that follow. After this
+initial paragraph is assembled and the planned results are listed, we
+will transfer this text to the main manuscript.
+:END:
+
+1.
+2.
+3.
+4.
+5.
+6.
+
+** Potential discussion points
+:PROPERTIES:
+:CUSTOM_ID: subsec:futureDiscussion
+:END:
+#+Latex:\index{draft!discussion}
+*** Guidance on draft discussion points for the paper                     :noexport:
+:GUIDANCE:
+After some years of experience in a particular field, one has a sense of
+the critical discussion points about how the proposed results will
+relate to the results from the work of others. The content of this
+discussion is supposed to be about the relationship of our results to
+those reported by others. Sometimes, we expand these discussion points
+into initial paragraphs. After we think this section is well-developed,
+we will transfer it to the main manuscript.
+:END:
+
+
+
+** Prior discussion points
+:PROPERTIES:
+:CUSTOM_ID: subsec:priorDiscussion
+:END:
+#+Latex:\index{draft!prior discussion points}
+*** Guidance on prior discussion points for the paper                     :noexport:
+:GUIDNACE:
+The discussion section should contain new points of discussion. If you
+are writing a series of papers about a topic, it is all too easy to
+recycle old discussion points. Before making the transfer mentioned
+above, we will check the proposed discussion points against those we
+have published to avoid repeating ourselves and remind ourselves to
+review our new results against our prior discussion points. You can
+check this list against the discussion section of your current
+manuscript to ensure that you are raising new points or updating prior
+points while appropriately citing yourself. The new results may require
+that we update our published discussion points.
+:END:
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+** Potential titles
+:PROPERTIES:
+:CUSTOM_ID: sub:titles
+:END:
+#+Latex:\index{darft!potenital titles}
+*** Guidance on potential titles for the paper                     :noexport:
+:GUIDANCE:
+Titles of 3-7 words long are easier for people to remember. We generally
+iterate through enough titles to find one that is catchy. Sometimes,
+this requires generating a list of more than 100 titles. This work takes
+time and should not be delayed until the day of manuscript submission.
+:END:
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+
+
+
+** Potential Keywords
+:PROPERTIES:
+:CUSTOM_ID: sub:keywords
+:CLASS: unnumbered
+:END:
+#+Latex:\index{darft!potenital keywords}
+*** Guidance on potential keywords for the paper                     :noexport:
+:GUDIANCE:
+Below is a list of potential keywords. Abstracting services use the
+title and abstract to extract terms for searching. As a result, select
+keywords that are not in these two parts of the paper. Usually, there is
+a limit on the number of keywords, so we choose the keywords carefully.
+We make a long list of keywords and select the best ones.
+:END:
+
+
+1. open science
+2.
+3.
+4.
+5.
+6.
+7.
+
+
+
+** Potential Abstract
+:PROPERTIES:
+:CUSTOM_ID: potential-abstract
+:CLASS: unnumbered
+:END:
+#+Latex:\index{draft!potential abstract}
+*** Guidance on potential abstract for the paper                     :noexport:
+:GUIDANCE:
+After filling in the above subsections, we are in a solid position to
+draft the abstract for the paper. This is just a draft and will be
+updated as the results emerge. However, going through this exercise is
+another way of visualizing the paper's contents and helps to strengthen
+that vision. Such clarity is essential to maintain momentum.
+:END:
+
+
+** Abbreviations
+:PROPERTIES:
+:CUSTOM_ID: sub:abbrev
+:END:
+#+Latex:\index{draft!abbreviations}
+*** Guidance on abbreviation for the paper                     :noexport:
+:GUIDANCE:
+A common mistake is to delay the assembly of the list of acronyms and
+abbreviations. An incomplete list tells the reviewer that the authors
+assembled the manuscript in a hurry.
+:END:
+
+
+#+begin_quote
+Acronyms/Abbreviations/Initialisms should be defined the first time they
+appear in each of three sections: the abstract; the main text; the first
+figure or table. When defined for the first time, the
+acronym/abbreviation/initialism should be added in parentheses after the
+written-out form.
+#+end_quote
+
+Abbreviations are also listed at the end of the manuscript.
+
+- abbrev :: its expansion
+
+- abbrev :: its expansion
+
+- abbrev :: its expansion
+
+- abbrev :: its expansion
+
+
+** Potential collaborators: name; institution;e-mail
+:PROPERTIES:
+:CUSTOM_ID: sub:collaborators
+:END:
+#+Latex:\index{draft!collaborators}
+
+
+-
+-
+-
+-
+
+** Potential competitors: name; institution;e-mail
+:PROPERTIES:
+:CUSTOM_ID: sub:competitors
+:END:
+#+Latex:\index{draft!competitors}
+
+
+-
+-
+
+** Potential reviewers: name; institution; e-mail
+:PROPERTIES:
+:CUSTOM_ID: sub:reviewers
+:END:
+#+Latex:\index{draft!potential reviewers}
+
+
+1.
+2.
+3.
+4.
+5.
+
+** Draft cover letter
+:PROPERTIES:
+:CUSTOM_ID: sub:coverletter
+:END:
+#+Latex:\index{draft!cover letter}
+*** Guidance on draft cover letter                                 :noexport:
+:GUIDANCE:
+It is never too early to start writing the cover letter for a project.
+This letter is another form of summary that is part of the actualization
+of the project. If we have enough energy and time left over from
+completing the initialization of the writing project, we may proceed to
+drafting the cover letter. The advantage of doing so is to capture one's
+excitement about the project.
+:END:
+
+
+
+** Acknowledgements
+:PROPERTIES:
+:CUSTOM_ID: subsec:literaturesources
+:END:
+#+Latex:\index{draft!acknowledgements}
+*** Guidance on acknowledgments                                    :noexport:
+:GUIDANCE:
+It is never too early to start this section.
+Work on it should not be delayed until the last minute because you risk overlooking somebody's contribution.
+:END:
+
+
+-
+-
+-
+-
+-
+-
+
+** Funding sources
+:PROPERTIES:
+:CUSTOM_ID: subsec:fundingsources
+:END:
+#+Latex:\index{data!funding sources}
+*** Guidance on funding sources                                    :noexport:
+:GUIDANCE:
+It is never too early to start this section.
+Work on it should not be delayed until the last minute because you risk overlooking a funding source.
+:END:
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+
+* Data
+:PROPERTIES:
+:CUSTOM_ID: sec:data
+:END:
+#+LaTeX:\index{data}
+*** Guidance on Data                                   :noexport:
+:GUDIANCE:
+This section catalogs the data to be used in the paper.
+:END:
+
+** Data management plan                                 :noexport:
+:GUDIANCE:
+You might start this section with the data management plan included in the supporting grant application.
+Then you might include updates to this plan as the project evolves.
+:END:
+
+
+** Inventory of data on hand
+:PROPERTIES:
+:CUSTOM_ID: subsec:datainventory
+:END:
+#+LaTeX:\index{data inventory!data on hand}
+
+
+#+CAPTION[Stored data]: Projects's stored data.
+| Description               | Location   |
+|---------------------------+------------|
+| SSRL images February 2024 | MooersHD11 |
+| SSRL images August 2024   | MooersHD12 |
+
+
+
+** Inventory of project's required external software
+:PROPERTIES:
+:CUSTOM_ID: subsec:externalsoftware
+:END:
+#+LaTeX:\index{data inventory!external software}
+
+
+#+CAPTION[External software]: Projects's required external software.
+| Description               | Location   |
+|---------------------------+------------|
+| CCP4                      | iMac2      |
+| Phenix                    | iMac3      |
+
+
+
+** Inventory of project's software repositories
+:PROPERTIES:
+:CUSTOM_ID: subsec:projectsrepos
+:END:
+#+LaTeX:\index{data inventory!sofware repos}
+
+
+#+CAPTION[Software repos]: Projects's software repositories.
+| Description               | Location   |
+|---------------------------+------------|
+| Repo1                     |GitHub      |
+| Repo2                     |Codeberg    |
+
+
+
+** Relevant videos
+:PROPERTIES:
+:CUSTOM_ID: subsec:videos
+:END:
+#+Latex:\index{data inventory!videos}
+
+#+CAPTION[Related videos]: Videos related to project.
+| Description | URL |
+|-------------+-----|
+|             |     |
+|             |     |
+
+
+** Relevant blogs
+:PROPERTIES:
+:CUSTOM_ID: subsec:videos
+:END:
+#+Latex:\index{data inventory!relevent blogs}
+-
+-
+-
+-
+-
+-
+
+
+** Relevant literature sources
+:PROPERTIES:
+:CUSTOM_ID: subsec:literaturesources
+:END:
+#+Latex:\index{data inventory!literature sources}
+
+-
+-
+-
+-
+-
+-
+
+** Relevant collections of PDFs in Research Rabbit and the like
+:PROPERTIES:
+:CUSTOM_ID: subsec:pdfs
+:END:
+#+Latex:\index{data!collections of PDFs}
+
+
+-
+-
+-
+-
+-
+-
+
+
+** Project's progress summary for annual grant report
+:PROPERTIES:
+:CUSTOM_ID: subsec:annualgrantreport
+:END:
+
+#+Latex:\index{annual grant report}
+# It is never too early to start this section.
+
+-
+-
+-
+-
+-
+-
+-
+
+
+
+** Project's progress summary for annual report to college
+:PROPERTIES:
+:CUSTOM_ID: subsec:annualcollegereport
+:END:
+#+Latex:\index{data!annual college report}
+
+# It is never too early to start this section.
+# This will be where you inform your superiors what you have been up to.
+
+-
+-
+-
+-
+-
+-
+-
+
+
+
+* Plans to support the writing project
+:PROPERTIES:
+:CUSTOM_ID: supportforwritingproject
+:END:
+#+Latex:\index{plans!support for the writing project}
+*** Guidance on plans to support the writing project                     :noexport:
+:GUIDANCE:
+ While it is useful to write about half of a manuscript in four hours in the first sitting without having done any experiments to provide a mental framework for the project and limit the scope, the work will need to be done.
+ If the work is computational or experimental, many plans exist to get it done.
+ Several plans must be developed to execute the work required to complete and submit the manuscript.
+ These plans might not be written down many times, but it is probably quite useful to actually articulate them somewhere.
+ These plans may not necessarily have to reside inside the writing log: A link to the plan in a plain text or an HTML file may be sufficient.
+ Some of these plans are global in nature and may be applicable across all projects.
+Some plans may be specific to the project at hand and must be elaborated on.
+If these plans are relatively short, they could be included in the writing log, but if they are lengthy, it might be necessary to just provide a link to them.
+:END:
+
+
+
+- Budget
+- Relation to specific aims of funded grants.
+- Secure funding for the research and manuscript.
+- Timeline to do the required experiments to test the hypothesis.
+- Secure access to required national laboratory resources at experimental stations (i.e., general user proposal and beamtime requests).
+- Secure access to computing resources.
+- Gather the appropriate information from the literature.
+- Recruit collaborators
+- Recruit lab members to do the work.
+- Individual career development for lab members, including yourself.
+- Biosafety.
+- Authentication of key biological and chemical resources.
+- Rigorous statistical sampling and data analysis
+- Data management including backups and archives.
+- Data sharing.
+- The NIH PEDP.
+- Advertising plan: posters, talks, seminars, YouTube videos, social media posts.
+
+
+
+
+** Timeline for experiments
+:PROPERTIES:
+:CUSTOM_ID: subsec:supportforwritingproject
+:END:
+#+Latex:\index{plans!timeline for experiments}
+
+
+** User proposals: national labs
+:PROPERTIES:
+:CUSTOM_ID: subsec:userproposals
+:END:
+#+Latex:\index{plans!user proposals for national labs}
+
+
+** User proposals: HPC
+:PROPERTIES:
+:CUSTOM_ID: subsec:hpcproposals
+:END:
+#+Latex:\index{plans!user proposals for high performance computing}
+
+
+
+** Literature retrieval
+:PROPERTIES:
+:CUSTOM_ID: subsec:literatureretrieval
+:END:
+#+Latex:\index{plans!literature retrieval}
+
+
+
+
+** Funding
+:PROPERTIES:
+:CUSTOM_ID: subsec:funding
+:END:
+#+Latex:\index{plans!funding}
+
+
+
+** Recruitment of collaborators
+:PROPERTIES:
+:CUSTOM_ID: subsec:collaborators
+:END:
+#+Latex:\index{plans!collaborators}
+
+
+
+** Recruitment of workers
+:PROPERTIES:
+:CUSTOM_ID: subsec:workers
+:END:
+#+Latex:\index{plans!recruitment of workers}
+
+
+
+** Career development plans
+:PROPERTIES:
+:CUSTOM_ID: subsec:carreerdevelopment
+:END:
+#+Latex:\index{plans!carreer development}
+
+
+
+** Biosafety
+:PROPERTIES:
+:CUSTOM_ID: subsec:biosafety
+:END:
+#+Latex:\index{plans!biosafety}
+
+
+
+
+** Authentication of key biological resources
+:PROPERTIES:
+:CUSTOM_ID: subsec:authenticationbiological
+:END:
+#+Latex:\index{plans!authentication!biological resources}
+
+
+** Authentication of chemical resources
+:PROPERTIES:
+:CUSTOM_ID: subsec:authenticationchemicalresources
+:END:
+#+Latex:\index{plans!authenticiation!chemical resources}
+
+
+** Statistical sampling and power analysis
+:PROPERTIES:
+:CUSTOM_ID: subsec:samplingpoweranalysis
+:END:
+#+Latex:\index{plans!sampling plan}
+#+Latex:\index{plans!power analysis}
+
+
+
+** Computer simulations
+:PROPERTIES:
+:CUSTOM_ID: subsec:simulation
+:END:
+#+Latex:\index{plans!simulation}
+
+
+** Data analysis plans
+:PROPERTIES:
+:CUSTOM_ID: subsec:analysisplans
+:END:
+#+Latex:\index{plans!analysis}
+
+
+
+
+** Data management plans
+:PROPERTIES:
+:CUSTOM_ID: subsec:datamanagementplans
+:END:
+#+Latex:\index{plans!data management}
+
+
+
+
+** Data sharing plans
+:PROPERTIES:
+:CUSTOM_ID: subsec:datasharingplans
+:END:
+#+Latex:\index{plans!data sharing}
+
+
+
+
+** The NIH PEDP
+:PROPERTIES:
+:CUSTOM_ID: subsec:pedp
+:END:
+#+Latex:\index{plans!NIH PEDP}
+
+
+* Project management for timely completion
+:PROPERTIES:
+:CUSTOM_ID: sec:timelycompletion
+:END:
+#+Latex:\index{plans!timely completion}
+*** Guidance on plans to support the writing project                     :noexport:
+:GUIDANCE:
+This section is to plan the completion of the manuscript and for making periodic assessments of its status.
+Having the checklist and the timeline adjacent each other will aid the scheduling of remaining tasks.
+The assessment of the current state could be included within the diary section, but we think it is more useful to include it in this area near the timeline and the checklist for completion.
+By having the assessments adjacent to each other, you should be able to see more clearly how progress is being made on the manuscript.
+:END:
+
+
+
+- Checklist for manuscript completion.
+- Timeline and Milestones.
+- Periodic assessments of the current state of the manuscript.
+-
+-
+-
+
+** Checklist for manuscript completion
+:PROPERTIES:
+:CUSTOM_ID: subsec:checklist
+:END:
+#+Latex:\index{manuscript completion!checklist}
+
+
+- [ ] Central hypothesis identified.
+- [ ] Introduction drafted to define scope.
+- [ ] Results ordered by relevance to the central hypothesis.
+- [ ] Results imagined as figures and tables.
+- [ ] Results outlined to the subsection level.
+- [ ] Results outlined to the paragraph level.
+- [ ] Figures have been conceptualized.
+- [ ] Figures have been drafted.
+- [ ] Figure legends have been drafted.
+- [ ] Tables have been conceptualized.
+- [ ] Tables have been drafted.
+- [ ] Table legends have been drafted.
+- [ ] Paragraphs in the Results section drafted.
+- [ ] Results concluding sentences checked.
+- [ ] Discussion points identified.
+- [ ] Prior publications checked for Discussion points.
+- [ ] Discussion paragraphs drafted.
+- [ ] Discussion concluding sentences checked.
+- [ ] Discussion subsections check with the central hypothesis.
+- [ ] Citations have been entered.
+- [ ] Citations have been checked.
+- [ ] Bibliographic information has been checked.
+- [ ] Accuracy of Bibliographic information checked.
+- [ ] Citations have entries in the annotated bibliography.
+- [ ] Abstract drafted.
+- [ ] Supplemental materials assembled.
+- [ ] The first draft is finished.
+- [ ] Round 1 of rewriting finished.
+- [ ] Round 2 of rewriting finished.
+- [ ] Ready for reverse outline.
+- [ ] Round 3 of rewriting.
+- [ ] Solicit review by co-authors.
+- [ ] Internal polishing editing.
+- [ ] Ready for intense review by a professional writer.
+- [ ] Intensive review revisions have been incorporated.
+- [ ] Penultimate draft ready for internal proofreader.
+- [ ] Penultimate review revisions incorporated.
+- [ ] Manuscript ready for submission.
+
+
+
+
+** Timeline with milestones
+:PROPERTIES:
+:CUSTOM_ID: subsec:timelinemilestones
+:END:
+#+Latex:\index{manuscript completion!milestones}
+*** Guidance on Timeline with milestones                                :noexport:
+:GUIDANCE:
+This is the planning section where the calendar is matched up with milestones: goals without deadlines are just dreams.
+This is a tricky section to include inside of a writing log document because it often requires a heavy-duty external Library to be able to generate an image.
+This could be done by simply copying the checklist and pasting it into this section as a table with three columns: milestone, target date, and achievement date.
+This would lead to a very long table that might be too cluttered.
+There might be a subset of the items in the checklist that are larger in scope that could be listed.
+For example, completion of various parts of the writing log, key experiments, and solicitation of outside expertise.
+The setting up of the time timeline will be very Project Specific and will require customization.
+The main thing is to keep it simple enough to be useful but no simpler than necessary.
+:END:
+
+
+
+#+CAPTION[Milestones]: Timeline with milestones.
+| Milestone   | Target date | Achievement date |
+|-------------+-------------+------------------|
+|milestone 1  | date        | date             |
+|milestone 2  | date        | date             |
+|milestone 3  | date        | date             |
+|milestone 4  | date        | date             |
+|milestone 5  | date        | date             |
+
+
+
+** Assessments of current state
+:PROPERTIES:
+:CUSTOM_ID: subsec:currentstate
+:END:
+#+Latex:\index{manuscript completion!current state}
+
+
+
+*** Date:
+:PROPERTIES:
+:CUSTOM_ID: ssubsec:date
+:END:
+#+Latex:\index{manuscript completion!by date}
+
+
+
+**** How far is the manuscript from being completed (in percent completion)?
+:PROPERTIES:
+:CUSTOM_ID: sssubsec:precentcompletion
+:END:
+#+Latex:\index{manuscript completion!percent completion}
+
+
+
+
+
+**** List what keeps the manuscript from being submitted today.
+:PROPERTIES:
+:CUSTOM_ID: sssubsec:holdingback
+:END:
+#+Latex:\index{manuscript completion!holding back}
+
+
+
+
+
+**** List what is missing from the manuscript that could improve its impact.
+:PROPERTIES:
+:CUSTOM_ID: sssubsec:missing
+:END:
+#+Latex:\index{manuscript completion!what is missing}
+
+
+
+
+
+
+**** What could be removed from the manuscript to streamline it?
+:PROPERTIES:
+:CUSTOM_ID: ssubsec:streamlining
+:END:
+#+Latex:\index{manuscript completion!streamlining}
+
+
+
+
+* Daily Log
+:PROPERTIES:
+:CUSTOM_ID: sub:daily-log
+:END:
+#+Latex:\index{daily log}
+
+** 2025-03-20
+:PROPERTIES:
+:CUSTOM_ID: 2025-03-20
+:END:
+#+Latex:\index{2025-03-20}
+# Enter M-RET to create a new entry
+# Snippet entry has goals and accomplishments
+# You want to include correspondence in quote block(s).
+
+*** Accomplishments
+- Submitted routing form to or center track.
+- Drafted the summary statement.
+- Assigned project number and created folder for project.
+
+  ** 2025-03-21
+:PROPERTIES:
+:CUSTOM_ID: 2025-03-21
+:END:
+#+Latex:\index{2025-03-21}
+# Enter M-RET to create a new entry
+# Snippet entry has goals and accomplishments
+# You want to include correspondence in quote block(s).
+
+*** Bridge written at end of last writing session. 
+Copy and paste from section below if you want to keep a record of these thoughts.
+
+**** Actions to be taken in the next writing session.
+- 
+
+**** Summarize current state: What are the biggest challenges, open questions, worries, or future roadblocks?
+- 
+
+**** Record the vital details that may fade away before the next writing session.
+-
+
+**** What is you intention for the next writing session?
+
+
+*** Accomplishments
+- 
+
+
+
+** Bridge to next session                                            :restart-here:
+:PROPERTIES:
+:CUSTOM_ID: subsec:next
+:END:
+#+LaTeX:\index{next action}
+*** Guidance on bridge to next session                                :noexport:
+:GUIDANCE:
+The idea is not write until the generative well is completely dry.
+Leave some material behind so that you can reengage more easily.
+This idea is from Ernest Hemingway.
+
+If you paint a clear enough picture, it will be easier to re-engage.
+The four questions are from Tiago Forte (2022) 'Building a Second Brain'.
+
+You could copy this subtree and paste into the daily entry to have the
+answers to these questions in front of you. They might be a useful
+record.
+
+- List one or more actions to do in the next session.
+- Summarize current state: What are the biggest challenges, open questions, worries, or future roadblocks?
+- Record the vital details that may fade away before the next writing session.
+- What is you intention for the next writing session?
+
+:END:
+
+**** Actions to be taken in the next writing session.
+- 
+**** Summarize current state: What are the biggest challenges, open questions, worries, or future roadblocks?
+- 
+
+**** Record fleeting details
+Record the vital details that may fade away before the next writing session.
+
+**** What is you intention for the next writing session?
+
+
+
+** To be done or could be done
+:PROPERTIES:
+:CUSTOM_ID: subsec:to-do
+:END:
+#+LaTeX:\index{To be done}
+*** Guidance on to be done                               :noexport:appendtodos:
+:GUIDANCE:
+These are the tasks that are thought to be required to get the project
+finished. The prioritizing of the tasks is the hard part. The book "Time
+Power" by Charles Hobbs provides helpful guidance on setting priorities.
+I use an unordered list below.
+
+I leave this list unprioritized. 
+I pull out a subset of TODOs to work on in a given session.
+I do the priotizing of this subset at the start of the writing session.
+
+Avoding adding deadlines to your TODOs else your org-agenda will become clogged with unfnished TODOs.
+
+This log file can be included in the list of org files scanned for deadlines and scheduled events by org-agenda.
+
+The package mooerslab/org-10k-projects eases capturing TODOs in this file via the org-capture template for projects.
+:END:
+
+**** TODO placeholder
+
+
+
+
+
+** Word Count
+:PROPERTIES:
+:CUSTOM_ID: subsec:wordcount
+:END:
+#+LaTeX:\index{word count}
+
+# The word count is stored in wordcount.txt. The word count tends to
+# approach a plateau in the latter stages of writing.
+
+# The word count tends to approach a plateau in the latter stages of writing.
+
+
+#+Latex:\begin{figure}[H]
+#+LaTeX:  \centering
+#+LaTeX:  \begin{tikzpicture}
+#+LaTeX:    \begin{axis}[
+#+LaTeX:      xlabel={Date},
+#+LaTeX:      ylabel={Word Count Cumulative},
+#+LaTeX:      % legend pos=south east,
+#+LaTeX:      % legend entries={},
+#+LaTeX:      ]
+#+LaTeX:      \addplot table [x=Day,y=Words] {wordcount.txt};
+#+LaTeX:    \end{axis}
+#+LaTeX:  \end{tikzpicture}
+#+LaTeX:\caption{Cummulative word count.}
+#+LaTEX:\end{figure}
+
+#+LaTeX:\begin{table}[]
+#+LaTeX:  \centering
+#+LaTeX:  \pgfplotstabletypeset[
+#+LaTeX:  columns/Date/.style={column name=Date},
+#+LaTeX:  columns/Day/.style={column name=Day},
+#+LaTeX:  columns/Word/.style={column name=Words},
+#+LaTeX:  ]{wordcount.txt}
+#+LaTeX:  \caption{Date, day and wordcount.}
+#+Latex:  \label{tab:my_label}
+#+LaTeX:\end{table}
+
+** Update Writing Progress Notebook
+:PROPERTIES:
+:CUSTOM_ID: subsec:WPsheet
+:END:
+#+LaTeX:\index{writing progress notebook}
+*** Guidance on Writing Progress Notebook                               :noexport:
+:GUIDANCE:
+# The writing progress notebook enables the tracking of progress on a
+# project basis [fn:1]. The Notebook automatically updates sums of words
+# written and minutes spent across all projects on a given day. It only
+# takes a few seconds to enter the number of words written and the time
+# spent for a specific project on that project's Google Sheet. If you have
+# Voice In plus activated, say the words "open sheet 37" to have the
+# worksheet for project 37 opened in the web browser. If not, click on
+# this direct link to the Google Sheet in the compiled PDF of this writing
+# log [fn:2].
+
+# Update the sheet for this project with the total number of minutes spent
+# on this project and the word count. The word count is accessed in
+# Overleaf under the menu pull-down. The word count operation has to be
+# applied to a recently compiled tex document.
+:END:
+
+
+** Update Zettelkästen in org-roam
+:PROPERTIES:
+:CUSTOM_ID: subsec:zettelkasten
+:END:
+#+LaTeX:\index{zettelkasten}
+*** Guidance on Zettelkästen                              :noexport:
+:GUIDANCE:
+Update your knowledge base if you found anything worth adding to it.
+:END:
+
+
+
+* Future additions and tangents
+:PROPERTIES:
+:CUSTOM_ID: subsec:future
+:END:
+#+LaTeX:\index{future additions and tangents}
+*** Guidance on future additions and tangents                              :noexport:
+:GUIDANCE:
+# The word count is stored in wordcount.txt. The word count tends to
+# approach a plateau in the latter stages of writing.
+:END:
+
+
+
+-
+-
+-
+-
+-
+-
+
+
+
+** Ideas to consider adding to the manuscript
+:PROPERTIES:
+:CUSTOM_ID: subsec:new-ideas
+:END:
+#+LaTeX:\index{future additions and tangents}
+
+
+
+-
+-
+-
+
+*** Introduction
+:PROPERTIES:
+:CUSTOM_ID: ssubsec:new-ideas:Intro
+:END:
+#+LaTeX:\index{introduction}
+
+
+-
+-
+-
+-
+
+*** Results
+:PROPERTIES:
+:CUSTOM_ID: ssubsec:new-ideas:Results
+:END:
+#+LaTeX:\index{results}
+
+
+-
+-
+-
+-
+
+*** Discussion
+:PROPERTIES:
+:CUSTOM_ID: ssubsec:new-ideas:Discussion
+:END:
+#+LaTeX:\index{discussion}
+
+
+-
+-
+-
+
+** To be done someday
+:PROPERTIES:
+:CUSTOM_ID: subsec:someday
+:END:
+#+LaTeX:\index{to be done someday}
+
+*** Guidance on to be done someday                              :noexport:
+:GUIDANCE:
+This section stores tasks that are related to the current project and
+that may be worth doing someday. Often these tasks are tangential to
+addressing the central hypothesis of the paper. This is a place for
+capturing those wonderful ideas. Sometimes these ideas blossom into new
+projects. This section can capture ideas that might be mentioned in
+terms of future work in the discussion section of the manuscript.
+:END:
+
+-
+-
+-
+
+** Spin off writing projects
+:PROPERTIES:
+:CUSTOM_ID: subsec:spinoffs
+:END:
+#+LaTeX:\index{spin off writing progect}
+
+
+-   ::
+-   ::
+-   ::
+-   ::
+
+
+* Guidelines, checklists, protocols, helpful hints
+:PROPERTIES:
+:CUSTOM_ID: sec:guides
+:END:
+#+LaTeX:\index{guidelines}
+#+LaTeX:\index{checkists}
+#+LaTeX:\index{protocols}
+#+LaTeX:\index{helpful hints}
+
+
+** Daily protocol
+:PROPERTIES:
+:CUSTOM_ID: sub:entry-protocol
+:END:
+#+Latex:\index{daily protocol}
+
+
+1. At start of work session, review the timeline, recent daily entries, next action item , and
+   to-do list.
+2. Write the goal(s) for the current writing session as a means of
+   engaging mentally in the work. This prose could be retained or
+   deleted at the end of the work session.
+3. At the end of the work session, move finished items to an achievement
+   list for the day.
+4. Move the unfinished items to the to-do list.
+5. Identify the next task or action.
+6. Update the wordcount.txt file, if you wrote anything.
+7. Update the project Sheet in the Writing Progress Workbook.
+8. Update your personal knowledge base.
+
+** Tips for using Overleaf
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:overleaf
+:END:
+#+LaTeX:\index{tips for using Overleaf}
+
+1. Chrome has the TextArea extension that is needed to run Grammarly in
+   Overleaf.
+2. Use the shortcuts (new commands defined in the preamble) to save time
+   typing.
+3. Where shortcuts are not possible, use templates.
+4. View Overleaf project with Chrome to be able to run Grammarly via the
+   Chrome Grammarly extension.
+5. code Snippets can be mapped to voice commands in Voice In Plus.
+
+
+
+** Protocol for running Grammarly in Overleaf
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:grammarlyInoverleaf
+:END:
+#+LaTeX:\index{running Grammarly in Overleaf}
+
+
+You must install Grammarly and Textarea extensions for Chrome. With your
+project open in Overleaf, open the textarea icon in the upper right of
+your browser and check the checkbox. This will convert the PDF viewport
+into RichText. Hit the Grammarly icon. Grammarly will check the text in
+the RichText viewport. Corrections that you make in the RichText
+viewport are applied to your tex file in the left viewport. Note that
+the preamble of the document will cause the text to be spread out. You
+may have to scroll down a ways to see the document environment.
+
+** Protocol for BibTeX to BibLaTeX library conversion
+
+Note that you must supply the full file paths.
+Also, note the order of the arguments to bibConvert.
+The third argument is the file type of the first.
+The fourth argument is the file type of the second argument.
+
+#+LaTeX:\begin{enumerate}
+#+LaTeX:\item Start R-Studio
+#+LaTeX:\item Run the following code after editing the file paths:
+#+LaTeX:\end{enumerate}
+#+LaTeX:
+#+LaTeX:\begin{minted}{R}
+#+LaTeX:library(devtools)
+#+LaTeX:install_github("GeoBosh/rbibutils")
+#+LaTeX:library(rbibutils)
+#+LaTeX:bibConvert("/Users/blaine/Documents/global.bib", "/Users/blaine/Documents/globalBiblatex.bib", "bibtex", "biblatex")
+#+LaTeX:\end{minted}
+
+
+** Guidelines for debugging the annotated bibliography
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:annotDebug
+:END:
+#+LaTeX:\index{annotated bibliography!guideline for debugging}
+
+
+
+For a template annotated bibliography, see
+https://github.com/MooersLab/annotatedBibliography.
+
+1. Escape with a forward slash the following: &, _, %, and #.
+2. Title case the journal titles.
+3. Replace unicode characters with LaTeX code: e.g., replace Å with Å.
+   Not all LaTeX document classes are compatible with unicode.
+4. The primes have to be replaced with '.
+5. The vertical red rectangles with a white dot in the middle should be
+   replaced with a whitespace.
+6. There are two styles in the bibtex world: bibtex and biblatex. We are
+   using bibtex. It is simpler. It has fewer fields.
+7. Use Google Scholar bibtex over Medline or PubMed biblatex.
+8. Often the error is in the bibitem entry above the one indicated in
+   the error messages.
+9. All interior braces must by followed by a comma, including the last
+   one.
+10. When stumped, replace the entry with a fresh one from Google
+    Scholar.
+
+** Graphical Abstract
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:graphicalAbstract
+:END:
+#+LaTeX:\index{graphical abstract}
+
+The following is copied from the Crystal Journal's
+[[https://www.mdpi.com/journal/crystals/instructions#preparation][author
+guidelines]].
+
+#+begin_quote
+A graphical abstract (GA) is an image that appears alongside the text
+abstract in the Table of Contents. In addition to summarizing the
+content, it should represent the topic of the article in an interesting
+way. The GA should be a high-quality illustration or diagram in any of
+the following formats: PNG, JPEG, EPS, SVG, PSD or AI. Written text in a
+GA should be clear and easy to read, using one of the following fonts:
+Times, Arial, Courier, Helvetica, Ubuntu or Calibri. The minimum size
+required for the GA is 560 \(\times\) 1100 pixels (height \(\times\)
+width). When submitting larger images, please, keep to the same ratio.
+#+end_quote
+
+I usually make the mistake of treating the graphical abstract as an
+afterthought. Then there is no time to make one during submission of the
+manuscript. This can lead to delays or to the journal converting one of
+your sub-figures into a graphical abstract. A good example of a
+graphical abstract is found
+[[https://www.mdpi.com/2073-4352/11/3/273][here]].
+
+
+** Guidelines for benchmarks
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:benchmarks
+:END:
+#+LaTeX:\index{guidelines for benchmarks}
+
+
+** Guidelines for using Writing Progress Notebook
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:wpnb
+:END:
+#+LaTeX:\index{writing progress notebook!guidelines}
+
+The writing progress notebook enables the tracking of progress on a
+project basis [fn:3]. The Notebook automatically updates sums of words
+written and minutes spent across all projects on a given day. It only
+takes a few seconds to enter the number of words written and the time
+spent for a specific project on that project's Google Sheet. If you have
+Voice In plus activated, say the words "open sheet 37" to have the
+worksheet for project 37 opened in the web browser. If not, click on
+this direct link to the Google Sheet in the compiled PDF of this writing
+log [fn:4].
+
+
+** Guidelines for using a personal knowledge base
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:knowledgebase
+:END:
+#+LaTeX:\index{personal knowledge base!guidelines}
+
+If you maintain a knowledge base like a Zettelkästen in org-roam or
+Obsidian or Notion, you might consider adding literature notes and
+permanent notes at the end of a work session [fn:5] [fn:6]. The name of
+the index for this project is =XXXXXXXXX=. Enter =Control-c n f= to find
+this project note. This knowledge base can store information that you
+may want to use eventually in the paper.
+
+These notes that you may add might be in the form of what are called
+*permanent notes* that include new insights or plans for the work. These
+thoughts are not directly linked or derived from any particular
+reference in the literature. Another kind of note is known as a
+*citation note* or *literature note* is derived from a specific
+reference. This kind of note will contain the BibTeX cite key.
+
+Although such notes can be stored in an annotated bibliography
+(https://github.com/MooersLab/annotatedBibliography), I seem less likely
+to utilize this information while working on a manuscript because the
+annotated bibliographies are in a different document. Because it is out
+of sight, the annotated bibliography is also out of mind.
+
+The advantage of keeping these bits of knowledge inside the writing log
+is that you can link the entries made in the daily log section to these
+bits of knowledge by using the label and ref macros of LaTeX. You can
+also set up label and ref pairs between to-do items and the bits of
+knowledge. Some of these notes may refer to a particular reference, so
+you can include the cite key with these notes if the reference has been
+included in the BibTeX library file sourced at the bottom of this file.
+
+I usually source the BibTeX library file that I am using in the
+annotated bibliography for a particular project. Keeping these items
+together in one document will improve the odds that you act upon the
+collected information, reducing the mental bandwidth you have to commit
+to managing this writing log.
+
+Another approach I use sometimes is to include such information on lines
+that have been commented out in the manuscript's tex document near where
+I want to utilize that information. I must admit that this approach can
+become a little unwieldy if the comments span many lines.
+
+If you use the Pomodoro method, you would probably want to commit the
+last one or two poms of a work session on a writing project to update
+your knowledge base. If you have been lagging on doing such updates, you
+may want to commit four to six poms to this kind of work; you might have
+to do this over multiple days if you have fallen behind.
+
+
+
+
+** Writer's Creed
+:PROPERTIES:
+:CUSTOM_ID: subsec:guides:writerscreed
+:END:
+#+LaTeX:\index{writer's creed}
+
+A writer does the following:
+
+
+- Schedules daily writing time on workdays; takes a relaxed approach on weekends.
+- Shows up and writes during the scheduled writing time.
+- Stands up and walks around every 25 minutes for no more than 5 minutes (i.e., uses the Pomodoro technique).
+- Limits generative writing to 3-5 hours daily; spends the rest of the day on supportive tasks and other duties.
+- Overcomes writer's block by rewriting the last paragraph or reverse outlining a section.
+- Keeps near a list of tricks for overcoming writer's block.
+- Manages their energy by doing generative writing first, rewriting second, and supportive tasks later in the day.
+- Jumps into generative writing; does not wait to be inspired.
+- Does generative writing when half-awake early in the day and editing and rewriting when fully alert, generally mid to late morning.
+- Masters their writing tools without letting the tools master them.
+- Writes without distractions (no YouTube videos, TV, radio, etc.; playing classical music is okay sometimes).
+- Tracks the time spent and words written by project ID.
+- Takes credit for time spent reading material related to the project, especially if finished by making an entry in an annotated bibliography.
+- Uses a separate writing log for each writing project.
+- Makes writing social when it is mutually beneficial.
+- Reads and writes about writing at least once a fortnight.
+- Keeps up on weasel words,  wordy phrases, cliché, and other junk English; reviews this list quarterly to avoid their use.
+- If a scientist, writes with precision, clarity, and conciseness. The order is in descending importance. Has memorized this list.
+- Uses computerized writing tools responsibly, not blindly: Takes full responsibility for the final draft.
+- Documents in writing log any use of AI to generate or paraphrase passages.
+- Uses dictation software for some generative writing.
+- Uses software tools like *Grammarly*, the *LanguageTool*, and the *Hemingway.app* to stimulate improvements in their writing.
+- Knows enough about good writing to accept only useful suggestions.
+- Does not blindly accept noun clusters, English contractions, and weasel words suggested by AI software.
+- Uses copilot when exhausted to complete sentences.
+- Uses the paraphrasing tool of some chatbots (e.g. TexGPT) cautiously and only to generate intermediate drafts.
+- Reviews this list periodically.
+
+Premises of the creed:
+
+- Writing is any activity that advances a writing project. Most of the time spent on these writing activities does not involve generative writing.
+- Generative writing is the most valuable activity: All other activities descend from it.
+- Generative writing and editing use different parts of the brain, so they should be done at separate times.
+- Generative writing is best done when half awake because your internal editor is not fully on so new ideas are more likely to emerge.
+- Generative writing be done by dictation while commuting if planned before the commute.
+- Editing is best done when fully awake because your internal editor will be activated. (Be careful; late-night editing can keep you awake later than intended and interfere with your sleep pattern.)
+- Most of the time spent on actual *writing* involves rewriting.
+- Planning is an important (underemphasized) component of writing.
+- Writing includes any activity that advances a writing project.
+- The word count does not capture most writing-related activities. Hence, the time spent on these activities must be tracked to document these efforts.
+- Time tracking is an essential component of time management. It is hard to manage what you do not measure. **Writing involves a lot of time management!!**
+- 90 minutes of generative writing per day on one project is the optimal length of time due to our [ultradian cycles](https://www.youtube.com/watch?v=ezT8kGzYOng). Thank you to my brother, Randall, for alerting me to this. Longer stretches of writing on one project are known as *binge writing*, which always leads to diminishing returns.
+- Writing includes reading the papers that you cite and those that you do not wind up citing. This reading activity can rejuvenate your momentum and inspire new ideas. It is best done in the evening so your subconscious can work overnight with the new insights. **Writing involves feeding your subconscious: Feed our head!**. Reading is grossly underemphasized in writing books. Time should be scheduled for it else it is less likely to be done.
+- Writing includes mundane tasks like managing bibliographic libraries and making figures; these are good afternoon activities.
+- Writing includes data analysis.
+
+
+
+* Backmatter
+:PROPERTIES:
+:CUSTOM_ID: backmatter
+:END:
+
+
+#+Latex:\bibliography{/Users/blaine/Documents/global.bib}
+#+LaTeX:\printindex
+
+[fn:1] [[https://github.com/MooersLab/writing-progress-2024-25]]
+
+[fn:2] [[file:<insert link for specific sheet>][<insert link for specific sheet>]]
+
+[fn:3] [[https://github.com/MooersLab/writing-progress-2024-25]]
+
+[fn:4] [[file:<insert link for specific sheet>][<insert link for specific sheet>]]
+
+[fn:5] [[https://wiki2.org/en/Zettelkasten]]
+
+[fn:6] [[https://wiki2.org/en/Comparison_of_note-taking_software]]
