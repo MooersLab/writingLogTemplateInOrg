@@ -64,12 +64,12 @@ You can delete these after they are no longer needed.
 
 Version 0.8 of the writing log is divided into these sections: 
 
-- project initiation
-- project data
-- plans to support the project
-- timely completion
-- daily entries
-- future additions and tangents
+- Project initiation
+- Project data
+- Plans to support the project
+- Timely completion
+- Daily entries
+- Future additions and tangents
 - Guidelines, checklists, protocols, and helpful tips
 
 The subsections of these sections are shown below.
@@ -180,7 +180,7 @@ Now type `entry` followed by `tab` to start a new subsection for the current day
 
 This part of the writing project log may require customization.
 You may want to include project-specific protocols.
-You May have already written down your own protocols that you want to include, or the space for such protocols May stimulate you to develop protocols for multi-step processes you must go through in your work.
+You may have already written down your own protocols that you want to include, or the space for such protocols may stimulate you to develop protocols for multi-step processes you must go through in your work.
 Having those multi-step processes recorded in a protocol and readily accessible in this document increases the probability that the protocol will be followed and that you will save time by avoiding mistakes.
 
 We have made a variant of this writing log where this section is modular.
@@ -253,8 +253,8 @@ Prompts for a file path via minibuffer and includes a timestamp in a comment."
 (global-set-key (kbd "C-c P") 'org-insert-protocol-file)
 ```
 
-Disclosure: the last two functions were generated with Lama 3.1 70B via the Sider plugin for Google Chrome.
-The functions were tested and worked as advertised.
+Disclosure: The last two functions were generated with Lama 3.1 70B via the Sider plugin for Google Chrome.
+The functions were tested, and they worked as advertised.
 
 ## Usage
 
@@ -284,20 +284,20 @@ org-mode
   + `C-x u` to undo the last change.
   + `M-UP` or `M-DOWN` to shift lines up and down. UP and Down are the arrow keys.
   + `C-3 S-tab` to collapse the whole document while showing headlines down to the 3rd level. Change the number to collapse to a different level.
-  + `C-x C-o` to show the outline view using consult. This is the same as `M-x consult-outline`. This consult command collapses the document into a more compact format than `C-s S-tab` command. It is easier to navigate as a result. You have to install the consult package.
+  + `C-x C-o` to show the outline view using consult. This is the same as `M-x consult-outline`. This consult command collapses the document into a more compact format than `C-s S-tab` command. As a result, it is easier to navigate. You have to install the consult package.
 
 The [latex-emacs profile](https://github.com/MooersLab/latex-emacs) can access org-mode because it is built into Emacs.
 
 ## Using with org-pomodoro
 
-The daily log section is the ideal place for running a pomodoro timer.
+The daily log section is the ideal place for running a Pomodoro timer.
 The daily entries have a property drawer.
-Place the cursor or point below the current day's heading and enter `C-c o` to start a pomodoro with the start and end times logged in a logbook in the property drawer.
+Place the cursor or point below the current day's heading and enter `C-c o` to start a Pomodoro with the start and end times logged in a logbook in the property drawer.
 
 
-## Bash function for creating writing log for a new project
+## Bash function for creating a writing log for a new project
 
-At the start of a writing project, use this function to write a copy of the writing log template to a file with the project name in it.
+At the start of a writing project, use this function to write a copy of the writing log template to a file with the project name.
 Store this Dash function in the `.bashrc` or `.zshrc` file. Oh shoot too
 
 ```bash
@@ -318,6 +318,31 @@ cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5
 
 }
 ```
+
+## Some relevant functions in [Mooerslab/mooereslab-functions-el](https://github.com/MooersLab/mooerslab-functions-el)
+
+This repository contains my collection of useful functions to ease the use of this writing log and org-mode in general.
+
+- add-periods-to-list
+- org-add-periods-to-list-items
+- org-insert-protocol-file (I now store my protocols in ~/org-roam for fast discovery and recall)
+- region-to-itemized-list-in-org
+- region-to-todos-in-org
+- region-to-itemized-in-latex
+- latex-to-org-list-region
+- region-csv-to-org-table
+- create-org-table-with-caption
+- count-non-blank-lines
+- export-csv-to-sqlite-table (great for creating databases from csv files)
+- export-csv-to-matched-sqlite-table (great for adding data in csv file to existing database)
+- get-citekeys-from-bibtex-file
+- wrap-citekey-and-create-tex-file
+- insert-org-captioned-figure 
+- org-convert-checkboxes-to-todos
+- org-move-to-tag
+- append-todo-to-tagged-headline
+- open-new-abibnote-on-citekey
+- split-sentences-into-lines (very useful for splitting the long line of sentences returned from the whisper-file transcription)
 
 ## Directly related talks
 - [DSW 60-minute talk about scientific writing workflow in Org Mode: November 22, 2024](https://mediasite.ouhsc.edu/Mediasite/Channel/python/watch/cd5641aea892468c894ae31cd151d4671d)
