@@ -391,6 +391,7 @@ This repository contains my collection of useful functions to ease the use of th
 | 0.8.1 | Added function to insert contents of external files. This is very cool!                            | 2024 December 6 |
 | 0.8.2 | Added :appendtodos: tag to headline above TODO list in middle of document to work with org-projects.el. Replaced Next Action with  Hemmingway Bridge.                           | 2025 March 21 |
 | 0.8.3 | Added list of useful functions found in mooerslab-functions-el                         | 2025 March 27 |
+|0.8.4.| Added section at beginning for drafting alternate central hypotheses.  | 2026 January 5|
 
 ## Sources of funding
 
