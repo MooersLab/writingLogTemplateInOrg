@@ -188,8 +188,7 @@ The modularity eases the inclusion and exclusion of various protocols and guidel
 Seek repositories on this website with the words modular and writing log.
 
 Below is a list of protocols you can delete, supplement,  or expand upon.
-
-
+ 
 - Daily Protocol
 - Tips for using Overleaf
 - Protocol for running Grammarly in Overleaf
@@ -359,6 +358,7 @@ This repository contains my collection of useful functions to ease the use of th
 - [Writing log template in Markdown](https://github.com/MooersLab/writing-log-md) Markdown variant. Read and rendered to PDF by most good text editors.
 - [Writing log template in ODT](https://github.com/MooersLab/writing-log-odt) ODT can be read by Open Office, LibreOffice and MS Word.
 - [Writing log template in DOCX for MS Word](https://github.com/MooersLab/writing-log-docx) MS Word variant. Probably the least suitable format for this task.
+- [Programming log in Org](https://github.com/MooersLab/programmingLogInOrg)
 
 - [Slideshow template in LaTeX](https://github.com/MooersLab/slideshowTemplateLaTeX)
 - [Annotated bibliography Template in LaTeX](https://github.com/MooersLab/annotatedBibliography)
