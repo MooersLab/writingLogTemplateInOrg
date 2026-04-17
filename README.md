@@ -49,7 +49,7 @@ The remaining LaTeX code can be used in a code block for LaTeX.
 - Plot of the word count by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
 - A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and entering the tab.
-
+- Transcluded AIuse.org that can be updated in one file and imported into writing logs for all projects.
 
 ### Introduction
 
@@ -390,8 +390,9 @@ This repository contains my collection of useful functions to ease the use of th
 |  0.8.0 | Added :restart: tag to position the cursor at the end of the last daily entry in the Daily Log section upon opening the document in Emac. Made minor updates to the README.md file including link to talk about this document. | 2024 November 28 |
 | 0.8.1 | Added function to insert contents of external files. This is very cool!                            | 2024 December 6 |
 | 0.8.2 | Added :appendtodos: tag to headline above TODO list in middle of document to work with org-projects.el. Replaced Next Action with  Hemmingway Bridge.                           | 2025 March 21 |
-| 0.8.3 | Added list of useful functions found in mooerslab-functions-el                         | 2025 March 27 |
-|0.8.4.| Added section at beginning for drafting alternate central hypotheses.  | 2026 January 5|
+| 0.8.3  | Added list of useful functions found in mooerslab-functions-el                         | 2025 March 27 |
+| 0.8.4 | Added section at beginning for drafting alternate central hypotheses.  | 2026 January 5|
+| 0.8.6 | Added via transclusion section on AI use. | 2026 April 17|
 
 ## Sources of funding
 
