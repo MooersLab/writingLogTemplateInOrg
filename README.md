@@ -94,6 +94,16 @@ The subsections of these sections are shown below.
 - Potential reviewers
 - Draft cover letter
 
+### AI use
+
+The section is transcluded using the org-transclude package.
+This enable the editing of this section in one file and it's import into the writing logs for many projects.
+The section is under rapid change due to the evolving nature of AI.
+Read the tutorial tutorialOrgTransclusion.org.
+
+The information in this file is global.
+You can add another section for project-specific AI use.
+You should document your local AI use in the daily log section below.
 
 ### Project Data
 
