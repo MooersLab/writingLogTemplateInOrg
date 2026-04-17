@@ -1,0 +1,171 @@
+#+TITLE: Tutorial on Using org-transclusion to Import aiuse.org into writingLog.org
+#+AUTHOR: Blaine Mooers
+#+OPTIONS: toc:nil num:t
+#+STARTUP: noindent overview
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [10pt,letterpaper]
+#+LaTeX_HEADER: \usepackage[margin=0.5in]{geometry}
+#+LaTeX_HEADER: \usepackage{booktabs}
+#+LaTeX_HEADER: \usepackage{minted}
+#+LaTeX_HEADER: \usepackage{hyperref}
+#+LaTeX_HEADER: \usepackage{parskip}
+
+* Overview
+The =org-transclusion= package by Noboru Ota allows one org-mode buffer to display the live content of another file without copying it. The analogy is a window into a shared room rather than a photocopy of the furniture. You maintain one authoritative =aiuse.org= file in a central location, and each project writing log renders that content on demand. When you update the single source, every writing log that transcludes it shows the updated text the next time it is refreshed or reopened.
+
+\indexentry{org-transclusion}{1}
+\indexentry{single source of truth}{1}
+
+* Installation
+The package is available from MELPA and GNU ELPA. Install it from within Emacs with one of the following approaches.
+
+** Using package.el
+#+BEGIN_SRC emacs-lisp
+(unless (package-installed-p 'org-transclusion)
+  (package-refresh-contents)
+  (package-install 'org-transclusion))
+#+END_SRC
+
+** Using use-package
+#+BEGIN_SRC emacs-lisp
+(use-package org-transclusion
+  :ensure t
+  :after org
+  :bind (("C-c n t" . org-transclusion-mode)))
+#+END_SRC
+
+The key binding is optional. Replace =C-c n t= with any chord that does not collide with your existing bindings.
+
+* Activating the Mode
+Before transclusions render, the minor mode must be active in the buffer. Toggle it with the following command.
+
+#+BEGIN_SRC emacs-lisp
+M-x org-transclusion-mode
+#+END_SRC
+
+When the mode is on, the buffer shows the transcluded content inline. When the mode is off, you see the raw =#+transclude:= keyword lines only.
+
+* Basic Syntax
+A transclusion directive is a single org-mode keyword line that points to a target file. The minimal form inserts the entire contents of the target.
+
+#+BEGIN_SRC org
+#+transclude: [[file:~/org/shared/aiuse.org]]
+#+END_SRC
+
+Place this line in =writingLog.org= at the position where you want the shared content to appear. Save the file. Run =M-x org-transclusion-add= with the cursor on the line to render the content, or run =M-x org-transclusion-add-all= to render every directive in the buffer.
+
+* Recommended File Layout
+Put the shared file in a fixed location that every project can reference by an absolute path or by a path relative to your home directory. An example layout follows.
+
+#+BEGIN_SRC text
+~/org/shared/aiuse.org                       <- single source
+~/Projects/projectA/writingLog.org           <- transcludes aiuse.org
+~/Projects/projectB/writingLog.org           <- transcludes aiuse.org
+~/Projects/projectC/writingLog.org           <- transcludes aiuse.org
+#+END_SRC
+
+The tilde expands to your home directory and works across machines with the same username layout.
+
+* A Minimal Worked Example
+Assume =aiuse.org= lives at =~/org/shared/aiuse.org= and contains the following text.
+
+#+BEGIN_SRC org
+* AI Use Disclosure
+I used Claude 4.6 for brainstorming outline structure and for
+proofreading the Methods section. All experimental design,
+data analysis, and final prose are my own work.
+#+END_SRC
+
+In =writingLog.org=, add the directive under a suitable heading.
+
+#+BEGIN_SRC org
+* AI Use for This Project
+#+transclude: [[file:~/org/shared/aiuse.org]] :only-contents :exclude-elements "headline"
+#+END_SRC
+
+With =org-transclusion-mode= on and =M-x org-transclusion-add-all= executed, the writing log shows the disclosure text in place without the duplicate =AI Use Disclosure= heading.
+
+* Common Options
+The directive accepts options that trim or reshape the imported content. The most useful options are summarized below.
+
+#+CAPTION: Frequently used options for the =#+transclude:= directive.
+#+ATTR_LATEX: :booktabs t :align lp{8cm}
+| Option                        | Effect                                                       |
+|-------------------------------+--------------------------------------------------------------|
+| =:only-contents=              | Skip the target headline, keep the body                      |
+| =:exclude-elements "headline"= | Strip all headlines from the imported text                   |
+| =:lines 5-20=                 | Import a specific line range                                 |
+| =:level 2=                    | Promote or demote all headlines to a specific level          |
+| =:src emacs-lisp=             | Wrap a non-org file in a source block of the given language  |
+| =:end "REGEX"=                | Stop importing when a line matches the given regex           |
+
+\indexentry{transclude options}{1}
+
+* Targeting Part of a File
+You can transclude a single heading by its title or by a custom ID.
+
+#+BEGIN_SRC org
+#+transclude: [[file:~/org/shared/aiuse.org::*AI Use Disclosure]] :only-contents
+#+transclude: [[file:~/org/shared/aiuse.org::#ai-use]] :only-contents
+#+END_SRC
+
+The first form matches the headline text. The second form matches a =CUSTOM_ID= property on the target heading. The custom ID approach survives heading renames, so it is the safer choice for long-lived shared files.
+
+* Keybinding Reference
+#+CAPTION: Common commands and their typical bindings.
+#+ATTR_LATEX: :booktabs t
+| Command                          | Purpose                                 |
+|----------------------------------+-----------------------------------------|
+| =org-transclusion-mode=          | Toggle rendering for the buffer         |
+| =org-transclusion-add=           | Render the directive at point           |
+| =org-transclusion-add-all=       | Render every directive in the buffer    |
+| =org-transclusion-remove=        | Collapse the directive at point         |
+| =org-transclusion-remove-all=    | Collapse every directive in the buffer  |
+| =org-transclusion-refresh=       | Pull the latest content from the source |
+| =org-transclusion-live-sync-start= | Enter two-way edit mode at point      |
+| =org-transclusion-live-sync-exit=  | Leave two-way edit mode               |
+
+* Live Sync
+Live sync is a two-way edit mode. With the cursor in a rendered transclusion, run =M-x org-transclusion-live-sync-start=. Edits you make in the writing log propagate to the source file. Edits made to the source file while the sync session is active also appear in the writing log. Exit the session with =M-x org-transclusion-live-sync-exit=. Use this feature when you want to edit the shared file without leaving the writing log buffer.
+
+* Export Behavior
+When you export =writingLog.org= to LaTeX, PDF, HTML, or any other backend, =org-transclusion= inlines the source content during export. The resulting PDF contains the shared text as if it had been copied in. This happens automatically, so your reviewers and readers see a complete document.
+
+If you want to exclude transcluded content from a specific export, wrap the directive in a =noexport= tag on its parent heading or set =org-transclusion-mode= off before running the export.
+
+* Troubleshooting
+The following issues arise most often for new users.
+
+** Nothing renders after saving
+Confirm that =org-transclusion-mode= is on in the buffer. Confirm that the file path in the link exists. Run =M-x org-transclusion-add-all=.
+
+** The imported heading shows at the wrong level
+Use the =:level= option to promote or demote the imported headings. For example, =:level 2= forces the imported top-level heading to become a level-two heading in the writing log.
+
+** Changes to the source file do not appear
+Call =M-x org-transclusion-refresh= with the cursor on the directive. Reverting the buffer also works. The package does not poll the file for changes on a timer.
+
+** Duplicate headings appear in the output
+Add =:only-contents= or =:exclude-elements "headline"= to the directive so the imported body does not bring its own heading with it.
+
+* Setting Up Your Project
+The following checklist walks you through a new project. Replace the paths with your own values.
+
+\begin{minted}{org}
+- [ ] Create or locate the shared file at ~/org/shared/aiuse.org.
+- [ ] Add a CUSTOM_ID property to each heading you plan to transclude.
+- [ ] Add (use-package org-transclusion :ensure t) to init.el.
+- [ ] Restart Emacs and confirm the package loaded without errors.
+- [ ] Open writingLog.org in the new project folder.
+- [ ] Insert the directive at the desired location.
+- [ ] Turn on org-transclusion-mode.
+- [ ] Run M-x org-transclusion-add-all and confirm the content renders.
+- [ ] Export to PDF and verify the shared content appears.
+- [ ] Commit writingLog.org and keep aiuse.org in a separate repository or directory.
+\end{minted}
+
+* Why This Approach Works Well
+You gain three benefits because you maintain only one copy of =aiuse.org=. First, corrections and additions reach every project the next time the writing log is opened or refreshed. Second, project folders stay small because they hold only the directive line rather than the full text. Third, diffs in version control become easier to read because changes to the shared content do not appear in every project repository.
+
+* Further Reading
+The official manual is at https://nobiot.github.io/org-transclusion/ and is the best reference for advanced usage, including transclusion of non-org files, custom filters, and programmatic extensions.
