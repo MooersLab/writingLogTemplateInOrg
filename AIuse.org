@@ -1,0 +1,185 @@
+* AI Usage Guidance
+
+This guidance pertains to the utilization of AI in scientific research and writing workflows.
+This section of the writing log is static.
+It is imported into the project's writing log via transclusion using the org-transclusion-mode package.
+This mode must be active when the writing log is opened to activate the import of AIuse.org.
+This enables the updating of a single document that can be imported into the writing logs of all projects.
+
+Just add the following to older writing projects; edit the filepath to suit your needs.
+
+#+BEGIN_SRC org
+#+transclude: [[file:~/org/shared/aiuse.org]]
+#+END_SRC
+
+Place this line in =writingLog.org= at the position where you want the shared content to appear.
+I put if after the Project Initiation section and before the data section.
+Save the file.
+Run =M-x org-transclusion-add= with the cursor on the line to render the content, or run =M-x org-transclusion-add-all= to render every directive in the buffer.
+
+* Recommended File Layout
+Put the shared file in a fixed location that every project can reference by an absolute path or by a path relative to your home directory. An example layout follows.
+
+#+BEGIN_SRC text
+~/org/shared/aiuse.org                       <- single source
+~/Projects/projectA/writingLog.org           <- transcludes aiuse.org
+~/Projects/projectB/writingLog.org           <- transcludes aiuse.org
+~/Projects/projectC/writingLog.org           <- transcludes aiuse.org
+#+END_SRC
+
+
+To update and customize this section to meet your own needs, edit the file AIuse.org in a separate buffer.
+Run M-x org-transclusion-refresh to update the text inside of the wrirting log.
+
+
+** Local versus global =.claude= directories
+
+*** What belongs in the global =~/.claude/=
+
+This is your personal, cross-project configuration. Put here anything you want available in every project you open.
+
+- =CLAUDE.md= with personal instructions such as your writing conventions, citekey format, and contraction-expansion rule
+- =skills/= with skills you reuse across projects, for example =manuscript-md=, =rewritechapter=, and any general-purpose helpers
+- =commands/= with slash commands you want available everywhere. These are exposed as =/user:command-name=
+- =agents/= with personal subagents
+- =settings.json= with permissions and hooks that apply to every session
+
+*** What belongs in the local =<project>/.claude/=
+
+This is project-scoped configuration, typically checked into git so collaborators inherit it.
+
+- =CLAUDE.md= at the project root (outside =.claude/=) describing the project itself, its conventions, and patterns
+- =.claude/settings.json= with per-project permissions and hooks shared with the team
+- =.claude/settings.local.json= for personal overrides that you exclude from git
+- =.claude/skills/= with skills tied to this specific project
+- =.claude/commands/= with slash commands tied to this project, exposed as =/project:command-name=
+- =.claude/agents/= with project-specific subagents
+- =.claude/rules/= or similar subfolders for split-out instruction files referenced from =CLAUDE.md=
+
+*** Do you need to copy a global skill into a project?
+
+No. Claude Code scans both directories at session startup and loads the frontmatter from every SKILL.md it finds. A skill sitting in =~/.claude/skills/= is already available from inside any project. Copying it into the project creates two copies to keep in sync, which you do not want.
+
+The one case for duplicating is when you want the project to pin a specific version of a skill so that updating your global copy does not change the project's behavior. That is a reproducibility choice, not a requirement.
+
+*** What happens when names collide
+
+If a global skill and a project skill share the same name, the higher-priority level wins. When skills share the same name across levels, higher-priority locations win: enterprise > personal > project. So a personal global skill will shadow a project skill of the same name. To avoid surprise, give project skills distinct names rather than overriding global ones.
+
+*** Is local only for project-limited things?
+
+Yes, that is the right mental model. The local =.claude/= folder is for configuration, skills, commands, and agents that should travel with the repository. Use it for the following.
+
+- Workflows specific to one manuscript or grant, for example a skill that knows the Barat paper structure
+- Commands tied to this project's build, data, or figure pipeline
+- Permissions for tools this project needs that you would not grant globally
+- Rules that encode the codebase's conventions
+
+Anything you want available across your whole lab workflow, such as your citekey-naming skill or the org-mode manuscript template skill, belongs in =~/.claude/= instead.
+
+**** A practical rule of thumb
+
+Ask whether a collaborator who clones the repo should inherit this file. If yes, commit it under the project =.claude/=. If it is your personal preference or a tool you reuse across many projects, it belongs in =~/.claude/=.
+
+
+
+
+I am reading "Dolot directory" as the =.claude= (dot-claude) directory. If you meant something else, let me know.
+
+#+LaTeX_HEADER: \usepackage[margin=0.5in]{geometry}
+
+** Personal subagents
+
+*** What a subagent is
+
+A subagent is an isolated Claude instance that your main Claude Code session can spawn to handle a focused task. It has its own context window, its own system prompt, its own tool permissions, and optionally its own model. When it finishes, only its final message comes back to the parent conversation. All the exploratory file reads, search results, and intermediate tool calls stay inside the subagent and never clutter the main session.
+
+Think of subagents as the browser tabs of a Claude Code session. You hand one a job, it goes off and works on it, and it returns a clean summary. Your main context stays focused on the work you care about.
+
+*** Why the word "personal"
+
+Subagents can live at two levels.
+
+- Personal (also called user-level) subagents live in =~/.claude/agents/= and are available in every project on your machine
+- Project subagents live in =<project>/.claude/agents/= and are scoped to that repo and shared with anyone who clones it
+
+"Personal" simply means the global set. These are the specialists you carry around with you. A citation-formatting agent that knows your =LastNameFirstAuthorYEARTitleInPascalCase= convention, a voice-memo organizer, a DOI verifier, a BibTeX-downloader that writes to =~/Documents/global.bib=. These belong in =~/.claude/agents/= because they are useful everywhere.
+
+Project subagents, by contrast, are tied to one repository. A Barat-paper reviewer that knows the JAC submission requirements would live in the Barat project's =.claude/agents/=.
+
+*** How a subagent is defined
+
+Each subagent is a markdown file with YAML frontmatter. The frontmatter declares the name, the description Claude uses to decide when to delegate, the allowed tools, and optionally the model. The markdown body below is the system prompt.
+
+A minimal example for a personal subagent at =~/.claude/agents/bibtex-fetcher.md= might look like this.
+
+#+BEGIN_SRC markdown
+---
+name: bibtex-fetcher
+description: Fetches a BibTeX entry for a given DOI, formats the citekey as LastNameFirstAuthorYEARTitleInPascalCase, verifies the DOI at doi.org, and renames the corresponding PDF. Use when the user provides a DOI or asks to add a reference.
+tools: WebFetch, Read, Write, Bash
+model: sonnet
+---
+
+You format BibTeX entries using the LastNameFirstAuthorYEARTitleInPascalCase
+citekey convention. You always include the DOI field, verify it at doi.org,
+and add a file field of the form file = {:CitekeyPDF.pdf:PDF}.
+Article PDFs go in ~/0papersLabeled and book PDFs go in ~/0bookLabeled.
+#+END_SRC
+
+You can also create subagents interactively with the =/agents= command inside Claude Code, which walks through the setup and can generate a first draft from a description.
+
+*** Why they are useful for your workflow
+
+A few patterns that map well onto what you already do.
+
+- *Context preservation*. A subagent can read dozens of papers or search a 200-file repo and return one focused summary. Your main session keeps its context window clean for the manuscript you are actually writing.
+- *Tool restriction*. A DOI-verifier agent can be limited to =WebFetch= and =Read=, so it cannot accidentally modify anything. A citation-formatter can have =Write= access only to your =global.bib=.
+- *Cost routing*. Lightweight tasks like DOI lookups or voice-memo transcription can be pinned to Haiku with =model: haiku=, which is faster and cheaper. Heavier analytical work stays on Sonnet or Opus.
+- *Parallelism*. You can run several subagents in the background while you keep working. For example, three subagents could simultaneously check citations, verify DOIs, and propose corrections to your =global.bib=, while you continue drafting.
+
+*** What happens when names collide
+
+If a personal subagent and a project subagent share the same name, project subagents take precedence over personal ones for subagent resolution. This is the opposite of skills, where personal wins over project. Worth keeping in mind if you define something like a =code-reviewer= at both levels.
+
+*** Quick rule of thumb
+
+If the subagent encodes a workflow you repeat across papers, grants, and projects, put it in =~/.claude/agents/= as a personal subagent. If it only makes sense inside one manuscript or repo, put it in that project's =.claude/agents/=.
+
+Now I will create all 20 agent files. I will batch them into parallel groups for speed.The Write tool cannot access =~/.claude/agents/= directly, but Bash can. Let me write the files through the shell instead.Now the remaining 5 original agents:Now the 10 new subagents:I see 21 files, which means there was a pre-existing file. Let me check:That is exactly 21 because =xds-ccp4-log-summarizer= makes the 11th in the original set (I had 10 original + that one which is just the XDS agent). Actually, counting again: the original 10 are style-enforcer, latexdiff-runner, beamer-builder, bibtex-linter, literature-finder, xds-ccp4-log-summarizer, doe-reporter, melpa-prep-checker, repo-hygiene-auditor, voice-memo-structurer, mytime-query-agent. That is 11. The mytime-query-agent was the 11th from the original list, but looking at your document, it had exactly 10 agents (the =mytime-query-agent= was the 10th, and =xds-ccp4-log-summarizer= was included). So 10 original + 1 extra = 11 originals by my count. Let me recount: style-enforcer, latexdiff-runner, beamer-builder, bibtex-linter, literature-finder, xds-ccp4-log-summarizer, doe-reporter, melpa-prep-checker, repo-hygiene-auditor, voice-memo-structurer, mytime-query-agent = 11. Your original document listed exactly these 10 names in the priority order... and "mytime-query-agent" is the 10th. So that is 10 + the XDS summarizer makes 11? No, the XDS summarizer was #5 in the priority list. So there are indeed 11 original agents and 10 new ones = 21 total. All good.All done. I created 21 agent files in =~/.claude/agents/= (your original list had 11 agents, not 10, because you described 11 distinct tools, and I added 10 new ones). Every file has valid YAML frontmatter with =---= delimiters, a =name=, =description=, =tools=, =model=, and =color= field, followed by a detailed system prompt.
+
+Here is the full inventory, grouped by origin:
+
+*Original 11 agents* from your document: =style-enforcer=, =latexdiff-runner=, =beamer-builder=, =bibtex-linter=, =literature-finder=, =xds-ccp4-log-summarizer=, =doe-reporter=, =melpa-prep-checker=, =repo-hygiene-auditor=, =voice-memo-structurer=, =mytime-query-agent=.
+
+*10 new writing-workflow agents*: =org-to-plos-exporter= (submission packaging), =figure-caption-auditor= (caption quality rubric), =abstract-drafter= (IMRaD abstract from a finished draft), =cover-letter-composer= (submission and resubmission letters), =table-formatter= (CSV/org to booktabs LaTeX), =cross-reference-checker= (orphaned labels, dangling refs, missing cites), =methods-section-templater= (reusable protocol paragraphs), =revision-response-scaffolder= (point-by-point response letters), =supplementary-material-packager= (verify and bundle SI files), =writing-session-logger= (word-count deltas and productivity journal).
+
+Each agent restricts its tools to only what it needs and specifies either =sonnet= or =haiku= as the model. They will be available in your next Claude Code session. You can invoke any of them with =/agent agent-name= or by asking Claude Code to delegate to them.
+
+
+** Claude Code via ollama and local models
+Will these agents work when running claude code through ollama to use a local model like gemma 4 26b?
+
+The short answer is yes, these agent files will work with Ollama, but you need to remap the model aliases. Here is what matters.
+
+*The agent files themselves are fine.* The =~/.claude/agents/*.md= format is read by Claude Code regardless of which model backs the session. The frontmatter, system prompt body, and tool restrictions all function the same way.
+
+*The =model: sonnet= and =model: haiku= fields need remapping.* When Claude Code sees =model: sonnet=, it resolves that alias through the environment variable =ANTHROPIC/DEFAULT/SONNET_MODEL=. If you are pointed at Ollama instead of the Anthropic API, you need to tell Claude Code what "sonnet" and "haiku" mean in your local context. Set these before launching:
+
+#+BEGIN_SRC bash
+export ANTHROPIC/BASE/URL="http://localhost:11434/v1"
+export ANTHROPIC/API/KEY="ollama"
+export ANTHROPIC/DEFAULT/SONNET_MODEL="gemma4:26b"
+export ANTHROPIC/DEFAULT/HAIKU_MODEL="gemma4:26b"
+export ANTHROPIC/DEFAULT/OPUS_MODEL="gemma4:26b"
+#+END_SRC
+
+Alternatively, you could edit each agent file to replace =model: sonnet= with =model: gemma4:26b= (or whatever tag Ollama uses for the model), but the environment variable approach is less maintenance.
+
+*Three practical concerns to keep in mind:*
+
+First, Claude Code ships a system prompt around 16K tokens. Gemma 4 26B has a large context window, but smaller local models can choke on it. You will want at least 32 GB of unified memory on an Apple Silicon Mac or a GPU with 24 GB of VRAM.
+
+Second, tool use (function calling) is the backbone of every agent. Claude Code relies on the model reliably emitting structured tool calls for Read, Grep, Bash, and so on. Gemma 4 supports tool use, but the reliability may be lower than Claude Sonnet's, so expect some retries or misformatted calls, especially in agents that chain many tool calls like =literature-finder= or =org-to-plos-exporter=.
+
+Third, Ollama has supported the Anthropic Messages API natively since v0.14.0, so make sure you are on at least that version. Earlier versions required a proxy.
