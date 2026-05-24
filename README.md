@@ -72,6 +72,10 @@ The remaining LaTeX code can be used in a LaTeX code block.
 - Transcluded AIuse.org that can be updated in one file and imported into writing logs for all projects.
 - A table of zettelkasten nodes being actively used in this project.
 
+## Related videos
+
+Sick of reading? Here is a 20-minute [video](https://www.bing.com/videos/riverview/relatedvideo?q=EmacsConf+Blaine+Mooers&mid=F191ED7C7665BAB53B30F191ED7C7665BAB53B30&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUCwuyodzTl_KdEKNuJmeo99A&FORM=VIRE) about this project.
+
 ### Introduction
 
 The writing log is a document that is external to the manuscript.
