@@ -415,7 +415,7 @@ This repository contains my collection of useful functions to ease the use of th
 | 0.8.3  | Added list of useful functions found in mooerslab-functions-el                         | 2025 March 27 |
 | 0.8.4 | Added section at the beginning for drafting alternate central hypotheses.  | 2026 January 5|
 | 0.8.6 | Added transcluded section on AI use. | 2026 April 17|
-| 0.8.7 | Added section just above daily log for table of nodes used in zettelkasten | 2026 May 24 |
+| 0.8.7 | Added section just above daily log for table of nodes used in zettelkasten. | 2026 May 24 |
 
 ## Sources of funding
 
