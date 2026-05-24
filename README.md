@@ -6,10 +6,10 @@
 
 ## What is this? A space for metacognition and storing metadata about one writing project
 
-Use this template to store in one document outside of your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes) the data and the thinking behind your writing project.
+Use this template to store, in one document outside your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes), the data and the thinking behind your writing project.
 This document is meant to be specific to one project; create a separate document for additional projects.
 This template addresses the problem of cluttering the writing project document with notes about decisions made and plans for the work.
-This template provides a safe place for notes that tend to get deleted and lost upon manuscript submission.
+This template provides a safe place for notes that often get deleted or lost upon manuscript submission.
 
 Use this writing log in parallel to the main writing project document to support these workflows:
 
@@ -17,7 +17,7 @@ Use this writing log in parallel to the main writing project document to support
 - Data inventory (update as needed)
 - Daily log to record decisions made, actions completed or attempted, and correspondence.
 - Periodic project assessment against timeline with milestones (once a week, month, or quarter -- whatever is appropriate)
-- Project completion and archiving (one to several days at manuscript submission or acceptance or a bit of both)
+- Project completion and archiving (one to several days at manuscript submission or acceptance, or a bit of both)
 
 ## Why use this writing project log?
 
@@ -30,13 +30,13 @@ Use this writing log in parallel to the main writing project document to support
 ## What this is not
 
 - This is not an extended annotated bibliography to store your thoughts about the literature you read. You can find elsewhere on the site repositories that support the assembly of classical annotated bibliographies. You will also find repositories for templates for modern bibliographies that support multi-paragraph entries illustrated with figures, tables, code listings, equations, and URLs to relevant websites, including videos.
-- This is not an accountability tool where you record your minutes spent on words written per day across one or more writing projects. You can find several different approaches to writing accountability on this website and the corresponding tools to support those approaches. You can choose one approach that you think you can use daily. Do not try to use more than one approach at a time. You will exhaust yourself and give up. If you schedule your writing activities and show up at the appointed time, the need for tracking your progress will be diminished when following the writing schedule becomes a deeply ingrained habit.
+- This is not an accountability tool where you record your minutes spent on words written per day across one or more writing projects. You can find several approaches to writing accountability on this website, along with the corresponding tools to support them. You can choose one approach that you think you can use daily. Do not try to use more than one approach at a time. You will exhaust yourself and give up. If you schedule your writing activities and show up at the appointed time, the need to track your progress will diminish as following the writing schedule becomes a deeply ingrained habit.
 
 
 ## What is org-mode
 
 [Org-mode](https://orgmode.org/) is a rich variant of markdown (see [cheatsheet](https://devhints.io/org-mode)) that can read some LaTeX code directly.
-The remaining LaTeX code can be used in a code block for LaTeX.
+The remaining LaTeX code can be used in a LaTeX code block.
 
 
 ## Features
@@ -48,18 +48,18 @@ The remaining LaTeX code can be used in a code block for LaTeX.
 - A writing log section for recording notes about each day's accomplishments.
 - Plot of the word count by writing session to track your progress.
 - Use org-clock and clock tables to track and summarize your effort.
-- A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and entering the tab.
+- A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and pressing Tab.
 - Transcluded AIuse.org that can be updated in one file and imported into writing logs for all projects.
 
 ### Introduction
 
 The writing log is a document that is external to the manuscript.
-It stores the plans and progress made on one manuscript.
-It is a tool for enhancing your focus and sustaining forward momentum on the writing project.
+It stores the plans and progress for a single manuscript.
+It is a tool to enhance your focus and sustain forward momentum on the writing project.
 It is also a tool that eases re-engagement in an interrupted writing project.
 It is like a master thinking document or a second brain for a writing project.
 
-Instructions for using the writing log are found in the annotations in the template.
+Instructions for using the writing log are provided in the template's annotations.
 You can delete these after they are no longer needed.
 
 Version 0.8 of the writing log is divided into these sections: 
@@ -97,7 +97,7 @@ The subsections of these sections are shown below.
 ### AI use
 
 The section is transcluded using the org-transclude package.
-This enable the editing of this section in one file and it's import into the writing logs for many projects.
+This enables editing of this section in a single file and its import into the writing logs for many projects.
 The section is under rapid change due to the evolving nature of AI.
 Read the tutorial tutorialOrgTransclusion.org.
 
@@ -108,14 +108,14 @@ You should document your local AI use in the daily log section below.
 ### Project Data
 
 - Inventory of data on hand
-- Inventory of project's required external software
+- Inventory of the project's required external software
 - Inventory of the project's software repositories
 - Relevant videos
 - Relevant blogs
 - Relevant literature sources
 - Relevant collections of PDFs
 - Project's progress summary for the annual grant report
-- Project's progress summary for the annual report to college
+- Project's progress summary for the annual report to the college
 
 
 ### Plans to support the project
@@ -147,15 +147,16 @@ You should document your local AI use in the daily log section below.
 
 ### Nodes Used in Zettelkasten
 
-This section contains a table of the nodes that are being used in this particular project.
+This section contains a table of the nodes used in this project.
 You update this table as you use new nodes.
 You may want to list the most appropriate parent node.
-The idea is to be able to jump back into the Zettelkasten by looking up the appropriate node.
+The idea is to jump back into the Zettelkasten by looking up the appropriate node.
+Folgezettels make such navigation faster and less error-prone than relying on searches.
 
-I realize that this goes against the idea of needing to search through your Zettelkasten so that you become more familiar with it and so that you can stumble across pairs of nodes to be cross-linked.
+I realize that this goes against the idea of needing to search through your Zettelkasten to become more familiar with it and to stumble across pairs of nodes to cross-link.
 However, busy academics need to get on with finding where they left off.
 
-The table was positioned just above the daily entries so that it's easy to find and use on a daily basis.
+The table was positioned just above the daily entries, so it's easy to find and use each day.
 
 ### Daily entries
 
@@ -206,7 +207,7 @@ Having those multi-step processes recorded in a protocol and readily accessible 
 
 We have made a variant of this writing log where this section is modular.
 The modularity eases the inclusion and exclusion of various protocols and guidelines so that you can customize this section of the writing log to be most relevant to the writing project at hand.
-Seek repositories on this website with the words modular and writing log.
+Search this website for repositories containing the words "modular" and "writing log".
 
 Below is a list of protocols you can delete, supplement,  or expand upon.
  
@@ -224,7 +225,7 @@ Below is a list of protocols you can delete, supplement,  or expand upon.
 
 We store files containing established protocols in the home directory.
 These files can be included in all writing-project log files.
-This enables updating one file and propagating these updates to all log files.
+This enables updating a single file and propagating the updates to all log files.
 In an org file, you can use the org-mode `#+INCLUDE:` or the LaTeX `\include{}`.
 These included files will only be injected into the log file upon export to PDF.
 
@@ -284,7 +285,7 @@ The functions were tested, and they worked as advertised.
 
 ## Configure yasnippets
 
-You may want to enable yasnippets to make available your latex-mode and org-mode snippets while editing the writinglog.org file in org-mode.
+You may want to enable yasnippets to make your LaTeX and org-mode snippets available while editing the writinglog.org file in org-mode.
 
 1. In your `~/.emacs.d/snippets/latex-mode`, create a file named `.yas-parents`.
 2. Add the following to this file:
@@ -302,7 +303,7 @@ org-mode
   + `C-x C-s` to save the current document.
   + `C-c C-e l o` to export to pdflatex and BibTeX and open the resulting PDF in the default PDF viewer.
   + `C-x u` to undo the last change.
-  + `M-UP` or `M-DOWN` to shift lines up and down. UP and Down are the arrow keys.
+  + `M-UP` or `M-DOWN` to shift lines up and down. UP and DOWN are the arrow keys.
   + `C-3 S-tab` to collapse the whole document while showing headlines down to the 3rd level. Change the number to collapse to a different level.
   + `C-x C-o` to show the outline view using consult. This is the same as `M-x consult-outline`. This consult command collapses the document into a more compact format than `C-s S-tab` command. As a result, it is easier to navigate. You have to install the consult package.
 
@@ -318,23 +319,23 @@ Place the cursor or point below the current day's heading and enter `C-c o` to s
 ## Bash function for creating a writing log for a new project
 
 At the start of a writing project, use this function to write a copy of the writing log template to a file with the project name.
-Store this Dash function in the `.bashrc` or `.zshrc` file. Oh shoot too
+Store this Bash function in the `.bashrc` or `.zshrc` file or wherever you store your aliases. 
 
 ```bash
 function logorg {
 echo "Copy template writing log in org with project number in title."
 if [ $# -lt 1 ]; then
-  echo 1>&2 "$0: not enough arguments"
+  echo 1>&2 "$0: Not enough arguments."
   echo "Usage1: logorg projectID"
   return 2
 elif [ $# -gt 1 ]; then
-  echo 1>&2 "$0: too many arguments"
+  echo 1>&2 "$0: Too many arguments."
   echo "Usage1: logorg projectID"
   return 2
 fi
 projectID="$1"
 echo "Write writing log to log$1.org file."
-cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer5.org log$1.org
+cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer087.org log$1.org
 
 }
 ```
@@ -353,8 +354,8 @@ This repository contains my collection of useful functions to ease the use of th
 - region-csv-to-org-table
 - create-org-table-with-caption
 - count-non-blank-lines
-- export-csv-to-sqlite-table (great for creating databases from csv files)
-- export-csv-to-matched-sqlite-table (great for adding data in csv file to existing database)
+- export-csv-to-sqlite-table (great for creating databases from CSV files)
+- export-csv-to-matched-sqlite-table (great for adding data in a CSV file to an existing database)
 - get-citekeys-from-bibtex-file
 - wrap-citekey-and-create-tex-file
 - insert-org-captioned-figure 
@@ -377,7 +378,7 @@ This repository contains my collection of useful functions to ease the use of th
 - [Writing log template in LaTeX (compiles on Overleaf and in Emacs)](https://github.com/MooersLab/writingLogTemplate)
 - [Writing log template in reStructuredText](https://github.com/MooersLab/writing-log-rst) reStructuredText is used by programmers for documentation.
 - [Writing log template in Markdown](https://github.com/MooersLab/writing-log-md) Markdown variant. Read and rendered to PDF by most good text editors.
-- [Writing log template in ODT](https://github.com/MooersLab/writing-log-odt) ODT can be read by Open Office, LibreOffice and MS Word.
+- [Writing log template in ODT](https://github.com/MooersLab/writing-log-odt) ODT can be read by Open Office, LibreOffice, and MS Word.
 - [Writing log template in DOCX for MS Word](https://github.com/MooersLab/writing-log-docx) MS Word variant. Probably the least suitable format for this task.
 - [Programming log in Org](https://github.com/MooersLab/programmingLogInOrg)
 
@@ -408,11 +409,11 @@ This repository contains my collection of useful functions to ease the use of th
 |  0.7.1 | Added subheading with noexport tag above each GUIDANCE drawer to prevent the export of their contents to the PDF.  Added the urlx package to linewrap long URLs. | 2024 August 27      |
 |  0.7.2 | Added STARTUP command to open file with the drawers closed. | 2024 September 13 |
 |  0.7.3 | Explained introduction to distinguish this tool from writing accountability tools. | 2024 October 30 |
-|  0.8.0 | Added :restart: tag to position the cursor at the end of the last daily entry in the Daily Log section upon opening the document in Emac. Made minor updates to the README.md file including link to talk about this document. | 2024 November 28 |
+|  0.8.0 | Added :restart: tag to position the cursor at the end of the last daily entry in the Daily Log section upon opening the document in Emacs. Made minor updates to the README.md file, including a link to talk about this document. | 2024 November 28 |
 | 0.8.1 | Added function to insert contents of external files. This is very cool!                            | 2024 December 6 |
-| 0.8.2 | Added :appendtodos: tag to headline above TODO list in middle of document to work with org-projects.el. Replaced Next Action with  Hemmingway Bridge.                           | 2025 March 21 |
+| 0.8.2 | Added :appendtodos: tag to headline above TODO list in the middle of the document to work with org-projects.el. Replaced Next Action with  Hemingway Bridge.                           | 2025 March 21 |
 | 0.8.3  | Added list of useful functions found in mooerslab-functions-el                         | 2025 March 27 |
-| 0.8.4 | Added section at beginning for drafting alternate central hypotheses.  | 2026 January 5|
+| 0.8.4 | Added section at the beginning for drafting alternate central hypotheses.  | 2026 January 5|
 | 0.8.6 | Added transcluded section on AI use. | 2026 April 17|
 | 0.8.7 | Added section just above daily log for table of nodes used in zettelkasten | 2026 May 24 |
 
