@@ -145,6 +145,17 @@ You should document your local AI use in the daily log section below.
 - Timeline and Milestones.
 - Periodic assessments of the current state of the manuscript.
 
+### Nodes Used in Zettelkasten
+
+This section contains a table of the nodes that are being used in this particular project.
+You update this table as you use new nodes.
+You may want to list the most appropriate parent node.
+The idea is to be able to jump back into the Zettelkasten by looking up the appropriate node.
+
+I realize that this goes against the idea of needing to search through your Zettelkasten so that you become more familiar with it and so that you can stumble across pairs of nodes to be cross-linked.
+However, busy academics need to get on with finding where they left off.
+
+The table was positioned just above the daily entries so that it's easy to find and use on a daily basis.
 
 ### Daily entries
 
@@ -402,7 +413,8 @@ This repository contains my collection of useful functions to ease the use of th
 | 0.8.2 | Added :appendtodos: tag to headline above TODO list in middle of document to work with org-projects.el. Replaced Next Action with  Hemmingway Bridge.                           | 2025 March 21 |
 | 0.8.3  | Added list of useful functions found in mooerslab-functions-el                         | 2025 March 27 |
 | 0.8.4 | Added section at beginning for drafting alternate central hypotheses.  | 2026 January 5|
-| 0.8.6 | Added via transclusion section on AI use. | 2026 April 17|
+| 0.8.6 | Added transcluded section on AI use. | 2026 April 17|
+| 0.8.7 | Added section just above daily log for table of nodes used in zettelkasten | 2026 May 24 |
 
 ## Sources of funding
 
