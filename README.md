@@ -336,7 +336,6 @@ fi
 projectID="$1"
 echo "Write writing log to log$1.org file."
 cp  ~/6112MooersLabGitHubLabRepos/writingLogTemplateInOrg/writingLogTemplateVer087.org log$1.org
-
 }
 ```
 
