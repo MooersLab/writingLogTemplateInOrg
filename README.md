@@ -2,14 +2,33 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-# Writing project log template in org-mode
+# Writing project log template in org-mode: A space for metacognition and storing metadata about one writing project
 
-## What is this? A space for metacognition and storing metadata about one writing project
+## Problem addressed
 
-Use this template to store, in one document outside your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes), the data and the thinking behind your writing project.
-This document is meant to be specific to one project; create a separate document for additional projects.
 This template addresses the problem of cluttering the writing project document with notes about decisions made and plans for the work.
 This template provides a safe place for notes that often get deleted or lost upon manuscript submission.
+These notes serve as a valuable resource for addressing questions from reviewers and readers.
+They are also a valuable source of ideas for future papers and grant applications.
+
+
+## What is this? 
+
+Use this template to store, in one document outside your writing project's main document (e.g., journal article, grant application, book chapter, book, lecture notes, seminar notes, talk notes, poster notes), the data and the thinking behind your writing project.
+This document is meant to be specific to one project.
+It helps you maintain a sharp focus on the project in front of you for a few hours while ignoring all other projects and worries.
+Create a separate document for additional projects.
+
+## How does it differ from the accountability tool of the same name?
+
+This writing log is different from the writing accountability tool that is also called a writing log.
+The accountability tool is where you record the time that you spent on each of your writing projects on a given day.
+There is support in this document for tracking word count, but I find it kind of pointless because the word count plateaus pretty quickly.
+It can be difficult to monitor the number of words added and deleted during editing sessions, which make up the majority of the time spent on a research article.
+It's better to record the number of minutes spent on a particular writing project on a given day to track progress.
+
+
+## How to use this tool?
 
 Use this writing log in parallel to the main writing project document to support these workflows:
 
@@ -23,14 +42,15 @@ Use this writing log in parallel to the main writing project document to support
 
 - Eases restarting a project that has been interrupted.
 - Supports working on several projects concurrently.
-- Updates the fear of losing momentum.
+- Addresses the fear of losing momentum.
 - Abates the fear of forgetting where you left off.
 - Supports the planning of related projects as you make progress on the current project. You will have a running start on the next writing project.
 
-## What this is not
+## What this is not?
 
-- This is not an extended annotated bibliography to store your thoughts about the literature you read. You can find elsewhere on the site repositories that support the assembly of classical annotated bibliographies. You will also find repositories for templates for modern bibliographies that support multi-paragraph entries illustrated with figures, tables, code listings, equations, and URLs to relevant websites, including videos.
-- This is not an accountability tool where you record your minutes spent on words written per day across one or more writing projects. You can find several approaches to writing accountability on this website, along with the corresponding tools to support them. You can choose one approach that you think you can use daily. Do not try to use more than one approach at a time. You will exhaust yourself and give up. If you schedule your writing activities and show up at the appointed time, the need to track your progress will diminish as following the writing schedule becomes a deeply ingrained habit.
+- This is not an extended annotated bibliography to store your thoughts about the literature you read. You can find elsewhere on this site repositories that support the assembly of classical annotated bibliographies. You will also find repositories for templates for modern bibliographies that support multi-paragraph entries illustrated with figures, tables, code listings, equations, and URLs to relevant websites, including videos.
+- 
+- This is not an accountability tool where you record your minutes spent or words written per day across one or more writing projects. You can find several approaches to writing accountability on this website, along with the corresponding tools to support them. You can choose one approach that you think you can use daily. Do not try to use more than one approach at a time. You will exhaust yourself and give up. If you schedule your writing activities and show up at the appointed time, the need to track your progress will diminish as following the writing schedule becomes a deeply ingrained habit.
 
 
 ## What is org-mode
@@ -50,6 +70,7 @@ The remaining LaTeX code can be used in a LaTeX code block.
 - Use org-clock and clock tables to track and summarize your effort.
 - A GUIDANCE drawer that stores advice on how to use a section. The drawer is opened by placing the cursor on it and pressing Tab.
 - Transcluded AIuse.org that can be updated in one file and imported into writing logs for all projects.
+- A table of zettelkasten nodes being actively used in this project.
 
 ### Introduction
 
@@ -68,6 +89,7 @@ Version 0.8 of the writing log is divided into these sections:
 - Project data
 - Plans to support the project
 - Timely completion
+- Zettelkasten nodes in use
 - Daily entries
 - Future additions and tangents
 - Guidelines, checklists, protocols, and helpful tips
