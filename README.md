@@ -76,6 +76,18 @@ The remaining LaTeX code can be used in a LaTeX code block.
 
 Sick of reading? Here is a 20-minute [video](https://www.bing.com/videos/riverview/relatedvideo?q=EmacsConf+Blaine+Mooers&mid=F191ED7C7665BAB53B30F191ED7C7665BAB53B30&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUCwuyodzTl_KdEKNuJmeo99A&FORM=VIRE) about this project.
 
+## Claude skill file to semiautomate daily entries
+
+The zip file update-writing-log.zip contains a Claude skill in a folder.
+It has a subfolder with a Python script.
+This skill will review the changes you have committed during the day via Git and any unsaved changes in the currently open manuscript file.
+It does not depend on chat history, so the changes you make to the manuscript do not have to have been made in Claude.
+
+It will summarize these changes and insert them at the appropriate position inside the Daily Log section.
+This tool is meant to ease the task of making a daily entry.
+That task is already fairly small, but nonetheless, this makes it even easier to do.
+If you did additional work outside the folder containing the writing project, then you will have to enter those accomplishments manually.
+
 ### Introduction
 
 The writing log is a document that is external to the manuscript.
