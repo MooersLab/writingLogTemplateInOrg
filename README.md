@@ -88,7 +88,7 @@ This tool is meant to ease the task of making a daily entry.
 That task is already fairly small, but nonetheless, this makes it even easier to do.
 If you did additional work outside the folder containing the writing project, then you will have to enter those accomplishments manually.
 
-### Introduction
+## Introduction
 
 The writing log is a document that is external to the manuscript.
 It stores the plans and progress for a single manuscript.
