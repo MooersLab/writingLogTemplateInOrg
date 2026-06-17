@@ -453,6 +453,8 @@ This repository contains my collection of useful functions to ease the use of th
 | 0.8.4 | Added section at the beginning for drafting alternate central hypotheses.  | 2026 January 5|
 | 0.8.6 | Added transcluded section on AI use. | 2026 April 17|
 | 0.8.7 | Added section just above daily log for table of nodes used in zettelkasten. | 2026 May 24 |
+| 0.8.8 | Added update-writing-log.zip containing a Claude skill. | 2026 June 17 |
+
 
 ## Sources of funding
 
